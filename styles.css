@@ -46,7 +46,7 @@ body {
   text-decoration: none;
   color: #2d2d2d;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 .hamburger {
@@ -118,7 +118,7 @@ body {
 
 /* Tagline image */
 .hero-title {
-  max-width: 80%;
+  max-width: 65%;
   height: auto;
   object-fit: contain;
 }
