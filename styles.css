@@ -14,7 +14,7 @@ body {
 
 /* ======= NAVBAR ======= */
 .navbar-container {
-  background-color: #fff4e1;
+  background-color: #ffffff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,8 +45,8 @@ body {
 .navbar-items a {
   text-decoration: none;
   color: #2d2d2d;
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 600;
+  font-size: 18px;
 }
 
 .hamburger {
