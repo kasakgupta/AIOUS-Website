@@ -225,3 +225,10 @@ body {
     font-size: 15px;
   }
 }
+
+.content h3{
+  font-family: "Electrolize", sans-serif;
+}
+.content{
+ color: #FFF4E1;
+}
