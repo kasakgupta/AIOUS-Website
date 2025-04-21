@@ -232,21 +232,60 @@ body {
 .content {
   color: #fff4e1;
 }
-
+.aboutUs h4 {
+  color: #22b5c8;
+  margin-left: 100px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align:justify;
+  font-family: "Saira", sans-serif;
+}
 .aboutUs-container {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-left: 500px;
-  margin-right: 500px;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px; /* space between cards */
+  padding: 40px 20px;
+  flex-wrap: wrap;
+  /* background: radial-gradient(circle at center, #0f2d34, #0a1c21);  */
 }
 
 .aboutUs-box {
-  background-color: #61a2aa;
-  box-sizing: border-box;
-  border-style: solid;
-  border-width: 2px;
-  border-color: aqua;
-  padding: 5px;
-  border-radius: 2px;
+  flex: 1 1 280px;
+  max-width: 300px;
+  background: radial-gradient(
+    circle at center,
+    rgba(20, 109, 120, 0.2),
+    rgba(20, 109, 120, 0.1)
+  );
+  border: 2px solid #22b5c8;
+  padding: 25px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Orbitron", sans-serif;
+  box-shadow: 0 0 10px rgba(34, 181, 200, 0.3);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.aboutUs-box:hover {
+  transform: translateY(-5px);
+}
+
+.aboutUs-box h3 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.aboutUs-box p {
+  font-family: "Saira", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  flex-grow: 1; /* allows even spacing */
 }
