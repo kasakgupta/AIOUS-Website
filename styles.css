@@ -232,21 +232,44 @@ body {
 .content {
   color: #fff4e1;
 }
-
+h4{
+    color: rgba(34, 181, 200, 1);
+    font-weight: 600;
+    font-size: 23px;
+}
 .aboutUs-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-left: 500px;
   margin-right: 500px;
+  gap: 7px;
 }
 
 .aboutUs-box {
   background-color: #61a2aa;
-  box-sizing: border-box;
+  box-sizing: 160px;
   border-style: solid;
   border-width: 2px;
   border-color: aqua;
   padding: 5px;
-  border-radius: 2px;
+  border-radius: 7px;
 }
+.aboutUs-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,2);
+    border: 1px solid rgba(34, 181, 200, 0.6);
+}
+.title-text{
+    font-size: 0.77rem;
+    color: white;
+    
+}
+.title-name{
+    font-size: 0.90rem;
+    color: white;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
