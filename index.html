@@ -1,142 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta tags for character set and responsiveness -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Linking external CSS file -->
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani&display=swap" rel="stylesheet">
+<head>
+  <!-- Meta tags for character set and responsiveness -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Linking external CSS file -->
+  <link rel="stylesheet" href="styles.css" />
 
-    <!-- Google Fonts import -->
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
-    </style>
+  <!-- Google Fonts import -->
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Electrolize&family=Saira:ital,wght@0,100..900;1,100..900&display=swap");
+    @import url('https://fonts.cdnfonts.com/css/electric-formula?styles=175163');
+  </style>
 
-    <title>AIOUS Website</title>
-  </head>
+  <!-- Website title -->
+  <title>AIOUS Website</title>
+</head>
 
-  <body>
-    <!-- ================= NAVBAR SECTION ================= -->
-    <nav class="navbar">
-      <div class="navbar-container">
-        <!-- Website Logo -->
-        <img class="logo" src="Images/AIOUS Logo.png" alt="AIOUS Logo" />
+<body>
 
-        <!-- Hamburger icon for mobile view -->
-        <div class="hamburger" id="hamburger">&#9776;</div>
+  <!-- =============== NAVBAR SECTION =============== -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Website Logo -->
+      <img class="logo" src="Images/AIOUS Logo.png" alt="AIOUS Logo" />
 
-        <!-- Navigation links -->
-        <ul class="navbar-items" id="navbar-items">
-          <li><a href="#">Formula Student</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">CrowdFunding</a></li>
-          <li><a href="#">Sponsorship</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
+      <!-- Hamburger icon for mobile view -->
+      <div class="hamburger" id="hamburger">&#9776;</div>
+
+      <!-- Navigation links -->
+      <ul class="navbar-items" id="navbar-items">
+        <li><a href="#">Formula Student</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">CrowdFunding</a></li>
+        <li><a href="#">Sponsorship</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- =============== HERO SECTION =============== -->
+  <section class="hero" id="hero-section">
+    <div class="title">
+      <div class="heading">
+        <!-- Left chevron button -->
+        <img id="prevBtn" width="30" height="40" src="Images/left-chevron.png" alt="Left Chevron" />
+
+        <!-- Hero tagline image -->
+        <img class="hero-title" src="Images/hero image.png" alt="AIOUS Tagline" />
+
+        <!-- Right chevron button -->
+        <img id="nextBtn" width="30" height="40" src="Images/right-chevron.png" alt="Right Chevron" />
       </div>
-    </nav>
+    </div>
 
-    <!-- ================= HERO SECTION ================= -->
-    <section class="hero" id="hero-section">
-      <div class="title">
-        <div class="heading">
-          <!-- Left chevron button -->
-          <img
-            id="prevBtn"
-            width="30"
-            height="40"
-            src="Images/left-chevron.png"
-            alt="Left Chevron"
-          />
+    <!-- Decorative chevron lines under the title -->
+    <div class="subheading">
+      <div class="chevron_first"></div>
+      <div class="chevron_second"></div>
+    </div>
+  </section>
 
-          <!-- Hero tagline -->
-          <img
-            class="hero-title"
-            src="Images/hero image.png"
-            alt="AIOUS Tagline"
-          />
+  <!-- =============== MAIN CONTENT SECTION =============== -->
+  <section class="content">
 
-          <!-- Right chevron button -->
-          <img
-            id="nextBtn"
-            width="30"
-            height="40"
-            src="Images/right-chevron.png"
-            alt="Right Chevron"
-          />
+    <!-- =============== ABOUT US SECTION =============== -->
+    <section class="aboutUs">
+      <h2>About Us</h2>
+      <p>
+        AIOUS Formula Student comprises passionate Mechanical and Automation
+        Engineering students dedicated to conceptualizing, designing, and
+        fabricating an exemplary car showcasing advanced engineering
+        techniques. Our commitment lies in sincere teamwork and excellence,
+        recognizing the paramount importance of collaboration and competence
+        in achieving our goals.
+        <br /><br />
+        We, the students of IGDTUW, are honored to represent AIOUS in the
+        esteemed Formula Bharat Competition 2025. The legacy of our team,
+        established by our predecessors in 2011, serves as a guiding light for
+        us.
+      </p>
+
+      <h4>Our Success Starts With Our Culture</h4>
+
+      <!-- Core values section -->
+      <div class="aboutUs-container">
+        <div class="aboutUs-box">
+          <h3>Excellence</h3>
+          <p>
+            Dedication to superior performance and meticulous attention to detail define the AIOUS Team.
+          </p>
+        </div>
+
+        <div class="aboutUs-box">
+          <h3>Innovation</h3>
+          <p>
+            The AIOUS Team leverages cutting-edge technology to push the boundaries of automotive engineering.
+          </p>
+        </div>
+
+        <div class="aboutUs-box">
+          <h3>TeamWork</h3>
+          <p>
+            Collaboration is at the heart of the AIOUS Team's success. They foster a supportive environment that
+            empowers members.
+          </p>
         </div>
       </div>
+    </section>
 
-      <!-- Chevron decorative lines -->
-      <div class="subheading">
-        <div class="chevron_first"></div>
-        <div class="chevron_second"></div>
+    <!-- =============== SPONSORS SECTION =============== -->
+    <section class="sponsors">
+      <h2>Our Sponsors</h2>
+    </section>
+
+    <!-- =============== TEAM SECTION =============== -->
+    <section class="Team">
+      <h2>Meet the Team</h2>
+      <div class="team">
+        <!-- Team Member 1 -->
+        <h2>01</h2>
+        <p class="name">Jeevisha Shukla</p>
+        <p>Captain</p>
+        <hr>
+
+        <!-- Team Member 2 -->
+        <h2>02</h2>
+        <p class="name">Arushi Sharma</p>
+        <p>Vice Captain</p>
+        <hr>
+
+        <!-- Team Member 3 -->
+        <h2>03</h2>
+        <p class="name">Kanishka Kaintura</p>
+        <p>Manager</p>
+        <hr>
+
+        <!-- Team Member 4 -->
+        <h2>04</h2>
+        <p class="name">Kriti Pal</p>
+        <p>Treasurer</p>
+        <hr>
       </div>
     </section>
 
-    <section class="content">
-      <section class="aboutUs">
-        <h3>About Us</h3>
-        <p>
-          AIOUS Formula Student comprises passionate Mechanical and Automation
-          Engineering students dedicated to conceptualizing, designing, and
-          fabricating an exemplary car showcasing advanced engineering
-          techniques. Our commitment lies in sincere teamwork and excellence,
-          recognizing the paramount importance of collaboration and competence
-          in achieving our goals.
-
-          <br />
-          We, the students of IGDTUW, are honored to represent AIOUS in the
-          esteemed Formula Bharat Competition 2025. The legacy of our team,
-          established by our predecessors in 2011, serves as a guiding light for
-          us.
-        </p>
-
-        <h4>Our Success Starts With Our Culture</h4>
-        <div class="aboutUs-container">
-          <div class="aboutUs-box">
-            <h3>Excellence</h3>
-            <p>
-              Dedication to superior performance and meticulous attention to detail define the AIOUS Team.
-            </p>
-          </div>
-          <div class="aboutUs-box">
-            <h3>Innovation</h3>
-            <p>
-              The AIOUS Team leverages cutting-edge technology to push the boundaries of automotive engineering.
-            </p>
-          </div>
-          <div class="aboutUs-box">
-            <h3>TeamWork</h3>
-            <p>
-              Collaboration is at the heart of the AIOUS Team's success. They foster a supportive environment that empowers members.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="sponsors">
-        <h3>Our Sponsors</h3>
-      </section>
-
-      <section class="Team">
-        <h3>Meet the Team</h3>
-      </section>
-
-      <section class="departments">
-        <h3>Departments</h3>
-      </section>
+    <!-- =============== DEPARTMENTS SECTION =============== -->
+    <section class="departments">
+      <h2>Departments</h2>
     </section>
 
-    <section>
-      <footer>This is the footer</footer>
-    </section>
+  </section> <!-- closing main content wrapper -->
 
-    <!-- Linking external JavaScript file for interactivity -->
-    <script src="script.js"></script>
-  </body>
+  <!-- =============== FOOTER SECTION =============== -->
+  <footer>
+    This is the footer
+  </footer>
+
+  <!-- Linking external JavaScript file for interactivity -->
+  <script src="script.js"></script>
+</body>
+
 </html>
