@@ -49,13 +49,14 @@ body {
   font-size: 18px;
 }
 
+/* Hamburger menu icon */
 .hamburger {
   display: none;
   font-size: 30px;
   cursor: pointer;
 }
 
-/* ========== MOBILE NAVIGATION ========== */
+/* ========== RESPONSIVE NAVBAR ========== */
 @media (max-width: 768px) {
   .hamburger {
     display: block;
@@ -80,10 +81,6 @@ body {
   .navbar-items a {
     padding: 15px 0;
     font-size: 15px;
-  }
-
-  .navbar-items {
-    top: 90px;
   }
 }
 
@@ -125,14 +122,14 @@ body {
   object-fit: contain;
 }
 
-/* White arrows for dark backgrounds */
+/* Styling for hero arrows */
 .heading img,
 .subheading img {
   filter: brightness(0) invert(1);
   cursor: pointer;
 }
 
-/* Chevron shapes for design */
+/* Chevron decoration in hero section */
 .subheading {
   position: absolute;
   bottom: 140px;
@@ -200,8 +197,7 @@ body {
 
   #prevBtn,
   #nextBtn {
-    margin-left: 25px;
-    margin-right: 25px;
+    margin: 0 25px;
     width: 24px;
     height: 32px;
   }
@@ -219,16 +215,21 @@ body {
   }
 }
 
-/* ========== CONTENT SECTION ========== */
+/* ========== CONTENT STYLING ========== */
 .content {
   color: #fff4e1;
 }
 
-.content h2 {
+/* Headings across sections */
+h2 {
   font-family: 'Electric Formula', sans-serif;
-  font-weight: normal;
   font-size: 35px;
+  color: #f5f5dc;
+  font-weight: normal;
+  padding-left: 10px;
+  margin-bottom: 30px;
   letter-spacing: 2px;
+  text-align: left;
 }
 
 /* ========== ABOUT US SECTION ========== */
@@ -246,12 +247,10 @@ body {
   font-size: 28px;
   font-weight: bold;
   text-align: left;
-  font-family: "Saira", sans-serif;
   margin-bottom: 30px;
 }
 
 .aboutUs p {
-  font-family: "Saira", sans-serif;
   font-size: 20px;
   line-height: 2;
   font-weight: lighter;
@@ -260,6 +259,7 @@ body {
   max-width: 900px;
 }
 
+/* Container for About Us cards */
 .aboutUs-container {
   display: flex;
   justify-content: flex-start;
@@ -269,15 +269,11 @@ body {
   gap: 30px;
 }
 
-/* ========== ABOUT US BOX ========== */
+/* About Us individual card */
 .aboutUs-box {
   flex: 1 1 280px;
   max-width: 300px;
-  background: radial-gradient(
-    circle at center,
-    rgba(20, 109, 120, 0.2),
-    rgba(20, 109, 120, 0.1)
-  );
+  background: radial-gradient(circle at center, rgba(20, 109, 120, 0.2), rgba(20, 109, 120, 0.1));
   border: 2px solid #22b5c8;
   padding: 25px 20px;
   border-radius: 10px;
@@ -290,10 +286,12 @@ body {
   justify-content: flex-start;
 }
 
+/* Card hover effect */
 .aboutUs-box:hover {
   transform: translateY(-5px);
 }
 
+/* Heading inside About Us card */
 .aboutUs-box h3 {
   font-size: 22px;
   font-weight: normal;
@@ -302,8 +300,8 @@ body {
   letter-spacing: 1px;
 }
 
+/* Paragraph inside About Us card */
 .aboutUs-box p {
-  font-family: "Saira", sans-serif;
   font-size: 20px;
   line-height: 1.5;
   margin: 0;
@@ -311,18 +309,58 @@ body {
   flex-grow: 1;
 }
 
-/* ========== HORIZONTAL LINE ========== */
-hr {
-  border: 1.5px solid;
-  color: #3c3b3b;
-  margin: 20px 50px;
+/* ========== OUR TEAM SECTION ========== */
+.team-section {
+  padding: 50px 100px;
 }
 
-/* ========== TEAM SECTION ========== */
-.team h2 {
-  font-family: "Electric Formula", sans-serif;
+/* List of team members */
+.team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 15px;
 }
 
-.name {
+/* Each team member layout */
+.team-member {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #555;
+  padding-bottom: 20px;
+}
+
+/* Remove bottom border for last member */
+.team-member:last-child {
+  border-bottom: none;
+}
+
+/* Left side: number + name */
+.team-member-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Member number */
+.team-member .number {
+  font-size: 2rem;
+  color: #f5f5dc;
+  font-weight: 700;
+  font-family: "Electrical Formula", sans-serif;
+}
+
+/* Member name */
+.team-member .name {
+  font-size: 1.6rem;
+  font-weight: 500;
   color: #22b5c8;
+}
+
+/* Member position */
+.team-member .position {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #f5f5dc;
 }
