@@ -49,7 +49,7 @@ body {
   font-size: 18px;
 }
 
-/* Hamburger menu icon */
+/* ========== HAMBURGER MENU ========== */
 .hamburger {
   display: none;
   font-size: 30px;
@@ -122,14 +122,14 @@ body {
   object-fit: contain;
 }
 
-/* Styling for hero arrows */
+/* Hero section arrow icons */
 .heading img,
 .subheading img {
   filter: brightness(0) invert(1);
   cursor: pointer;
 }
 
-/* Chevron decoration in hero section */
+/* Chevron decoration */
 .subheading {
   position: absolute;
   bottom: 140px;
@@ -220,7 +220,6 @@ body {
   color: #fff4e1;
 }
 
-/* Headings across sections */
 h2 {
   font-family: 'Electric Formula', sans-serif;
   font-size: 35px;
@@ -259,7 +258,7 @@ h2 {
   max-width: 900px;
 }
 
-/* Container for About Us cards */
+/* About Us Card Container */
 .aboutUs-container {
   display: flex;
   justify-content: flex-start;
@@ -269,7 +268,7 @@ h2 {
   gap: 30px;
 }
 
-/* About Us individual card */
+/* About Us Individual Card */
 .aboutUs-box {
   flex: 1 1 280px;
   max-width: 300px;
@@ -286,12 +285,10 @@ h2 {
   justify-content: flex-start;
 }
 
-/* Card hover effect */
 .aboutUs-box:hover {
   transform: translateY(-5px);
 }
 
-/* Heading inside About Us card */
 .aboutUs-box h3 {
   font-size: 22px;
   font-weight: normal;
@@ -300,7 +297,6 @@ h2 {
   letter-spacing: 1px;
 }
 
-/* Paragraph inside About Us card */
 .aboutUs-box p {
   font-size: 20px;
   line-height: 1.5;
@@ -314,7 +310,6 @@ h2 {
   padding: 50px 100px;
 }
 
-/* List of team members */
 .team-list {
   display: flex;
   flex-direction: column;
@@ -322,7 +317,6 @@ h2 {
   margin: 15px;
 }
 
-/* Each team member layout */
 .team-member {
   display: flex;
   align-items: center;
@@ -331,19 +325,16 @@ h2 {
   padding-bottom: 20px;
 }
 
-/* Remove bottom border for last member */
 .team-member:last-child {
   border-bottom: none;
 }
 
-/* Left side: number + name */
 .team-member-left {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-/* Member number */
 .team-member .number {
   font-size: 2rem;
   color: #f5f5dc;
@@ -351,16 +342,58 @@ h2 {
   font-family: "Electrical Formula", sans-serif;
 }
 
-/* Member name */
 .team-member .name {
   font-size: 1.6rem;
   font-weight: 500;
   color: #22b5c8;
 }
 
-/* Member position */
 .team-member .position {
   font-size: 1.4rem;
   font-weight: 400;
   color: #f5f5dc;
+}
+
+/* ========== SPONSORS SLIDER ========== */
+.sponsors h2 {
+  padding: 50px 100px 50px;
+}
+
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  perspective: 800px; /* Gives a 3D look */
+}
+
+.slider {
+  display: flex;
+  gap: 20px;
+  transform-style: preserve-3d;
+  animation: scroll 20s linear infinite;
+  /* transform: rotateX(20deg); */ /* Uncomment this for curved effect */
+  padding: 20px 0;
+}
+
+.slider img {
+  width: 170px;
+  height: 150px;
+  object-fit: contain;
+  background: #fff4e1;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease;
+}
+
+.slider img:hover {
+  transform: scale(1.1) rotateY(0deg);
+}
+
+/* Animation for horizontal scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

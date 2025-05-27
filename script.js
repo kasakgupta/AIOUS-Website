@@ -38,3 +38,25 @@ nextBtn.addEventListener("click", () => {
   currentIndex = (currentIndex + 1) % backgrounds.length;
   updateBackground();
 });
+
+
+// Sponsors carousel
+const imagePaths = [
+  'images/arc_global_logo.png',
+  'images/Autodesk_Logo.png',
+  'images/curiosity_logo.png',
+  'images/digitech_logo.png',
+  'images/hoosier_logo.png'
+];
+
+const slider = document.getElementById("slider");
+
+// Duplicate images for infinite scroll illusion
+const allImages = [...imagePaths, ...imagePaths];
+
+allImages.forEach((src) => {
+  const img = document.createElement("img");
+  img.src = src;
+  slider.appendChild(img);
+});
+
