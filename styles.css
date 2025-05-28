@@ -417,8 +417,8 @@ h2 {
   }
   
   .department-card {
-    background-color: rgb(18, 59, 63);
-    border: 2px solid #105868;
+    background: radial-gradient(circle at center, rgba(20, 109, 120, 0.2), rgba(20, 109, 120, 0.1));
+    border: 2px solid #22b5c8;
     border-radius: 10px;
     padding: 20px;
     width: 90%;
@@ -440,14 +440,16 @@ h2 {
   }
   
   .department-card h3 {
-    color: #53d4f0;
-    font-size: 1.2rem;
+   font-size: 1.6rem;
+  font-weight: 500;
+  color: #22b5c8;
     margin: 10px 0 5px;
   }
   
   .department-card p {
     color: #ffffff;
     margin-bottom: 15px;
+    font-size: 1.4rem;
   }
   
   .view-more {
