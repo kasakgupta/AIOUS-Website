@@ -405,16 +405,10 @@ h2 {
     text-align: center;
   }
   
-  .departments-section h2 {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: rgb(255, 255, 255);
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    letter-spacing: 1px;
-    text-align:  start;
-    padding-left: 75px;
-  }
+.departments-section h2 {
   
+  padding: 50px 100px 50px;
+  } 
   .departments-grid {
     display: grid;
     grid-template-columns: 1fr;
