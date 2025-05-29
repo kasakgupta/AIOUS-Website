@@ -39,21 +39,20 @@ nextBtn.addEventListener("click", () => {
   updateBackground();
 });
 
-
 // Sponsors carousel
 const imagePaths = [
-  'images/arc_global_logo.png',
-  'images/Autodesk_Logo.png',
-  'images/curiosity_logo.png',
-  'images/digitech_logo.png',
-  'images/hoosier_logo.png',
-  'images/Bs_solidworks_logo.png',
-  'images/Madame_logo.png',
-  'images/maxxis_logo.png',
-  'images/rs_management_logo.png',
-  'images/SAIL_Logo.png',
-  'images/valvoline_logo.png',
-  'images/wee_print_logo.png',
+  "images/arc_global_logo.png",
+  "images/Autodesk_Logo.png",
+  "images/curiosity_logo.png",
+  "images/digitech_logo.png",
+  "images/hoosier_logo.png",
+  "images/Bs_solidworks_logo.png",
+  "images/Madame_logo.png",
+  "images/maxxis_logo.png",
+  "images/rs_management_logo.png",
+  "images/SAIL_Logo.png",
+  "images/valvoline_logo.png",
+  "images/wee_print_logo.png",
 ];
 
 const slider = document.getElementById("slider");
@@ -66,4 +65,3 @@ allImages.forEach((src) => {
   img.src = src;
   slider.appendChild(img);
 });
-
