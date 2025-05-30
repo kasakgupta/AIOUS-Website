@@ -584,12 +584,11 @@ h2 {
 }
 
 /* ========== Gallery ============ */
-
-.Gallery-container {
-  padding-top: 5px;
-  margin-top: 7rem;
-}
-
-.Gallery-container h2 {
-  color: #fff;
+.Gallery-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 140px 20px 0 20px;
 }
