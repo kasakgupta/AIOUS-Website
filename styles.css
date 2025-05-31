@@ -584,11 +584,70 @@ h2 {
 }
 
 /* ========== Gallery ============ */
-.Gallery-container{
+.Gallery-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   margin: 140px 20px 0 20px;
+}
+
+.Gallery-container .heading {
+  padding-bottom: 50px;
+  color: #fff;
+  /* Add flexbox to center content horizontally */
+  display: flex;
+  justify-content: center;
+}
+
+.Gallery-container .heading h3 {
+  width: 50%;
+  font-size: 3em;
+  font-weight: bolder;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #fff;
+}
+
+.Gallery-container .heading h3 span {
+  font-weight: 100;
+  color: #22b5c8;
+}
+
+.Gallery-container .gallery-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.Gallery-container .gallery-box .Gallery-column {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.Gallery-container .gallery-box .Gallery-column img {
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+@media only screen and (max-width: 769px) {
+  .Gallery-container .gallery-box {
+    flex-direction: column;
+  }
+
+  .Gallery-container .gallery-box .Gallery-column {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 643px) {
+  .Gallery-container .heading {
+    width: 100%;
+  }
+
+  .Gallery-container .heading h3 {
+    font-size: 1em;
+  }
 }
