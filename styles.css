@@ -650,4 +650,8 @@ h2 {
   .Gallery-container .heading h3 {
     font-size: 1em;
   }
+
+  .Gallery-container{
+    margin-top: 100px;
+  }
 }
