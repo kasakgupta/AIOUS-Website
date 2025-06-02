@@ -795,6 +795,60 @@ h2 {
   top: 1210px;
 }
 
+/* Responsive Achievement */
+@media (max-width: 768px) {
+  .achievements {
+    padding: 40px 20px;
+  }
+
+  .line-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto !important;
+    position: relative;
+    gap: 30px;
+  }
+
+  /* Hide all decorative lines and circles */
+  .vertical-line,
+  .vertical-line-right,
+  .horizontal-line,
+  .horizontal-line-right,
+  .circle,
+  .circle-right {
+    display: none !important;
+  }
+
+  .achievement-box,
+  .achievement-box-right {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .achievement-box h3,
+  .achievement-box-right h3 {
+    position: static !important;
+    transform: none !important;
+    font-size: 22px;
+    margin: 10px 0;
+    text-align: left;
+  }
+
+  .achievement-box p,
+  .achievement-box-right p {
+    font-size: 16px;
+    text-align: justify;
+  }
+}
+
 /* ========== Gallery ============ */
 .Gallery-container {
   display: flex;
