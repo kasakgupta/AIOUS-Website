@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Pro Racing';
+  src: url(./fonts/ProRacing-7BZOD.otf);
+}
+
 /* ========== RESET DEFAULT STYLES ========== */
 * {
   margin: 0;
@@ -608,7 +613,7 @@ h2 {
 /* Right vertical line */
 .vertical-line-right {
   position: absolute;
-  top: 200px; /* starts lower than the left line */
+  top: 300px; /* starts lower than the left line */
   right: 100px;
   width: 5px;
   height: 1200px;
@@ -619,13 +624,13 @@ h2 {
 .horizontal-line {
   position: absolute;
   left: 105px; /* slightly offset from the vertical line */
-  width: 150px;
+  width: 120px;
   height: 5px;
   background-color: #22b5c8;
 }
 
 #Hor-line-1 {
-  top: 200px;
+  top: 120px;
 }
 #Hor-line-2 {
   top: 600px;
@@ -638,7 +643,7 @@ h2 {
 .horizontal-line-right {
   position: absolute;
   right: 105px; /* slightly offset from right vertical line */
-  width: 150px;
+  width: 120px;
   height: 5px;
   background-color: #22b5c8;
 }
@@ -655,8 +660,8 @@ h2 {
 
 .circle {
   position: absolute;
-  top: 185px;
-  left: 230px;
+  top: 108px;
+  left: 220px;
   width: 30px;
   height: 30px;
   box-sizing: border-box;
@@ -676,7 +681,7 @@ h2 {
 .circle-right {
   position: absolute;
   top: 335px;
-  right: 230px;
+  right: 220px;
   width: 30px;
   height: 30px;
   box-sizing: border-box;
@@ -691,6 +696,76 @@ h2 {
 
 #circle-6 {
   top: 1135px;
+}
+
+.achievement-box{
+ position: absolute;
+ top: 70px;
+ left: 270px;
+  max-width: 500px;
+  background: radial-gradient(
+    circle at center,
+    rgba(20, 109, 120, 0.2),
+    rgba(20, 109, 120, 0.1)
+  );
+  border: 2px solid #22b5c8;
+  padding: 30px 70px 30px 40px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Saira";
+  box-shadow: 0 0 10px rgba(34, 181, 200, 0.3);
+}
+
+.achievement-box p{
+  font-size: 22px;
+  font-weight: normal;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.achievement-box h3{
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  display: inline-block;
+  color: #e4e1e1;
+  margin-left: 450px;
+  font-size: 30px;
+  font-family: 'Pro Racing' , sans-serif;
+}
+
+.achievement-box-right{
+position: absolute;
+ top: 300px;
+ right: 270px;
+  max-width: 500px;
+  background: radial-gradient(
+    circle at center,
+    rgba(20, 109, 120, 0.2),
+    rgba(20, 109, 120, 0.1)
+  );
+  border: 2px solid #22b5c8;
+  padding: 30px 40px 30px 70px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Saira";
+  box-shadow: 0 0 10px rgba(34, 181, 200, 0.3);
+}
+
+.achievement-box-right p{
+  font-size: 22px;
+  font-weight: normal;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.achievement-box-right h3{
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  display: inline-block;
+  color: #e4e1e1;
+  margin-right: 600px;
+  font-size: 30px;
+  font-family: 'Pro Racing' , sans-serif;
 }
 
 /* ========== Gallery ============ */
