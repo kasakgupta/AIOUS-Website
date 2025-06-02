@@ -583,44 +583,115 @@ h2 {
   }
 }
 
-/* Achievements */
+/* ========= Achievements ========= */
 
 .achievements {
   padding: 50px 100px;
 }
 
-/* Wrap both lines in a flex container */
+/* Container */
 .line-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  height: 1600px; /* adjust this as needed */
   position: relative;
+  height: 1500px;
 }
 
-/* Common vertical line styles */
+/* Left vertical line */
 .vertical-line {
-  margin-top: 50px;
+  position: absolute;
+  top: 50px;
+  left: 100px;
   width: 5px;
-  height: 1300px;
+  height: 1200px;
   background-color: #22b5c8;
 }
 
-/* Right line starts lower */
-#line-2 {
-  margin-top: 200px; /* creates the gap from top */
+/* Right vertical line */
+.vertical-line-right {
+  position: absolute;
+  top: 200px; /* starts lower than the left line */
+  right: 100px;
+  width: 5px;
+  height: 1200px;
+  background-color: #22b5c8;
 }
 
-.horizontal-line{
-  margin-top: 70px;
-  width: 80px;
-  background-color: #22b5c8;
+/* Horizontal lines (left side) */
+.horizontal-line {
+  position: absolute;
+  left: 105px; /* slightly offset from the vertical line */
+  width: 150px;
   height: 5px;
-  padding-left: 0px;
-  margin-left: 0px;
+  background-color: #22b5c8;
 }
 
+#Hor-line-1 {
+  top: 200px;
+}
+#Hor-line-2 {
+  top: 600px;
+}
+#Hor-line-3 {
+  top: 1000px;
+}
 
+/* Horizontal lines (right side) */
+.horizontal-line-right {
+  position: absolute;
+  right: 105px; /* slightly offset from right vertical line */
+  width: 150px;
+  height: 5px;
+  background-color: #22b5c8;
+}
+
+#Hor-line-4 {
+  top: 350px;
+}
+#Hor-line-5 {
+  top: 750px;
+}
+#Hor-line-6 {
+  top: 1150px;
+}
+
+.circle {
+  position: absolute;
+  top: 185px;
+  left: 230px;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #2d2d2d;
+  border: 5px solid #22b5c8;
+}
+
+#circle-2 {
+  top: 585px;
+}
+
+#circle-3 {
+  top: 985px;
+}
+
+.circle-right {
+  position: absolute;
+  top: 335px;
+  right: 230px;
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: #2d2d2d;
+  border: 5px solid #22b5c8;
+}
+
+#circle-5 {
+  top: 735px;
+}
+
+#circle-6 {
+  top: 1135px;
+}
 
 /* ========== Gallery ============ */
 .Gallery-container {
@@ -690,7 +761,7 @@ h2 {
     font-size: 1em;
   }
 
-  .Gallery-container{
+  .Gallery-container {
     margin-top: 100px;
   }
 }
