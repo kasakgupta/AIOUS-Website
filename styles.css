@@ -583,6 +583,45 @@ h2 {
   }
 }
 
+/* Achievements */
+
+.achievements {
+  padding: 50px 100px;
+}
+
+/* Wrap both lines in a flex container */
+.line-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 1600px; /* adjust this as needed */
+  position: relative;
+}
+
+/* Common vertical line styles */
+.vertical-line {
+  margin-top: 50px;
+  width: 5px;
+  height: 1300px;
+  background-color: #22b5c8;
+}
+
+/* Right line starts lower */
+#line-2 {
+  margin-top: 200px; /* creates the gap from top */
+}
+
+.horizontal-line{
+  margin-top: 70px;
+  width: 80px;
+  background-color: #22b5c8;
+  height: 5px;
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+
+
 /* ========== Gallery ============ */
 .Gallery-container {
   display: flex;
