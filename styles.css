@@ -318,6 +318,13 @@ h2 {
   flex-grow: 1;
 }
 
+/* Responsive About us */
+@media (max-width: 768px) {
+  .aboutUs {
+    padding: 30px 20px;
+  }
+}
+
 /* ========== OUR TEAM SECTION ========== */
 .team-section {
   padding: 50px 100px;
@@ -366,6 +373,40 @@ h2 {
   font-weight: 400;
   color: #f5f5dc;
 }
+
+/* Responsive Team section */
+
+@media (max-width: 768px) {
+  .team-section {
+    padding: 30px 20px;
+  }
+
+  .team-member {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding-bottom: 25px;
+  }
+
+  .team-member-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .team-member .number {
+    font-size: 1.5rem;
+  }
+
+  .team-member .name {
+    font-size: 1.3rem;
+  }
+
+  .team-member .position {
+    font-size: 1.1rem;
+  }
+}
+
 
 /* ========== SPONSORS SLIDER ========== */
 .sponsors h2 {
