@@ -452,6 +452,18 @@ h2 {
   }
 }
 
+/* Responsive Sponsor Section */
+@media (max-width: 768px) {
+  .sponsors h2 {
+    padding: 30px 20px;
+  }
+
+  .slider img {
+  width: 150px;
+  height: 130px;
+}
+}
+
 /* department and footer section css */
 
 .departments-section {
