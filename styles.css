@@ -1231,33 +1231,43 @@ h2 {
     margin: 0;
   }
 }
-/* css for team page */
+/* ========== Team Page ========= */
 
-.team-section {
-  padding: 140px 20px;
-  text-align: center;
+.teamPage-section {
+  padding: 120px 0 20px 100px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.team-section h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 40px;
+.teamPage-section h2 {
+  font-family: "Electric Formula", sans-serif;
+  font-size: 35px;
   color: #f5f5dc;
-  text-align: center;
-  font-weight: 600;
+  font-weight: normal;
+  padding-left: 10px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-align: left;
 }
 
 .team-description {
   max-width: 800px;
-  margin: 10px auto 40px;
+  margin-bottom: 40px;
   font-size: 15px;
+  font-family: 'Saira' , sans-serif;
   color: #ccc;
 }
 
 .team-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-  justify-items: center;
+   display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 100px;
 }
 
 .team-card {
