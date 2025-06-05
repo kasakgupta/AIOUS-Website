@@ -311,11 +311,13 @@ h2 {
 }
 
 .aboutUs-box p {
+  max-width: 800px;
+  margin-bottom: 40px;
   font-size: 20px;
-  line-height: 1.5;
-  margin: 0;
-  padding: 5px;
-  flex-grow: 1;
+  font-family: "Saira", sans-serif;
+  color: #fff4e1;
+  line-height: 35px;
+  font-weight: 200;
 }
 
 /* Responsive About us */
@@ -407,7 +409,6 @@ h2 {
   }
 }
 
-
 /* ========== SPONSORS SLIDER ========== */
 .sponsors h2 {
   padding: 50px 100px 50px;
@@ -459,9 +460,9 @@ h2 {
   }
 
   .slider img {
-  width: 150px;
-  height: 130px;
-}
+    width: 150px;
+    height: 130px;
+  }
 }
 
 /* department and footer section css */
@@ -622,14 +623,13 @@ h2 {
   font-size: 14px;
 }
 
-.footer h1{
-  font-family: 'Pro Racing', sans-serif;
+.footer h1 {
+  font-family: "Pro Racing", sans-serif;
 }
 
 .social-icons img {
   width: 20px;
   margin-left: 15px;
-  
 }
 
 /* Responsive */
@@ -841,11 +841,11 @@ h2 {
   font-family: "Pro Racing", sans-serif;
 }
 
-#box-5{
+#box-5 {
   top: 750px;
 }
 
-#box-6{
+#box-6 {
   top: 1210px;
 }
 
@@ -887,11 +887,11 @@ h2 {
     box-sizing: border-box;
   }
 
-  .achievement-box{
+  .achievement-box {
     margin-right: 25px;
   }
 
-  .achievement-box-right{
+  .achievement-box-right {
     margin-left: 25px;
   }
 
@@ -989,7 +989,7 @@ h2 {
   color: #eaeaea;
   padding-top: 120px;
   padding-bottom: 20px;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .contact-container {
@@ -1130,23 +1130,23 @@ h2 {
   max-width: 300px;
   border-radius: 8px;
 }
-.map iframe{
+.map iframe {
   width: 450px;
   height: 250px;
   border-radius: 8px;
 }
 /* email section in get in touch section */
 .email-signup {
-  color:black;
+  color: black;
   padding: 20px 10px;
   text-align: left;
 }
-.signup-container p2{
-  color:black;
+.signup-container p2 {
+  color: black;
   text-align: left;
   font-weight: 600;
   font-size: 30px;
-  font-family:"Electrical Formula", sans-serif ;
+  font-family: "Electrical Formula", sans-serif;
 }
 
 .signup-container {
@@ -1166,7 +1166,6 @@ h2 {
   border: none;
   border-radius: 4px;
   width: 100%;
-  
 }
 
 .signup-form button {
@@ -1191,7 +1190,8 @@ h2 {
     padding: 0 20px;
   }
 
-  .contact-form, .contact-detailss {
+  .contact-form,
+  .contact-detailss {
     width: 100%;
   }
 
@@ -1262,8 +1262,8 @@ h2 {
   text-align: left;
 }
 
-.teamPage-section h5{
-  font-family: 'Saira' , sans-serif;
+.teamPage-section h5 {
+  font-family: "Saira", sans-serif;
   font-size: 20px;
   color: #fff4e1;
   font-weight: 400;
@@ -1273,14 +1273,14 @@ h2 {
   max-width: 800px;
   margin-bottom: 40px;
   font-size: 20px;
-  font-family: 'Saira' , sans-serif;
+  font-family: "Saira", sans-serif;
   color: #fff4e1;
   line-height: 35px;
   font-weight: 200;
 }
 
 .team-container {
-   display: flex;
+  display: flex;
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
@@ -1298,8 +1298,8 @@ h2 {
   text-align: center;
   color: #fff;
 }
-.team-card:hover{
-   transform: scale(1.03);
+.team-card:hover {
+  transform: scale(1.03);
 }
 
 .image-placeholder {
@@ -1330,9 +1330,9 @@ h2 {
   font-size: 30px;
   transition: color 0.3s;
 }
-.social-icons img{
+.social-icons img {
   height: 30px;
-  width: 30px
+  width: 30px;
 }
 
 .social-icons a:hover {
@@ -1340,37 +1340,37 @@ h2 {
 }
 
 /* =========== SPONSOR PAGE ========= */
-.sponsorPageContainer{
+.sponsorPageContainer {
   padding: 100px 0 20px 100px;
   margin: 20px;
 }
 
-.sponsorPageContainer h2{
+.sponsorPageContainer h2 {
   font-family: "Electric Formula", sans-serif;
   font-size: 35px;
   color: #f5f5dc;
   font-weight: normal;
   padding-left: 10px;
   margin-top: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   letter-spacing: 2px;
   text-align: left;
 }
 
-.sponsorPageContainer p{
-   max-width: 800px;
+.sponsorPageContainer p {
+  max-width: 800px;
   margin-bottom: 40px;
   font-size: 20px;
-  font-family: 'Saira' , sans-serif;
+  font-family: "Saira", sans-serif;
   color: #fff4e1;
   line-height: 35px;
   font-weight: 200;
 }
 
-.sponsor-box{
+.sponsor-box {
   width: 1111px;
   height: 435px;
-    background: radial-gradient(
+  background: radial-gradient(
     circle at center,
     rgba(20, 109, 120, 0.2),
     rgba(20, 109, 120, 0.1)
