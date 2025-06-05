@@ -1338,3 +1338,44 @@ h2 {
 .social-icons a:hover {
   color: #8a4fff;
 }
+
+/* =========== SPONSOR PAGE ========= */
+.sponsorPageContainer{
+  padding: 100px 0 20px 100px;
+  margin: 20px;
+}
+
+.sponsorPageContainer h2{
+  font-family: "Electric Formula", sans-serif;
+  font-size: 35px;
+  color: #f5f5dc;
+  font-weight: normal;
+  padding-left: 10px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.sponsorPageContainer p{
+   max-width: 800px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-family: 'Saira' , sans-serif;
+  color: #fff4e1;
+  line-height: 35px;
+  font-weight: 200;
+}
+
+.sponsor-box{
+  width: 1111px;
+  height: 435px;
+    background: radial-gradient(
+    circle at center,
+    rgba(20, 109, 120, 0.2),
+    rgba(20, 109, 120, 0.1)
+  );
+  border: 2px solid #22b5c8;
+  margin: 20px;
+  border-radius: 10px;
+}
