@@ -1379,3 +1379,13 @@ h2 {
   margin: 20px;
   border-radius: 10px;
 }
+
+.sponsor-box p{
+    max-width: 800px;
+  margin: 40px;
+  font-size: 20px;
+  font-family: "Saira", sans-serif;
+  color: #fff4e1;
+  line-height: 35px;
+  font-weight: 200;
+}
