@@ -1426,4 +1426,64 @@ h2 {
   padding-right: 40px;
 }
 
+/* Responsive Sponsor Page */
+@media (max-width: 992px) {
+  .sponsorPageContainer {
+    padding: 60px 20px;
+    margin: 10px;
+  }
+
+  .sponsor-box {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    padding: 30px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sponsor-text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .sponsor-text p {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    padding: 0 10px;
+  }
+
+  .sponsor-image {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .sponsor-image img {
+    max-width: 80%;
+    height: auto;
+    padding-right: 0;
+  }
+
+  .sponsor-text img {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .sponsorPageContainer h2 {
+    font-size: 28px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  .sponsorPageContainer p {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+  }
+}
 
