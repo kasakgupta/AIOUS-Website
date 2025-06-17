@@ -65,3 +65,53 @@ allImages.forEach((src) => {
   img.src = src;
   slider.appendChild(img);
 });
+
+
+// lift appearance
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          } else {
+            entry.target.classList.remove("visible"); // optional: remove if you want it to repeat
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    const elementsToAnimate = document.querySelectorAll(
+      ".team-section, .team-member,.aboutUs, .aboutUs-box, .aboutUs h4, .sponsors, .sponsor-box, .achievements, .achievement-box, .achievement-box-right, .departments-section, .department-card"
+    );
+
+    elementsToAnimate.forEach((el) => {
+      el.classList.add("fade-in-up");
+      observer.observe(el);
+    });
+
+    // Inject CSS
+    const style = document.createElement("style");
+    style.innerHTML = `
+      .fade-in-up {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 1.2s ease, transform 1.2s ease;
+      }
+      .fade-in-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    `;
+    document.head.appendChild(style);
+  });
+
+
+
+
+
+
