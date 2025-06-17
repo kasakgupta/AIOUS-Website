@@ -411,7 +411,7 @@ h2 {
 
 /* ========== SPONSORS SLIDER ========== */
 .sponsors h2 {
-  padding: 50px 100px 50px;
+  padding: 50px 120px 50px;
 }
 
 .slider-container {
@@ -456,7 +456,7 @@ h2 {
 /* Responsive Sponsor Section */
 @media (max-width: 768px) {
   .sponsors h2 {
-    padding: 30px 20px;
+    padding: 30px 40px;
   }
 
   .slider img {
@@ -468,13 +468,13 @@ h2 {
 /* department and footer section css */
 
 .departments-section {
-  padding: 50px 20px;
+  padding: 50px 100px;
   text-align: center;
 }
 
-.departments-section h2 {
+/* .departments-section h2 {
   padding: 50px 100px 50px;
-}
+} */
 .departments-grid {
   display: grid;
   grid-template-columns: 1fr;
