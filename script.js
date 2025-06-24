@@ -65,3 +65,16 @@ allImages.forEach((src) => {
   img.src = src;
   slider.appendChild(img);
 });
+
+  if (window.innerWidth <= 768) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const members = document.querySelectorAll('.team-member');
+    members.forEach(member => observer.observe(member));
+  }

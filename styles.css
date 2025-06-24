@@ -1231,8 +1231,7 @@ h2 {
     margin: 0;
   }
 }
-/* css for team page */
-
+//* team page styling */
 .team-section {
   padding: 140px 20px;
   text-align: center;
@@ -1242,8 +1241,10 @@ h2 {
   font-family: 'Orbitron', sans-serif;
   font-size: 40px;
   color: #f5f5dc;
-  text-align: center;
   font-weight: 600;
+  margin-top: 60px;
+  text-align: center;
+  
 }
 
 .team-description {
@@ -1251,13 +1252,16 @@ h2 {
   margin: 10px auto 40px;
   font-size: 15px;
   color: #ccc;
+  text-align: center;
 }
 
 .team-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
-  justify-items: center;
+  margin: 0 auto 40px;
+  padding: 0 20px;
+  max-width: 1200px;
 }
 
 .team-card {
@@ -1265,12 +1269,15 @@ h2 {
   border: 1px solid #8a4fff;
   border-radius: 10px;
   padding: 20px;
-  width: 220px;
+  width: 100%;
+  max-width: 220px;
   text-align: center;
   color: #fff;
+  transition: transform 0.3s ease;
 }
-.team-card:hover{
-   transform: scale(1.03);
+
+.team-card:hover {
+  transform: scale(1.03);
 }
 
 .image-placeholder {
@@ -1301,4 +1308,77 @@ h2 {
 
 .social-icons a:hover {
   color: #8a4fff;
+}
+
+/* content area in team section */
+.content-area {
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.content-area h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #f5f5dc; /* or any light color that contrasts the background */
+  font-size: 45px;
+  font-weight: 600;
+
+}
+
+.content-area h4 {
+  color: rgb(248, 231, 231);
+}
+
+.content-area p {
+  color: rgb(172, 169, 169);
+  font-weight: lighter;
+}
+
+.cont {
+  margin-top: 40px;
+}
+
+
+/* ✅ Media Query Fixes */
+@media (max-width: 768px) {
+  .team-section {
+    padding: 80px 10px;
+  }
+
+  .team-section h2 {
+    font-size: 30px;
+  }
+    .team-member {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translateY(20px);
+  }
+
+  .team-member.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+
+  .team-container {
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .team-card {
+    max-width: 100%;
+  }
+
+  .content-area h2 {
+    font-size: 32px;
+  }
+
+  .content-area {
+    padding: 0 10px;
+  }
+
+  .cont {
+    padding: 10px 0;
+  }
 }
