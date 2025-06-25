@@ -638,7 +638,7 @@ h2 {
 .social-icons img {
  max-width:25px;
  max-height: 25px;
-  margin-left: 5px;
+ margin-left: 30px;
 }
 
 /* Responsive */ 
@@ -1333,14 +1333,14 @@ h2 {
 }
 
 
-.social-icons img {
+.socialIcons img {
   margin: 20px;
   height: 35px;
   width: 35px;
   transition: transform 0.3s ease;
 }
 
-.social-icons img:hover {
+.socialIcons img:hover {
   transform: scale(1.1);
 }
 
