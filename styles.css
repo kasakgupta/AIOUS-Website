@@ -632,8 +632,8 @@ h2 {
   margin-left: 15px;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive */ 
+ @media (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: flex-start;
@@ -648,7 +648,7 @@ h2 {
   .social-icons {
     margin-top: 10px;
   }
-}
+} 
 
 /* ========= Achievements ========= */
 
@@ -1239,33 +1239,38 @@ h2 {
     margin: 0;
   }
 }
-/* css for team page */
-
-.team-section {
-  padding: 140px 20px;
+/* Team Section */
+.teamPage-section {
+  padding: 80px 40px 40px;
   text-align: center;
 }
 
 .teamPage-section h2 {
-  font-family: "Electric Formula", sans-serif;
-  font-size: 35px;
-  color: #f5f5dc;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 36px;
+   color: #b98cff;
+  text-transform: uppercase;
+  margin-top: 55px;
   text-align: center;
-  font-weight: 600;
+
+  
 }
 
 .team-description {
   max-width: 800px;
-  margin: 10px auto 40px;
+  margin: 0 auto 50px;
   font-size: 15px;
   color: #ccc;
+  line-height: 1.6;
 }
 
+/* Team Cards */
 .team-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   justify-items: center;
+  padding: 0 20px;
 }
 
 .team-card {
@@ -1273,21 +1278,25 @@ h2 {
   border: 1px solid #b98cff;
   border-radius: 10px;
   padding: 20px;
-  width: 220px;
+  width: 100%;
+  max-width: 210px;
   text-align: center;
   color: #fff;
   transition: transform 0.3s ease;
 }
-.team-card:hover{
-   transform: scale(1.03);
+
+.team-card:hover {
+  transform: scale(1.03);
 }
 
+/* Image */
 .image-placeholder {
-  width: 180px;
-  height: 180px;
+  width: 110px;
+  height: 110px;
   background-color: #aaa;
   border-radius: 50%;
-  margin: 0 auto 20px;
+  margin: 0 auto 15px;
+  overflow: hidden;
 }
 
 .image-placeholder img {
@@ -1295,34 +1304,87 @@ h2 {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  display: block;
 }
 
+/* Card Text */
 .team-card h3 {
   color: #b98cff;
   margin: 10px 0 5px;
-  font-size: 35px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: 500;
 }
 
 .team-card p {
   margin: 0 0 10px;
-  font-size: 30px;
-  font-weight: 300;
+  font-size: 14px;
   color: #ccc;
 }
 
+/* Social Icons */
 .social-icons a {
-  color: #ccc;
-  margin: 0 5px;
-  font-size: 30px;
-  transition: color 0.3s;
-}
-.social-icons img {
-  height: 30px;
-  width: 30px;
+  margin: 0 4px;
 }
 
-.social-icons a:hover {
-  color: #8a4fff;
+.social-icons img {
+  height: 22px;
+  width: 22px;
+  transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .team-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-container {
+    grid-template-columns: 1fr;
+  }
+  .teamPage-section h2 {
+    font-size: 26px;
+  }
+}
+
+/* About, Aim, Vision Section */
+.content-area {
+  padding: 40px 20px;
+  background-color: rgba(36, 36, 36, 1);
+}
+
+.discreption {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.cont h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  color: #f5f5dc;
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.cont h4 {
+  font-weight: bold;
+  font-size: 16px;
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.cont p {
+  font-size: 14px;
+  color: #ccc;
+  text-align: left;
+  line-height: 1.6;
 }
