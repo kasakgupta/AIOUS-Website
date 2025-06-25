@@ -550,6 +550,8 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ================ Footer ================== */
 .footer {
   background-color: rgba(28, 216, 241, 1);
   color: #000;
@@ -617,7 +619,7 @@ h2 {
   align-items: center;
   flex-wrap: wrap;
   max-width: 100%;
-  margin: 30px auto 0;
+  margin: 20px auto 0;
   padding-top: 20px;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 14px;
@@ -627,9 +629,16 @@ h2 {
   font-family: "Pro Racing", sans-serif;
 }
 
+.social-icons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .social-icons img {
-  width: 20px;
-  margin-left: 15px;
+ max-width:25px;
+ max-height: 25px;
+  margin-left: 5px;
 }
 
 /* Responsive */ 
@@ -1239,47 +1248,52 @@ h2 {
     margin: 0;
   }
 }
-/* Team Section */
+
+/* ============== Team Section =============== */
 .teamPage-section {
-  padding: 80px 40px 40px;
-  text-align: center;
+  padding: 100px 0 20px 100px;
+  margin: 20px;
 }
 
-.teamPage-section h2 {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 36px;
-   color: #b98cff;
-  text-transform: uppercase;
-  margin-top: 55px;
-  text-align: center;
-
-  
+.teamPage-section h2{
+   font-family: "Electric Formula", sans-serif;
+  font-size: 35px;
+  color: #f5f5dc;
+  font-weight: normal;
+  padding-left: 10px;
+  margin-top: 60px;
+  margin-bottom: 35px;
+  letter-spacing: 2px;
+  text-align: left;
 }
 
-.team-description {
-  max-width: 800px;
-  margin: 0 auto 50px;
-  font-size: 15px;
-  color: #ccc;
-  line-height: 1.6;
+.team-description{
+ max-width: 800px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-family: "Saira", sans-serif;
+  color: #fff4e1;
+  line-height: 35px;
+  font-weight: 200;
 }
 
 /* Team Cards */
 .team-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
   justify-items: center;
   padding: 0 20px;
 }
 
 .team-card {
+  padding-top: 20px;
   background: radial-gradient(circle at center, #351c6a 30%, #0c0c0c 100%);
   border: 1px solid #b98cff;
   border-radius: 10px;
   padding: 20px;
-  width: 100%;
-  max-width: 210px;
+  width: 335px;
+  height: 442px;
   text-align: center;
   color: #fff;
   transition: transform 0.3s ease;
@@ -1289,10 +1303,9 @@ h2 {
   transform: scale(1.03);
 }
 
-/* Image */
 .image-placeholder {
-  width: 110px;
-  height: 110px;
+  width: 189px;
+  height: 189px;
   background-color: #aaa;
   border-radius: 50%;
   margin: 0 auto 15px;
@@ -1306,28 +1319,24 @@ h2 {
   border-radius: 50%;
 }
 
-/* Card Text */
 .team-card h3 {
   color: #b98cff;
   margin: 10px 0 5px;
-  font-size: 17px;
+  font-size: 30px;
   font-weight: 500;
 }
 
 .team-card p {
   margin: 0 0 10px;
-  font-size: 14px;
+  font-size: 20px;
   color: #ccc;
 }
 
-/* Social Icons */
-.social-icons a {
-  margin: 0 4px;
-}
 
 .social-icons img {
-  height: 22px;
-  width: 22px;
+  margin: 20px;
+  height: 35px;
+  width: 35px;
   transition: transform 0.3s ease;
 }
 
@@ -1335,21 +1344,96 @@ h2 {
   transform: scale(1.1);
 }
 
-/* RESPONSIVE */
 @media (max-width: 992px) {
+  .teamPage-section {
+    padding: 80px 30px 20px;
+  }
+
+  .teamPage-section h2 {
+    font-size: 30px;
+    text-align: left;
+    padding-left: 0;
+  }
+
+  .team-description {
+    font-size: 18px;
+    text-align: left;
+    line-height: 32px;
+    margin: 0 auto 30px;
+  }
+
   .team-container {
     grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .team-card {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    padding: 20px;
+  }
+
+  .image-placeholder {
+    width: 160px;
+    height: 160px;
+  }
+
+  .team-card h3 {
+    font-size: 26px;
+  }
+
+  .team-card p {
+    font-size: 18px;
+  }
+
+  .social-icons img {
+    margin: 15px;
+    height: 30px;
+    width: 30px;
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
   .team-container {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
+
   .teamPage-section h2 {
-    font-size: 26px;
+    font-size: 28px;
+  }
+
+  .team-description {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .team-card {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .image-placeholder {
+    width: 140px;
+    height: 140px;
+  }
+
+  .team-card h3 {
+    font-size: 22px;
+  }
+
+  .team-card p {
+    font-size: 16px;
+  }
+
+  .social-icons img {
+    margin: 10px;
+    height: 28px;
+    width: 28px;
   }
 }
+
 
 /* About, Aim, Vision Section */
 .content-area {
@@ -1387,4 +1471,153 @@ h2 {
   color: #ccc;
   text-align: left;
   line-height: 1.6;
+}
+
+/* ============ Sponsor Page ============ */
+
+.sponsorPageContainer {
+  padding: 100px 0 20px 100px;
+  margin: 20px;
+}
+
+.sponsorPageContainer h2 {
+  font-family: "Electric Formula", sans-serif;
+  font-size: 35px;
+  color: #f5f5dc;
+  font-weight: normal;
+  padding-left: 10px;
+  margin-top: 60px;
+  margin-bottom: 35px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.sponsorPageContainer p {
+  max-width: 800px;
+  margin-bottom: 40px;
+  font-size: 20px;
+  font-family: "Saira", sans-serif;
+  color: #fff4e1;
+  line-height: 35px;
+  font-weight: 200;
+}
+
+.sponsor-box {
+  width: 1111px;
+  height: 435px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* makes text start from top */
+  padding: 40px;
+  gap: 30px;
+  border: 2px solid #22b5c8;
+  background: radial-gradient(
+    circle at center,
+    rgba(20, 109, 120, 0.2),
+    rgba(20, 109, 120, 0.1)
+  );
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+}
+
+.sponsor-text {
+  width: 80%; /* or adjust as needed */
+  padding-left: 50px;
+  padding-right: 100px;
+}
+
+.sponsor-text p {
+  margin: 0;
+  font-size: 25px;
+  font-family: "Saira", sans-serif;
+  color: #fff4e1;
+  line-height: 40px;
+  font-weight: 200;
+  text-align: left;
+}
+
+.sponsor-text img{
+  margin-top: 60px;
+  margin-right:25px;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+.sponsor-image {
+  width: 35%;
+  display: flex;
+  align-items: center;  /* centers image vertically */
+  justify-content: center;
+  height: 100%;
+}
+
+.sponsor-image img {
+  max-height: 300px;
+  width: 395px;
+  height: 117px;
+  object-fit: contain;
+  padding-right: 40px;
+}
+
+/* ========== Responsive Sponsor ========= */
+@media (max-width: 992px) {
+  .sponsorPageContainer {
+    padding: 60px 20px;
+    margin: 10px;
+  }
+
+  .sponsor-box {
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+    padding: 30px 20px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sponsor-text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .sponsor-text p {
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    padding: 0 10px;
+  }
+
+  .sponsor-image {
+    width: 100%;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .sponsor-image img {
+    max-width: 80%;
+    height: auto;
+    padding-right: 0;
+  }
+
+  .sponsor-text img {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 35px;
+    height: 35px;
+  }
+
+  .sponsorPageContainer h2 {
+    font-size: 28px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  .sponsorPageContainer p {
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+  }
 }
