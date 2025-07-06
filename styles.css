@@ -1535,7 +1535,9 @@ h2 {
   line-height: 40px;
   font-weight: 200;
   text-align: left;
+  padding-right: 10px;
 }
+
 
 .sponsor-text img{
   margin-top: 60px;
@@ -1546,7 +1548,7 @@ h2 {
 }
 
 .sponsor-image {
-  width: 35%;
+  max-width: 35%;
   display: flex;
   align-items: center;  /* centers image vertically */
   justify-content: center;
@@ -1554,12 +1556,12 @@ h2 {
 }
 
 .sponsor-image img {
-  max-height: 300px;
-  width: 395px;
-  height: 117px;
+  width: 90%;
+  height: auto;
   object-fit: contain;
-  padding-right: 40px;
+  filter: drop-shadow(0 0 10px #ffffff9f); /* white glow around the image */
 }
+
 
 /* ========== Responsive Sponsor ========= */
 @media (max-width: 992px) {
