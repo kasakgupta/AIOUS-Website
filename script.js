@@ -53,6 +53,11 @@ const imagePaths = [
   "images/SAIL_Logo.png",
   "images/valvoline_logo.png",
   "images/wee_print_logo.png",
+  "images/lps_Bossard_Logo.png",
+  "images/aditya_constructions_logo.png",
+  "images/sona_logo.png",
+  "images/Ayurvet_logo.png",
+  "images/Siam_logo.png",
 ];
 
 const slider = document.getElementById("slider");
