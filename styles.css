@@ -443,15 +443,26 @@ h2 {
   transform: scale(1.1) rotateY(0deg);
 }
 
-/* Animation for horizontal scrolling */
+.slider {
+  animation: scroll linear infinite;
+  animation-duration: 20s; /* adjust as needed */
+  gap: 20px; /* match JS imgGap */
+}
+
 @keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--scroll-width))); }
+}
+
+/* Animation for horizontal scrolling */
+/* @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
   }
-}
+} */
 
 /* Responsive Sponsor Section */
 @media (max-width: 768px) {

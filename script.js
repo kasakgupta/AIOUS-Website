@@ -62,13 +62,23 @@ const imagePaths = [
 
 const slider = document.getElementById("slider");
 
-// Duplicate images for infinite scroll illusion
-const allImages = [...imagePaths, ...imagePaths];
+// Clear existing images
+slider.innerHTML = "";
 
-allImages.forEach((src) => {
+// Populate two sets
+const allImages = imagePaths.concat(imagePaths);
+allImages.forEach(src => {
   const img = document.createElement("img");
   img.src = src;
+  img.classList.add("slider-img");
   slider.appendChild(img);
+});
+
+window.addEventListener("load", () => {
+  const imgWidth = document.querySelector(".slider-img").getBoundingClientRect().width;
+  const imgGap = 20; // match your CSS gap
+  const totalWidth = imagePaths.length * (imgWidth + imgGap);
+  document.documentElement.style.setProperty("--scroll-width", `${totalWidth}px`);
 });
 
 // Scroll Effect
