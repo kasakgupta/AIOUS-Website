@@ -360,21 +360,39 @@ h2 {
 .team-member .number {
   font-size: 2rem;
   color: #f5f5dc;
-  font-weight: 700;
+  font-weight: 800;
   font-family: "Electrical Formula", sans-serif;
 }
 
 .team-member .name {
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #22b5c8;
 }
 
 .team-member .position {
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #f5f5dc;
 }
+
+.hidden {
+  display: none;
+}
+
+.view-more-team {
+  margin: 20px auto;
+  display: block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2d2d2d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Saira", sans-serif;
+}
+
 
 /* Responsive Team section */
 

@@ -81,6 +81,22 @@ window.addEventListener("load", () => {
   document.documentElement.style.setProperty("--scroll-width", `${totalWidth}px`);
 });
 
+//Team View More Button
+
+const toggleBtn = document.getElementById('toggleMembersBtn');
+  const extraMembers = document.querySelectorAll('.extra-member');
+  let expanded = false;
+
+  toggleBtn.addEventListener('click', () => {
+    expanded = !expanded;
+
+    extraMembers.forEach(member => {
+      member.classList.toggle('hidden', !expanded);
+    });
+
+    toggleBtn.textContent = expanded ? 'Show Less' : 'Show More';
+  });
+
 // Scroll Effect
   document.addEventListener("DOMContentLoaded", function () {
     const observer = new IntersectionObserver(
