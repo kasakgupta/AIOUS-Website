@@ -1591,11 +1591,11 @@ h2 {
   filter: drop-shadow(0 0 10px #ffffff9f); /* white glow around the image */
 }
 
-.sponsor-categor-container{
-display: grid;
+.sponsor-category-container{
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  justify-items: center;
+  justify-items: space-around;
   padding: 0 20px;}
 
 .Sponsor-category {
@@ -1641,6 +1641,43 @@ display: grid;
   font-weight: 200;
 }
 
+.title-container{
+   display: grid;
+  gap: 30px;
+}
+
+.sponsor-title{
+    flex: 1 1 280px;
+  max-width: 1200px;
+  background: radial-gradient(
+    circle at center,
+    rgba(20, 109, 120, 0.2),
+    rgba(20, 109, 120, 0.1)
+  );
+  border: 2px solid #22b5c8;
+  padding: 25px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Electric Formula", sans-serif;
+  box-shadow: 0 0 10px rgba(34, 181, 200, 0.3);
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.sponsor-title h3{
+  font-size: 22px;
+  font-weight: normal;
+  color: #fff;
+  margin-bottom: 0;
+  letter-spacing: 1px;
+  margin: 20px 40px;
+}
+
+.sponsor-title p{
+   margin: 20px;
+}
 
 /* ========== Responsive Sponsor ========= */
 @media (max-width: 992px) {
@@ -1700,5 +1737,10 @@ display: grid;
     font-size: 16px;
     line-height: 28px;
     text-align: justify;
+  }
+
+  .sponsor-category-container{
+    grid-template-columns: 1fr;
+    gap: 30px;
   }
 }
