@@ -1783,4 +1783,8 @@ h2 {
     line-height: 28px;
     text-align: justify;
   }
+
+  .sponsor-title{
+     max-width: 450px;
+  }
 }
