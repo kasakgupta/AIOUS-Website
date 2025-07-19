@@ -1770,4 +1770,17 @@ h2 {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
+  .title-container h2{
+     font-size: 28px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  .title-container p{
+    font-size: 16px;
+    line-height: 28px;
+    text-align: justify;
+  }
 }
