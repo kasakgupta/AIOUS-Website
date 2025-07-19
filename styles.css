@@ -1771,20 +1771,24 @@ h2 {
     gap: 30px;
   }
 
-  .title-container h2{
-     font-size: 28px;
+ .sponsor-title {
+    flex-direction: column;
+    padding: 20px 15px;
+    max-width: 100%;         /* 🔥 prevent overflow */
+    width: 100%;             /* take full width of container */
+    box-sizing: border-box;  /* important for padding to behave right */
+    gap: 10px;
+  }
+
+  .sponsor-title h3 {
+    font-size: 20px;
+    margin: 10px 0;
     text-align: center;
-    padding: 0;
-    margin-bottom: 25px;
   }
 
-  .title-container p{
-    font-size: 16px;
-    line-height: 28px;
-    text-align: justify;
-  }
-
-  .sponsor-title{
-     max-width: 450px;
+  .sponsor-title p {
+    font-size: 14px;
+    margin: 10px 0;
+    text-align: center;
   }
 }
