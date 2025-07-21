@@ -325,6 +325,10 @@ h2 {
   .aboutUs {
     padding: 30px 20px;
   }
+
+  .aboutUs-box p{
+    font-size: 18px;
+  }
 }
 
 /* ========== OUR TEAM SECTION ========== */
