@@ -1564,7 +1564,7 @@ h2 {
 
 .sponsor-box {
   width: 1111px;
-  height: 435px;
+  height: 470px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start; /* makes text start from top */
@@ -1589,7 +1589,7 @@ h2 {
 
 .sponsor-text p {
   margin: 0;
-  font-size: 25px;
+  font-size: 23px;
   font-family: "Saira", sans-serif;
   color: #fff4e1;
   line-height: 40px;
