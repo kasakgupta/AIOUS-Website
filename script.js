@@ -139,3 +139,31 @@ const toggleBtn = document.getElementById('toggleMembersBtn');
     document.head.appendChild(style);
   });
 
+let userIP = "";
+
+// Get IP address
+fetch("https://api.ipify.org?format=json")
+  .then(res => res.json())
+  .then(data => userIP = data.ip);
+
+document.getElementById("signupForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email").value;
+
+  // Create form data
+  const formData = new FormData();
+  formData.append("email", email);
+  formData.append("ip", userIP);
+
+  fetch("https://script.google.com/macros/s/AKfycbxoOj8th9M0oZWm-i4oHkOWiDJNQyTdrC2AfbicXYlxwz8UcaXZJHlxDGcg-KBqLm3luQ/exec", {
+    method: "POST",
+    body: formData
+  })
+  .then(() => {
+    alert("Email saved successfully!");
+    document.getElementById("signupForm").reset();
+  })
+  .catch(err => console.error(err));
+});
+
