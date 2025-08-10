@@ -1,6 +1,6 @@
 const hamburger = document.getElementById("hamburger");
 const navItems = document.querySelector(".navbar-items");
-const hero = document.getElementById("hero-section");
+// const hero = document.getElementById("hero-section");
 const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 
@@ -10,33 +10,68 @@ hamburger.addEventListener("click", () => {
 });
 
 // Background slideshow logic
-const backgrounds = [
-  "Images/hero-bg-2.jpg",
-  "Images/hero-bg-3.jpg",
-];
+const hero = document.getElementById("hero-section");
+if (hero) {
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
 
-let currentIndex = 0;
+  const backgrounds = [
+    "Images/hero-bg-2.jpg",
+    "Images/hero-bg-3.jpg",
+  ];
 
-function updateBackground() {
-  hero.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
-  hero.style.backgroundSize = "cover";
-  hero.style.backgroundPosition = "center";
-  hero.style.transition = "background-image 0.6s ease-in-out";
+  let currentIndex = 0;
+
+  function updateBackground() {
+    hero.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+    hero.style.backgroundSize = "cover";
+    hero.style.backgroundPosition = "center";
+    hero.style.transition = "background-image 0.6s ease-in-out";
+  }
+
+  updateBackground();
+
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex - 1 + backgrounds.length) % backgrounds.length;
+      updateBackground();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      currentIndex = (currentIndex + 1) % backgrounds.length;
+      updateBackground();
+    });
+  }
 }
+// const backgrounds = [
+//   "Images/hero-bg-2.jpg",
+//   "Images/hero-bg-3.jpg",
+// ];
 
-// Initial image on load
-updateBackground();
+// let currentIndex = 0;
 
-// Navigation buttons
-prevBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + backgrounds.length) % backgrounds.length;
-  updateBackground();
-});
+// function updateBackground() {
+//   hero.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+//   hero.style.backgroundSize = "cover";
+//   hero.style.backgroundPosition = "center";
+//   hero.style.transition = "background-image 0.6s ease-in-out";
+// }
 
-nextBtn.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % backgrounds.length;
-  updateBackground();
-});
+// // Initial image on load
+// updateBackground();
+
+// // Navigation buttons
+// prevBtn.addEventListener("click", () => {
+//   currentIndex = (currentIndex - 1 + backgrounds.length) % backgrounds.length;
+//   updateBackground();
+// });
+
+// nextBtn.addEventListener("click", () => {
+//   currentIndex = (currentIndex + 1) % backgrounds.length;
+//   updateBackground();
+// });
 
 // Sponsors carousel
 const imagePaths = [
@@ -60,25 +95,26 @@ const imagePaths = [
 ];
 
 const slider = document.getElementById("slider");
+if (slider) {
+  // Clear existing images
+  slider.innerHTML = "";
 
-// Clear existing images
-slider.innerHTML = "";
+  // Populate two sets
+  const allImages = imagePaths.concat(imagePaths);
+  allImages.forEach(src => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.classList.add("slider-img");
+    slider.appendChild(img);
+  });
 
-// Populate two sets
-const allImages = imagePaths.concat(imagePaths);
-allImages.forEach(src => {
-  const img = document.createElement("img");
-  img.src = src;
-  img.classList.add("slider-img");
-  slider.appendChild(img);
-});
-
-window.addEventListener("load", () => {
-  const imgWidth = document.querySelector(".slider-img").getBoundingClientRect().width;
-  const imgGap = 20; // match your CSS gap
-  const totalWidth = imagePaths.length * (imgWidth + imgGap);
-  document.documentElement.style.setProperty("--scroll-width", `${totalWidth}px`);
-});
+  window.addEventListener("load", () => {
+    const imgWidth = document.querySelector(".slider-img").getBoundingClientRect().width;
+    const imgGap = 20; // match your CSS gap
+    const totalWidth = imagePaths.length * (imgWidth + imgGap);
+    document.documentElement.style.setProperty("--scroll-width", `${totalWidth}px`);
+  });
+}
 
 //Team View More Button
 
@@ -166,3 +202,53 @@ document.getElementById("signupForm").addEventListener("submit", function(e) {
   .catch(err => console.error(err));
 });
 
+// ======================
+// Contact Form Submission
+// ======================
+const contactForm = document.getElementById("contactForm");
+
+if (contactForm) {
+  let contactUserIP = "";
+
+  fetch("https://api.ipify.org?format=json")
+    .then(res => res.json())
+    .then(data => contactUserIP = data.ip);
+
+  contactForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const formData = new FormData();
+    formData.append("fullname", document.getElementById("fullname").value);
+    formData.append("email", document.getElementById("email").value);
+    formData.append("phone", document.getElementById("phone").value);
+    formData.append("message", document.getElementById("message").value);
+    formData.append("ip", contactUserIP);
+
+    fetch("https://script.google.com/macros/s/AKfycbwjRCm2gqwRjHkmADjk3hH4KlhPQ29wU1GwCoH9zRv0bSHBQnPN7bjbdXagtGV6pfNZAA/exec", {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.text())
+    .then(text => {
+      let response;
+      try {
+        response = JSON.parse(text);
+      } catch {
+        alert("❌ Server returned invalid response.");
+        return;
+      }
+
+      if (response.status === "success") {
+        alert("✅ Message sent successfully!");
+        contactForm.reset();
+      } else if (response.status === "duplicate") {
+        alert("⚠️ You have already sent this exact message.");
+      } else {
+        alert("❌ Something went wrong.");
+      }
+    })
+    .catch(() => {
+      alert("❌ Could not send message. Check connection.");
+    });
+  });
+}

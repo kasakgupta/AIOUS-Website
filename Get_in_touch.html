@@ -35,14 +35,12 @@
       <h2>GET IN TOUCH</h2>
       <p>FILL IN THE DETAILS BELOW, AND OUR TEAM WILL GET BACK TO YOU.</p>
 
-      <form>
-        <input type="text" placeholder="Full Name" required />
-        <input type="email" placeholder="Email Address" required />
-        <input type="tel" placeholder="Phone Number" required />
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit" class="submit-btn">
-          Submit <span>&rarr;</span>
-        </button>
+      <form id="contactForm">
+  <input type="text" id="fullname" placeholder="Full Name" required />
+  <input type="email" id="email" placeholder="Email Address" required />
+  <input type="tel" id="phone" placeholder="Phone Number" required />
+  <textarea id="message" placeholder="Your Message" required></textarea>
+  <button type="submit" class="submit-btn">Submit →</button>
       </form>
 
       <div class="brochure-links">
@@ -87,8 +85,8 @@
   <div class="signup-container">
     <p2>Stay Updated</p2>
     <p>Enter your email to receive the latest updates.</p>
-    <form action="#" method="post" class="signup-form">
-      <input type="email" placeholder="Enter your email here" required>
+    <form id="signupForm" class="signup-form">
+      <input type="email" id="email" name="email" placeholder="Enter your email here" required>
       <button type="submit">Sign Up</button>
     </form>
   </div>
