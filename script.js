@@ -11,7 +11,6 @@ hamburger.addEventListener("click", () => {
 
 // Background slideshow logic
 const backgrounds = [
-  "Images/background image.png",
   "Images/hero-bg-2.jpg",
   "Images/hero-bg-3.jpg",
 ];
