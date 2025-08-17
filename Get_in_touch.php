@@ -1,3 +1,60 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/Exception.php';
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+
+// If form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Collect form data
+    $name    = $_POST['name'];
+    $email   = $_POST['email'];
+    $tel     = $_POST['tel'];
+    $message = $_POST['message'];
+
+    $mail = new PHPMailer(true);
+
+    try {
+        //Server settings
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.gmail.com';
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'kasakgupta0507@gmail.com';  // your gmail
+        $mail->Password   = 'mnrj llcw dlty nrrx';       // Gmail app password
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;
+
+        //Recipients
+        $mail->setFrom('kasakgupta0507@gmail.com', 'Get In Touch');
+        $mail->addAddress('kasak005btit24@igdtuw.ac.in', 'AIOUS Website');
+
+        //Content
+        $mail->isHTML(true);
+        $mail->Subject = 'New Contact Form Submission';
+        $mail->Body    = "
+            <h2>New Message from Website Contact Form</h2>
+            <p><strong>Name:</strong> {$name}</p>
+            <p><strong>Email:</strong> {$email}</p>
+            <p><strong>Phone:</strong> {$tel}</p>
+            <p><strong>Message:</strong><br>{$message}</p>
+        ";
+
+        $mail->send();
+
+        // Redirect with success
+        header("Location: Get_in_touch.php?status=success");
+        exit();
+    } catch (Exception $e) {
+        // Redirect with error
+        header("Location: Get_in_touch.php?status=error");
+        exit();
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,7 +92,14 @@
       <h2>GET IN TOUCH</h2>
       <p>FILL IN THE DETAILS BELOW, AND OUR TEAM WILL GET BACK TO YOU.</p>
 
-      <form id="contactForm" action="" method = "post"> 
+      <?php if (isset($_GET['status']) && $_GET['status'] == 'success'): ?>
+    <div class="success">Message sent successfully!</div>
+<?php elseif (isset($_GET['status']) && $_GET['status'] == 'error'): ?>
+    <div class="alert">Oops! Something went wrong. Try again.</div>
+<?php endif; ?>
+
+
+      <form id="contactForm" action="Get_in_touch.php" method = "post"> 
   <input type="text" name = "name" id="fullname" placeholder="Full Name" required />
   <input type="email" name = "email" id="email" placeholder="Email Address" required />
   <input type="tel" name = "tel" id="phone" placeholder="Phone Number" required />
@@ -129,63 +193,3 @@
 </body>
 </html>
 
-<?php
-
-
-    //Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-  if(isset($_POST['submit'])){
-
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $tel = $_POST['tel'];
-    $message = $_POST['message'];
-
-
-//Load Composer's autoloader (created by composer, not included with PHPMailer)
-require 'PHPMailer/Exception.php';
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/SMTP.php';
-
-//Create an instance; passing `true` enables exceptions
-$mail = new PHPMailer(true);
-
-try {
-    //Server settings
-    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'kasakgupta0507@gmail.com';                     //SMTP username
-    $mail->Password   = 'mnrj llcw dlty nrrx';                               //SMTP password
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-    $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
-    //Recipients
-    $mail->setFrom('kasakgupta0507@gmail.com', 'Get In Touch');
-    $mail->addAddress('kasak005btit24@igdtuw.ac.in', 'AIOUS Website');     //Add a recipient
-    // $mail->addAddress('ellen@example.com');               //Name is optional
-    // $mail->addReplyTo('info@example.com', 'Information');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
-
-    //Attachments
-    // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
-
-    //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Test';
-    $mail->Body    = "Sender Name - $name <br> Sender Email - $email <br> Sender PhoneNo. - $tel <br> message - $message";
-
-    $mail->send();
-    echo "<div class = 'success'> Message Has Been Sent!</div>";
-} catch (Exception $e) {
-    echo "<div class = 'alert'> Message Not Sent!</div>";
-}
-  }
-?>
