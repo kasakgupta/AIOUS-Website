@@ -116,21 +116,25 @@ if (slider) {
   });
 }
 
-//Team View More Button
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".carousel-track");
+  const slides = document.querySelectorAll(".carousel-track img");
 
-const toggleBtn = document.getElementById('toggleMembersBtn');
-  const extraMembers = document.querySelectorAll('.extra-member');
-  let expanded = false;
+  if (!track || slides.length === 0) return; // safety check
 
-  toggleBtn.addEventListener('click', () => {
-    expanded = !expanded;
+  let currentIndex = 0;
 
-    extraMembers.forEach(member => {
-      member.classList.toggle('hidden', !expanded);
-    });
+  function updateCarousel() {
+    track.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
 
-    toggleBtn.textContent = expanded ? 'Show Less' : 'Show More';
-  });
+  // Auto-slide every 3 seconds
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    updateCarousel();
+  }, 3000);
+});
+
 
 // Scroll Effect
   document.addEventListener("DOMContentLoaded", function () {
@@ -150,7 +154,7 @@ const toggleBtn = document.getElementById('toggleMembersBtn');
     );
 
     const elementsToAnimate = document.querySelectorAll(
-      ".sponsors, .aboutUs, .team-section, .team-member, .aboutUs-box, .sponsor-box, .departments-section, .department-card,.achievements, .achievement-box, .achievement-box-right"
+      ".sponsors, .aboutUs, .team-section, .team-member, .aboutUs-box, .sponsor-box, .departments-section, .department-card,.achievements, .achievement-box, .achievement-box-right, .abt-ig , .team-carousel"
     );
 
     elementsToAnimate.forEach((el) => {
