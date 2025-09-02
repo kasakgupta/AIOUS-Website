@@ -65,25 +65,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 <body>
     <!-- =============== NAVBAR SECTION =============== -->
-    <nav class="navbar">
-      <div class="navbar-container">
-        <!-- Website Logo -->
-        <img class="logo" src="Images/AIOUS Logo.png" alt="AIOUS Logo" />
+  <nav class="navbar">
+    <div class="navbar-container">
+      <!-- Website Logo -->
+      <img class="logo" src="Images/AIOUS Logo.png" alt="AIOUS Logo" />
 
-        <!-- Hamburger icon for mobile view -->
-        <div class="hamburger" id="hamburger">&#9776;</div>
+      <!-- Hamburger icon for mobile view -->
+      <div class="hamburger" id="hamburger">&#9776;</div>
 
-        <!-- Navigation links -->
-        <ul class="navbar-items" id="navbar-items">
-          <li><a href="index.html">Formula Student</a></li>
-          <li><a href="Gallery.html">Gallery</a></li>
-          <li><a href="Team_Page.html">Team</a></li>
-          <li><a href="#">CrowdFunding</a></li>
-          <li><a href="SponsorPage.html">Sponsorship</a></li>
-          <li><a href="Get_in_touch.html">Contact Us</a></li>
-        </ul>
-      </div>
-    </nav>    
+      <!-- Navigation links -->
+      <ul class="navbar-items" id="navbar-items">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Team_Page.html">Team</a></li>
+        <li><a href="#">Achievements</a></li>
+        <li><a href="studentformula.html">Formula Student</a></li>
+        <li><a href="SponsorPage.html">Sponsors</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="#">Support Us</a></li>
+        <li><a href="Get_in_touch.php">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
 <!-- contact section    -->
 <section class="contact-sectionn" id="contact">
   <div class="contact-container">
