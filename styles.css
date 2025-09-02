@@ -836,8 +836,8 @@ ul li {
 
 /* ================ Footer ================== */
 .footer {
-  background-color: rgba(28, 216, 241, 1);
-  color: #000;
+  background-color: #005A67;
+  color: #FFF4E1;
   padding: 40px 20px 10px;
 }
 
@@ -881,7 +881,7 @@ ul li {
 
 .quick-links ul li a {
   text-decoration: none;
-  color: #000;
+  color: #FFF4E1;;
 }
 
 .contact-section p {
@@ -1429,12 +1429,12 @@ ul li {
 }
 /* email section in get in touch section */
 .email-signup {
-  color: black;
+  color: #FFF4E1;
   padding: 20px 10px;
   text-align: left;
 }
 .signup-container p2 {
-  color: black;
+  color: #FFF4E1;
   text-align: left;
   font-weight: 600;
   font-size: 30px;
