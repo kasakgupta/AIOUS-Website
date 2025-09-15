@@ -336,6 +336,17 @@ h2 {
   padding: 50px 100px;
 }
 
+.team-section h2{
+  font-family: "Electric Formula", sans-serif;
+  font-size: 35px;
+  color: #f5f5dc;
+  font-weight: normal;
+  padding-left: 10px;
+  margin-top: 60px;
+  margin-bottom: 35px;
+  letter-spacing: 2px;
+  text-align: left;
+}
 .team-list {
   display: flex;
   flex-direction: column;
@@ -1549,9 +1560,11 @@ ul li {
   letter-spacing: 2px;
   text-align: left;
 }
-
+.team-description br{
+  margin-bottom: 10px;
+}
 .team-description {
-  padding: 20px 0 0 100px;
+  padding: 20px 0 20px 20px;
   /* max-width: 800px; */
   margin-bottom: 40px;
   font-size: 20px;
