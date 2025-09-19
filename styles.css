@@ -1572,6 +1572,14 @@ ul li {
   padding: 0 20px;
 }
 
+.members{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  padding: 0 20px;
+}
+
 .team-card {
   padding-top: 20px;
   background: radial-gradient(circle at center, #351c6a 30%, #0c0c0c 100%);
@@ -2069,4 +2077,49 @@ ul li {
   margin-bottom: 35px;
   letter-spacing: 2px;
   text-align: left;
+}
+
+
+.AchievementPage{
+  padding: 100px 20px 20px 100px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.AchievementPage p{
+  font-weight: lighter;
+  line-height: 29px;
+  color: #fff4e1;
+  margin: 40px 0;
+  text-align: left;
+  max-width: 900px;
+}
+
+.AchievementPage p bold{
+  font-weight: bolder;
+}
+
+.AchievementPage h2{
+  font-family: "Electric Formula", sans-serif;
+  font-size: 35px;
+  color: #f5f5dc;
+  font-weight: normal;
+  padding-left: 10px;
+  margin-top: 60px;
+  margin-bottom: 35px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.AchievementPage li{
+  font-weight: lighter;
+  line-height: 0px;
+  color: #fff4e1;
+  margin: 40px 0;
+  text-align: left;
+  max-width: 900px;
+  list-style: none;
 }
