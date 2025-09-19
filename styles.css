@@ -2067,6 +2067,36 @@ ul li {
   max-width: 900px;
 }
 
+.supportButton{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 400px;
+}
+
+.supportButton button {
+  background: transparent;
+  color: #d9d9d9; /* Text color */
+  border: 2px solid #00e0ff; /* Neon border */
+  padding: 12px 28px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  display: inline-block;
+  text-shadow: 0 0 5px #00e0ff;
+  box-shadow: 0 0 8px rgba(0, 224, 255, 0.5);
+}
+
+.button:hover {
+  background: rgba(0, 224, 255, 0.1); /* Subtle glow inside */
+  box-shadow: 0 0 15px #00e0ff, 0 0 30px #00e0ff;
+  color: #fff; /* Brighten text */
+}
+
 .SupportPage h2{
   font-family: "Electric Formula", sans-serif;
   font-size: 35px;
