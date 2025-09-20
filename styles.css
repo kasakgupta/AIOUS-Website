@@ -4,7 +4,7 @@ html {
 
 @font-face {
   font-family: "Pro Racing";
-  src: url(./fonts/ProRacing.otf);
+  src: url(./fonts/ProRacing-7BZOD.otf);
 }
 
 /* ========== RESET DEFAULT STYLES ========== */
@@ -230,13 +230,13 @@ body {
 }
 
 h2 {
-  font-family: "Electric Formula", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
   font-size: 35px;
   color: #f5f5dc;
-  font-weight: normal;
   padding-left: 10px;
-  margin-bottom: 30px;
-  letter-spacing: 2px;
   text-align: left;
 }
 
