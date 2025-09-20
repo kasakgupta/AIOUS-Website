@@ -21,6 +21,21 @@ body {
   overflow-x: hidden;
 }
 
+.background-stack {
+  position: absolute;   /* not fixed, so it scrolls with the page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;          /* stays behind content */
+}
+
+.background-stack img {
+  width: 100%;
+  display: block;
+}
+
+
+
 /* ========== NAVBAR STYLES ========== */
 .navbar-container {
   background-color: #ffffff;
