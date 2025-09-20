@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
       .fade-in-up {
         opacity: 0;
         transform: translateY(30px);
-        transition: opacity 0.8s ease, transform 0.8s ease;
+        transition: opacity 1.0s ease, transform 1.0s ease;
       }
       .fade-in-up.visible {
         opacity: 1;

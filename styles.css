@@ -16,7 +16,7 @@ html {
 
 /* ========== GLOBAL STYLES ========== */
 body {
-  background-color: rgba(36, 36, 36, 1);
+  background-color:#000000;
   font-family: "Saira", sans-serif;
   overflow-x: hidden;
 }
@@ -447,10 +447,17 @@ h2 {
 
 .carousel-container {
   position: relative;
-  max-width: 90%;
+  max-width: 100%;
   margin: auto;
-  overflow: hidden;
   border-radius: 12px;
+  overflow: hidden;
+}
+
+.carousel-container img {
+  width: 100%;
+  max-height: calc(100vh - 110px); /* viewport height minus navbar height */
+  object-fit: contain;            /* show full image without cropping */
+  display: block;
 }
 
 .carousel-track {
@@ -848,8 +855,8 @@ ul li {
 
 /* ================ Footer ================== */
 .footer {
-  background-color: #005A67;
-  color: #FFF4E1;
+  background-color: #342794;
+  color: #b2b2b2;
   padding: 40px 20px 10px;
 }
 
@@ -867,11 +874,13 @@ ul li {
 }
 
 .logo-section h1 {
+  margin-left: 10px;
   font-size: 36px;
   font-weight: bold;
 }
 
 .logo-section p {
+  margin-left: 10px;
   margin-top: 5px;
   font-size: 17px;
 }
@@ -893,7 +902,7 @@ ul li {
 
 .quick-links ul li a {
   text-decoration: none;
-  color: #FFF4E1;;
+  color: #b2b2b2;;
 }
 
 .contact-section p {
@@ -916,12 +925,13 @@ ul li {
   max-width: 100%;
   margin: 20px auto 0;
   padding-top: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: 1px solid #b2b2b2;
   font-size: 14px;
 }
 
 .footer h1 {
   font-family: "Pro Racing", sans-serif;
+  color:#FFF4E1;
 }
 
 .social-icons {
@@ -1465,10 +1475,12 @@ ul li {
 }
 
 .signup-form input[type="email"] {
+  border-width: 2px;
+  border-style: solid;
+  border-color: #fff4e1;
+  background-color: #5548BA;
   padding: 12px;
   font-size: 16px;
-  border: none;
-  border-radius: 4px;
   width: 100%;
 }
 
@@ -1477,8 +1489,7 @@ ul li {
   font-size: 16px;
   border: none;
   background-color: #ffffff;
-  color: #0bb0c6;
-  border-radius: 4px;
+  color: #5548BA;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
