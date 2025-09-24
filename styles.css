@@ -21,19 +21,15 @@ body {
   overflow-x: hidden;
 }
 
-.background-stack {
-  position: absolute;   /* not fixed, so it scrolls with the page */
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: -1;          /* stays behind content */
+.page-wrapper {
+  min-height: 100vh; /* full height at least */
+  background: 
+    url("Images/IMG_9501\ 2.png") top center no-repeat,
+    url("Images/IMG_9502\ 2.png") center center no-repeat,
+    url("Images/IMG_9504\ 2.png") bottom center no-repeat;
+  background-size: 100% auto;   /* full width, natural height */
+  background-attachment: scroll; /* make them move when you scroll */
 }
-
-.background-stack img {
-  width: 100%;
-  display: block;
-}
-
 
 
 /* ========== NAVBAR STYLES ========== */
