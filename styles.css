@@ -16,21 +16,19 @@ html {
 
 /* ========== GLOBAL STYLES ========== */
 body {
-  background-color:#000000;
+  background-color: #000000;
   font-family: "Saira", sans-serif;
   overflow-x: hidden;
 }
 
 .page-wrapper {
   min-height: 100vh; /* full height at least */
-  background: 
-    url("Images/IMG_9501\ 2.png") top center no-repeat,
+  background: url("Images/IMG_9501\ 2.png") top center no-repeat,
     url("Images/IMG_9502\ 2.png") center center no-repeat,
     url("Images/IMG_9504\ 2.png") bottom center no-repeat;
-  background-size: 100% auto;   /* full width, natural height */
+  background-size: 100% auto; /* full width, natural height */
   background-attachment: scroll; /* make them move when you scroll */
 }
-
 
 /* ========== NAVBAR STYLES ========== */
 .navbar-container {
@@ -263,7 +261,7 @@ h2 {
 
 .aboutUs h4 {
   font-family: "Raleway", sans-serif;
-  color: #5548BA;
+  color: #5548ba;
   font-size: 28px;
   font-weight: bold;
   text-align: left;
@@ -298,7 +296,7 @@ h2 {
     rgba(54, 73, 140, 0.6),
     rgba(5, 6, 12, 0.2)
   );
-  border: 2px solid #5548BA;
+  border: 2px solid #5548ba;
   padding: 25px 20px;
   border-radius: 10px;
   color: #fff;
@@ -339,7 +337,7 @@ h2 {
     padding: 30px 20px;
   }
 
-  .aboutUs-box p{
+  .aboutUs-box p {
     font-size: 18px;
   }
 }
@@ -446,7 +444,6 @@ h2 {
 .team-carousel {
   text-align: center;
   padding: 50px 10px;
-  
 }
 
 .team-carousel h2 {
@@ -455,7 +452,6 @@ h2 {
   margin-bottom: 20px;
   color: #f5f5dc;
   padding: 20px 30px;
-  
 }
 
 .carousel-container {
@@ -469,7 +465,7 @@ h2 {
 .carousel-container img {
   width: 100%;
   max-height: calc(100vh - 110px); /* viewport height minus navbar height */
-  object-fit: contain;            /* show full image without cropping */
+  object-fit: contain; /* show full image without cropping */
   display: block;
 }
 
@@ -487,7 +483,6 @@ h2 {
 }
 
 /* Buttons */
-
 
 .carousel-btn.prev {
   left: 10px;
@@ -539,7 +534,7 @@ h2 {
   }
 }
 
-.description{
+.description {
   padding: 20px 0 20px 20px;
   max-width: 800px;
   margin: 50px;
@@ -550,11 +545,11 @@ h2 {
   font-weight: 200;
 }
 
-.description h4{
+.description h4 {
   margin-top: 35px;
   font-weight: bolder;
 }
-.description p{
+.description p {
   margin-top: 5px;
   font-weight: lighter;
 }
@@ -589,8 +584,7 @@ h2 {
   max-width: 500px;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 
-              0 0 40px rgba(0, 255, 255, 0.5); /* glowing border */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.5); /* glowing border */
 }
 
 .about-image {
@@ -690,7 +684,6 @@ ul li {
     font-size: 1.1rem;
   }
 }
-
 
 /* ========== SPONSORS SLIDER ========== */
 .sponsors h2 {
@@ -924,7 +917,7 @@ ul li {
 
 .quick-links ul li a {
   text-decoration: none;
-  color: #b2b2b2;;
+  color: #b2b2b2;
 }
 
 .contact-section p {
@@ -953,7 +946,7 @@ ul li {
 
 .footer h1 {
   font-family: "Pro Racing", sans-serif;
-  color:#FFF4E1;
+  color: #fff4e1;
 }
 
 .social-icons {
@@ -987,202 +980,152 @@ ul li {
 }
 
 /* ========= Achievements ========= */
-
 .achievements {
-  padding: 50px 100px;
-}
-
-/* Container */
-.line-wrapper {
+  padding: 50px 0;
+  font-family: "Saira", sans-serif;
+  color: #fff;
   position: relative;
-  height: 1500px;
 }
 
-/* Left vertical line */
-.vertical-line {
+/* Timeline wrapper */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 0 60px;
+}
+
+/* Two vertical lines (far left + far right) */
+.timeline::before,
+.timeline::after {
+  content: "";
   position: absolute;
-  top: 50px;
-  left: 100px;
-  width: 5px;
-  height: 1200px;
-  background-color: #22b5c8;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #22b5c8;
 }
 
-/* Right vertical line */
-.vertical-line-right {
-  position: absolute;
-  top: 250px; /* starts lower than the left line */
-  right: 100px;
-  width: 5px;
-  height: 1200px;
-  background-color: #22b5c8;
+.timeline::before {
+  left: 0; /* Far left line */
 }
 
-/* Horizontal lines (left side) */
-.horizontal-line {
-  position: absolute;
-  left: 105px; /* slightly offset from the vertical line */
-  width: 120px;
-  height: 5px;
-  background-color: #22b5c8;
+.timeline::after {
+  right: -800px; /* Far right line */
 }
 
-#Hor-line-1 {
-  top: 120px;
-}
-#Hor-line-2 {
-  top: 570px;
-}
-#Hor-line-3 {
-  top: 1020px;
+/* Items */
+.timeline-item {
+  position: relative;
+  display: flex;
+  width: 100%;
 }
 
-/* Horizontal lines (right side) */
-.horizontal-line-right {
-  position: absolute;
-  right: 105px; /* slightly offset from right vertical line */
-  width: 120px;
-  height: 5px;
-  background-color: #22b5c8;
+.timeline-item.left {
+  justify-content: flex-start;
 }
 
-#Hor-line-4 {
-  top: 320px;
-}
-#Hor-line-5 {
-  top: 790px;
-}
-#Hor-line-6 {
-  top: 1250px;
+.timeline-item.right {
+  justify-content: flex-end;
 }
 
-.circle {
-  position: absolute;
-  top: 108px;
-  left: 220px;
-  width: 30px;
-  height: 30px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background-color: #2d2d2d;
-  border: 5px solid #22b5c8;
-}
-
-#circle-2 {
-  top: 558px;
-}
-
-#circle-3 {
-  top: 1008px;
-}
-
-.circle-right {
-  position: absolute;
-  top: 308px;
-  right: 220px;
-  width: 30px;
-  height: 30px;
-  box-sizing: border-box;
-  border-radius: 50%;
-  background-color: #2d2d2d;
-  border: 5px solid #22b5c8;
-}
-
-#circle-5 {
-  top: 778px;
-}
-
-#circle-6 {
-  top: 1236px;
-}
-
-.achievement-box {
-  position: absolute;
-  top: 70px;
-  left: 270px;
-  max-width: 500px;
+/* Content box */
+.timeline-item .content {
+  position: relative;
   background: radial-gradient(
     circle at center,
     rgba(20, 109, 120, 0.2),
     rgba(20, 109, 120, 0.1)
   );
   border: 2px solid #22b5c8;
-  padding: 40px 80px 25px 40px;
   border-radius: 10px;
-  color: #fff;
-  font-family: "Saira";
+  padding: 20px 30px;
   box-shadow: 0 0 10px rgba(34, 181, 200, 0.3);
+  max-width: 320px;
+  width: 320px;
 }
 
-.achievement-box p {
-  font-size: 22px;
-  font-weight: normal;
-  color: #fff;
-  margin-bottom: 0;
+.timeline-item .content p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
-.achievement-box h3 {
+/* Connector line from left vertical line to left boxes */
+.timeline-item.left::before {
+  content: "";
   position: absolute;
-  top: 75%;
+  top: 50%;
+  left: -60px;
+  width: 60px;
+  height: 4px;
+  background: #22b5c8;
+  transform: translateY(-50%);
+}
+
+/* Connector line from right vertical line to right boxes */
+.timeline-item.right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -60px;
+  width: 60px;
+  height: 4px;
+  background: #22b5c8;
+  transform: translateY(-50%);
+}
+
+/* Connector circle on left vertical line */
+.timeline-item.left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2d2d2d;
+  border: 4px solid #22b5c8;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Connector circle on right vertical line */
+.timeline-item.right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #2d2d2d;
+  border: 4px solid #22b5c8;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+/* Year rotated */
+.timeline-item .content h3 {
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%) rotate(-90deg);
-  transform-origin: left bottom;
-  display: inline-block;
-  color: #e4e1e1;
-  margin-left: 450px;
-  font-size: 30px;
   font-family: "Pro Racing", sans-serif;
-}
-
-#box-2 {
-  top: 520px;
-}
-
-#box-3 {
-  top: 970px;
-}
-
-.achievement-box-right {
-  position: absolute;
-  top: 270px;
-  right: 270px;
-  max-width: 500px;
-  background: radial-gradient(
-    circle at center,
-    rgba(20, 109, 120, 0.2),
-    rgba(20, 109, 120, 0.1)
-  );
-  border: 2px solid #22b5c8;
-  padding: 40px 40px 40px 80px;
-  border-radius: 10px;
-  color: #fff;
-  font-family: "Saira";
-  box-shadow: 0 0 10px rgba(34, 181, 200, 0.3);
-}
-
-.achievement-box-right p {
-  font-size: 22px;
-  font-weight: normal;
-  color: #fff;
-  margin-bottom: 0;
-}
-
-.achievement-box-right h3 {
-  position: absolute;
-  left: 9px;
-  top: 85%; /* Center vertically, tweak as needed */
-  transform: translateY(-50%) rotate(-90deg);
-  transform-origin: left top;
+  font-size: 24px;
   color: #e4e1e1;
-  font-size: 30px;
-  font-family: "Pro Racing", sans-serif;
+  margin: 0;
+  font-weight: bold;
 }
 
-#box-5 {
-  top: 750px;
+.timeline-item.left .content h3 {
+  right: -40px;
 }
 
-#box-6 {
-  top: 1210px;
+.timeline-item.right .content h3 {
+  left: -40px;
 }
 
 /* Responsive Achievement */
@@ -1473,12 +1416,12 @@ ul li {
 }
 /* email section in get in touch section */
 .email-signup {
-  color: #FFF4E1;
+  color: #fff4e1;
   padding: 20px 10px;
   text-align: left;
 }
 .signup-container p2 {
-  color: #FFF4E1;
+  color: #fff4e1;
   text-align: left;
   font-weight: 600;
   font-size: 30px;
@@ -1500,7 +1443,7 @@ ul li {
   border-width: 2px;
   border-style: solid;
   border-color: #fff4e1;
-  background-color: #5548BA;
+  background-color: #5548ba;
   padding: 12px;
   font-size: 16px;
   width: 100%;
@@ -1511,7 +1454,7 @@ ul li {
   font-size: 16px;
   border: none;
   background-color: #ffffff;
-  color: #5548BA;
+  color: #5548ba;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -1594,7 +1537,7 @@ ul li {
   letter-spacing: 2px;
   text-align: left;
 }
-.team-description br{
+.team-description br {
   margin-bottom: 10px;
 }
 .team-description {
@@ -1617,7 +1560,7 @@ ul li {
   padding: 0 20px;
 }
 
-.members{
+.members {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -2052,12 +1995,12 @@ ul li {
     gap: 30px;
   }
 
- .sponsor-title {
+  .sponsor-title {
     flex-direction: column;
     padding: 20px 15px;
-    max-width: 100%;         /* 🔥 prevent overflow */
-    width: 100%;             /* take full width of container */
-    box-sizing: border-box;  /* important for padding to behave right */
+    max-width: 100%; /* 🔥 prevent overflow */
+    width: 100%; /* take full width of container */
+    box-sizing: border-box; /* important for padding to behave right */
     gap: 10px;
   }
 
@@ -2074,26 +2017,27 @@ ul li {
   }
 }
 
-.alert, .success{
+.alert,
+.success {
   width: 400px;
   text-align: center;
   position: absolute;
   top: 30px;
-  left : 50%;
-  transform : translateX(-50%);
+  left: 50%;
+  transform: translateX(-50%);
   color: whitesmoke;
   padding: 8px 0;
 }
 
-.alert{
+.alert {
   background-color: rgb(252, 59, 59);
 }
-.success{
+.success {
   background-color: rgb(44, 158, 24);
 }
 
 /* SUPPORT US PAGE */
-.SupportPage{
+.SupportPage {
   padding: 100px 20px 20px 100px;
   margin: 20px;
   display: flex;
@@ -2112,7 +2056,7 @@ ul li {
   max-width: 900px;
 }
 
-.supportButton{
+.supportButton {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -2121,9 +2065,9 @@ ul li {
 }
 
 .supportButton button {
-  background: transparent;           /* fully transparent center */
-  color: #dcdccc;                    /* pale gray text */
-  border: 2px solid #00e0ff;         /* cyan border */
+  background: transparent; /* fully transparent center */
+  color: #dcdccc; /* pale gray text */
+  border: 2px solid #00e0ff; /* cyan border */
   padding: 3px 28px;
   width: 240px;
   font-size: 16px;
@@ -2131,21 +2075,17 @@ ul li {
   font-family: "Saira", sans-serif;
   border-radius: 6px;
   cursor: pointer;
-  box-shadow:
-    0 0 8px rgba(0,224,255,0.15);    /* faint cyan glow */
+  box-shadow: 0 0 8px rgba(0, 224, 255, 0.15); /* faint cyan glow */
   transition: 0.2s ease-in-out;
 }
 
 /* optional: hover effect */
 .supportButton button:hover {
   color: #ffffff;
-  box-shadow:
-    0 8px 16px rgba(0,0,0,0.65),
-    0 0 15px rgba(0,224,255,0.25);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.65), 0 0 15px rgba(0, 224, 255, 0.25);
 }
 
-
-.SupportPage h2{
+.SupportPage h2 {
   font-family: "Raleway", sans-serif;
   font-size: 35px;
   color: #f5f5dc;
@@ -2157,8 +2097,7 @@ ul li {
   text-align: left;
 }
 
-
-.AchievementPage{
+.AchievementPage {
   padding: 100px 20px 20px 100px;
   margin: 20px;
   display: flex;
@@ -2167,7 +2106,7 @@ ul li {
   align-items: flex-start;
 }
 
-.AchievementPage p{
+.AchievementPage p {
   font-weight: lighter;
   line-height: 29px;
   color: #fff4e1;
@@ -2176,11 +2115,11 @@ ul li {
   max-width: 900px;
 }
 
-.AchievementPage p bold{
+.AchievementPage p bold {
   font-weight: bolder;
 }
 
-.AchievementPage h2{
+.AchievementPage h2 {
   font-family: "Raleway", sans-serif;
   font-size: 35px;
   color: #f5f5dc;
@@ -2192,7 +2131,7 @@ ul li {
   text-align: left;
 }
 
-.AchievementPage li{
+.AchievementPage li {
   font-weight: lighter;
   line-height: 0px;
   color: #fff4e1;
