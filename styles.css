@@ -1059,8 +1059,8 @@ ul li {
   content: "";
   position: absolute;
   top: 50%;
-  left: -60px;
-  width: 60px;
+  left:-60px;
+  width: 120px;
   height: 4px;
   background: #22b5c8;
   transform: translateY(-50%);
@@ -1071,8 +1071,8 @@ ul li {
   content: "";
   position: absolute;
   top: 50%;
-  right: -60px;
-  width: 60px;
+  right: -860px;
+  width: 120px;
   height: 4px;
   background: #22b5c8;
   transform: translateY(-50%);
@@ -1083,7 +1083,7 @@ ul li {
   content: "";
   position: absolute;
   top: 50%;
-  left: -70px;
+  left: 60px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -1098,7 +1098,7 @@ ul li {
   content: "";
   position: absolute;
   top: 50%;
-  right: -70px;
+  right: -760px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
