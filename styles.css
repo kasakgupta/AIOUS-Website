@@ -980,153 +980,113 @@ ul li {
 }
 
 /* ========= Achievements ========= */
-.achievements {
-  padding: 50px 0;
-  font-family: "Saira", sans-serif;
-  color: #fff;
-  position: relative;
-}
-
-/* Timeline wrapper */
 .timeline {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 80px;
-  padding: 0 60px;
+  width: 90%;
+  margin: 100px auto;
 }
 
-/* Two vertical lines (far left + far right) */
+/* Two vertical lines - one left, one right */
 .timeline::before,
 .timeline::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 4px;
-  background: #22b5c8;
+  width: 2px;
+  background: #00e0ff;
 }
 
 .timeline::before {
-  left: 0; /* Far left line */
+  left: 8%;
 }
 
 .timeline::after {
-  right: -800px; /* Far right line */
+  right: 8%;
 }
 
-/* Items */
+/* Timeline item */
 .timeline-item {
   position: relative;
   display: flex;
-  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 100px 0;
 }
 
-.timeline-item.left {
-  justify-content: flex-start;
-}
-
-.timeline-item.right {
-  justify-content: flex-end;
-}
-
-/* Content box */
-.timeline-item .content {
-  position: relative;
-  background: radial-gradient(
-    circle at center,
-    rgba(20, 109, 120, 0.2),
-    rgba(20, 109, 120, 0.1)
-  );
-  border: 2px solid #22b5c8;
+/* Box styling */
+.content {
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #00e0ff;
   border-radius: 10px;
-  padding: 20px 30px;
-  box-shadow: 0 0 10px rgba(34, 181, 200, 0.3);
-  max-width: 320px;
-  width: 320px;
+  color: white;
+  padding: 25px;
+  width: 55%;
+  font-family: 'Orbitron', sans-serif;
 }
 
-.timeline-item .content p {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-/* Connector line from left vertical line to left boxes */
-.timeline-item.left::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left:-60px;
-  width: 120px;
-  height: 4px;
-  background: #22b5c8;
-  transform: translateY(-50%);
-}
-
-/* Connector line from right vertical line to right boxes */
-.timeline-item.right::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -860px;
-  width: 120px;
-  height: 4px;
-  background: #22b5c8;
-  transform: translateY(-50%);
-}
-
-/* Connector circle on left vertical line */
-.timeline-item.left::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 60px;
-  width: 20px;
-  height: 20px;
+/* Circles */
+.circle {
+  width: 24px;
+  height: 24px;
+  background: #0c0c0c; 
   border-radius: 50%;
-  background: #2d2d2d;
-  border: 4px solid #22b5c8;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-
-/* Connector circle on right vertical line */
-.timeline-item.right::after {
-  content: "";
+  border: 4px solid #00e0ff;
   position: absolute;
   top: 50%;
-  right: -760px;
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: #2d2d2d;
-  border: 4px solid #22b5c8;
   transform: translateY(-50%);
-  z-index: 2;
 }
 
-/* Year rotated */
-.timeline-item .content h3 {
+/* Circle positions */
+.left-circle {
+  left: 8%;
+  transform: translate(-50%, -50%);
+}
+
+.right-circle {
+  right: 8%;
+  transform: translate(50%, -50%);
+}
+
+/* Connector lines from circle to box */
+.timeline-item::before {
+  content: '';
   position: absolute;
   top: 50%;
-  transform: translateY(-50%) rotate(-90deg);
-  font-family: "Pro Racing", sans-serif;
-  font-size: 24px;
-  color: #e4e1e1;
-  margin: 0;
+  width: calc(15% - 22px);
+  height: 2px;
+  background: #00e0ff;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::before {
+  left: 8%;
+}
+
+.timeline-item:nth-child(even)::before {
+  right: 8%;
+}
+
+/* Year text on side */
+.year {
+  position: absolute;
+  top: 50%;
   font-weight: bold;
+  font-size: 1.1rem;
+  color: #00e0ff;
+  transform: translateY(-50%) rotate(-90deg);
+  letter-spacing: 2px;
 }
 
-.timeline-item.left .content h3 {
-  right: -40px;
+.left-year {
+  left: 4%;
 }
 
-.timeline-item.right .content h3 {
-  left: -40px;
+.right-year {
+  right: 4%;
 }
+
 
 /* Responsive Achievement */
 @media (max-width: 768px) {
