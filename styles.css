@@ -1162,29 +1162,30 @@ ul li {
 
 .Gallery-container .heading {
   padding-bottom: 50px;
-  color: #fff;
   /* Add flexbox to center content horizontally */
   display: flex;
   justify-content: center;
+  margin-top:40px;
 }
 
 .Gallery-container .heading h3 {
   width: 50%;
-  font-size: 3em;
-  font-weight: bolder;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #fff;
+  font-size: 6.5em;
+  font-family: "Pro Racing", sans-serif;
+  color: #fff4e1;
+text-shadow:
+ -10px 0 4px #1B2446,
+  10px 0 4px #1B2446,
+  0 0 40px #1B2446;
 }
 
-.Gallery-container .heading h3 span {
-  font-weight: 100;
-  color: #22b5c8;
-}
+
 
 .Gallery-container .gallery-box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin:70px;
 }
 
 .Gallery-container .gallery-box .Gallery-column {
@@ -1343,15 +1344,6 @@ ul li {
   margin-top: 4px;
 }
 
-/* .socialss {
-  margin-bottom: 20px;
-}
-
-.socialss span {
-  display: block;
-  margin-bottom: 10px;
-  font-weight: 600;
-} */
 
 .iconss img {
   width: 24px;
