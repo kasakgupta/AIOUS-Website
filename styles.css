@@ -927,7 +927,7 @@ ul li {
 }
 
 .contact-section img {
-  width: 18px;
+  width: 35px;
   vertical-align: middle;
   margin-right: 8px;
 }
@@ -1015,7 +1015,7 @@ ul li {
 }
 
 /* Box styling */
-.content {
+/* .content {
   background: rgba(0, 0, 0, 0.6);
   border: 2px solid #00e0ff;
   border-radius: 10px;
@@ -1023,7 +1023,7 @@ ul li {
   padding: 25px;
   width: 55%;
   font-family: 'Orbitron', sans-serif;
-}
+} */
 
 /* Circles */
 .circle {
@@ -1489,12 +1489,14 @@ ul li {
 .teamPage-section h2 {
   font-family: "Raleway", sans-serif;
   font-size: 35px;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
   color: #f5f5dc;
-  font-weight: normal;
   padding-left: 10px;
-  margin-top: 60px;
+  margin-left:42px;
+  margin-top: 50px;
   margin-bottom: 35px;
-  letter-spacing: 2px;
   text-align: left;
 }
 .team-description br {
@@ -1513,14 +1515,6 @@ ul li {
 
 /* Team Cards */
 .team-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  justify-items: center;
-  padding: 0 20px;
-}
-
-.members {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
