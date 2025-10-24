@@ -859,7 +859,7 @@ h2 {
 
 /* HEADING STYLING */
 .about-igdtuw-heading {
-  // ================= DEPARTMENTS CAROUSEL JS =================
+  /* ================= DEPARTMENTS CAROUSEL JS =================*/
    font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
@@ -2060,7 +2060,163 @@ text-shadow:
   color: #f5f5dc;
   padding-left: 10px;
   text-align: left;
+  margin-bottom: 60px;
+  margin-top: 50px;
   
+}
+
+.sponsor-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
+  margin: 40px auto;
+}
+
+.sponsor-box {
+  flex: 1 1 280px;
+  max-width: 550px;
+  /* Subtle, transparent dark background like the 2nd image */
+  background-color: rgba(50, 50, 87, 0.5); /* 323257 with 50% opacity */
+  border: 2px solid rgba(90, 121, 233, 0.6); /* Soft border */
+  padding: 25px 20px;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+/* Hover effect stays soft */
+.Sponsor-category:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+.sponsor-logo img {
+  width: 170px;
+  height: auto;
+  margin: 0 auto 10px;
+  filter: drop-shadow(0 0 6px rgba(34, 181, 200, 0.4));
+}
+
+.sponsor-desc {
+  flex-grow: 1;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.view-more {
+  background-color: #FFF4E1;
+  color: #5A79E9;
+  display: block; /* Make the button a block-level element */
+  width: 150px; /* Set a specific width for the button */
+  margin: 0 auto;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-more:hover {
+  background-color: #1a8fa0;
+  transform: translateY(-3px);
+}
+
+.swiper-container {
+  max-width: 100%; /* or 100%, depending on layout */
+  margin: 0 auto;
+}
+
+/* Make slides fit card width and center the card inside the slide */
+.swiper-slide {
+  width: 420px !important;       /* fixed consistent width */
+  transition: transform 0.3s ease;
+}
+
+/* subtle zoom effect on center slide */
+.swiper-slide-active {
+  transform: scale(1.7); /* Make the active slide 50% larger */
+  z-index: 1; /* Ensure it's above other slides */
+  background-color: rgba(50, 50, 87, 0.8);
+}
+
+
+/* Ensure the swiper-wrapper doesn't create vertical misalignment */
+.swiper-wrapper {
+  align-items: stretch;            /* keeps slides same height */
+}
+
+/* Container sizing */
+.sponsor-swiper {
+  width: 95%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding-bottom: 24px;
+}
+
+/* Make each card responsive inside Swiper */
+.sponsor-box {
+  flex: 1;
+  width: 100%; /* Let Swiper control actual width */
+  max-width: 550px;
+  box-sizing: border-box;
+}
+
+/* Let Swiper calculate spacing instead of hardcoding */
+.swiper-wrapper {
+  align-items: stretch;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center; /* centers cards */
+  align-items: stretch;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom effect for active slide */
+.swiper-slide-active {
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+/* Buttons & pagination */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #5a79e9;
+}
+
+.swiper-pagination-bullet {
+  background: #5a79e9;
+  opacity: 0.85;
+}
+
+.swiper-pagination-bullet-active {
+  background: #1a8fa0;
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .swiper-slide {
+    width: 45% !important; /* Show 2 slides per view on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-slide {
+    width: 80% !important; /* Show 1 slide per view on small screens */
+  }
 }
 
 .sponsorPageContainer p {
@@ -2073,63 +2229,10 @@ text-shadow:
   font-weight: 200;
 }
 
-.sponsor-box {
-  width: 1111px;
-  height: 470px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* makes text start from top */
-  padding: 40px;
-  gap: 30px;
-  border: 2px solid #22b5c8;
-  background: radial-gradient(
-    circle at center,
-    rgba(20, 109, 120, 0.2),
-    rgba(20, 109, 120, 0.1)
-  );
-  border-radius: 10px;
-  box-sizing: border-box;
-  margin-bottom: 25px;
-}
-
 .sponsor-text {
   width: 80%; /* or adjust as needed */
   padding-left: 50px;
   padding-right: 100px;
-}
-
-.sponsor-text p {
-  margin: 0;
-  font-size: 23px;
-  font-family: "Saira", sans-serif;
-  color: #fff4e1;
-  line-height: 40px;
-  font-weight: 200;
-  text-align: left;
-  padding-right: 10px;
-}
-
-.sponsor-text img {
-  margin-top: 60px;
-  margin-right: 25px;
-  width: 45px;
-  height: 45px;
-  border-radius: 10px;
-}
-
-.sponsor-image {
-  max-width: 35%;
-  display: flex;
-  align-items: center; /* centers image vertically */
-  justify-content: center;
-  height: 100%;
-}
-
-.sponsor-image img {
-  width: 90%;
-  height: auto;
-  object-fit: contain;
-  filter: drop-shadow(0 0 10px #ffffff9f); /* white glow around the image */
 }
 
 .sponsor-category-container {
@@ -2142,19 +2245,16 @@ text-shadow:
 
 .Sponsor-category {
   flex: 1 1 280px;
-  max-width: 350px;
-  background: radial-gradient(
-    circle at center,
-    rgba(20, 109, 120, 0.2),
-    rgba(20, 109, 120, 0.1)
-  );
-  border: 2px solid #22b5c8;
+  max-width: 390px;
+  /* Subtle, transparent dark background like the 2nd image */
+  background-color: rgba(50, 50, 87, 0.5); /* 323257 with 50% opacity */
+  border: 2px solid rgba(90, 121, 233, 0.6); /* Soft border */
   padding: 25px 20px;
   border-radius: 10px;
   color: #fff;
   font-family: "Raleway", sans-serif;
-  box-shadow: 0 0 10px rgba(34, 181, 200, 0.3);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -2165,6 +2265,7 @@ text-shadow:
 }
 
 .Sponsor-category h3 {
+  font-family: "Raleway", sans-serif;
   font-size: 22px;
   font-weight: normal;
   color: #fff;
