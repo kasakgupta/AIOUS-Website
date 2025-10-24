@@ -1703,25 +1703,23 @@ text-shadow:
 /* ============ Sponsor Page ============ */
 
 .sponsorPageContainer {
-  padding: 100px 0 20px 100px;
+  padding: 120px 0 20px 100px;
   margin: 20px;
 }
 
 .sponsorPageContainer h2 {
   font-family: "Raleway", sans-serif;
+  font-weight: bold;
   font-size: 35px;
   color: #f5f5dc;
-  font-weight: normal;
   padding-left: 10px;
-  margin-top: 60px;
-  margin-bottom: 35px;
-  letter-spacing: 2px;
   text-align: left;
+  
 }
 
 .sponsorPageContainer p {
   max-width: auto;
-  margin: 40px;
+  margin: 40px 40px 40px 0;
   font-size: 20px;
   font-family: "Saira", sans-serif;
   color: #fff4e1;
