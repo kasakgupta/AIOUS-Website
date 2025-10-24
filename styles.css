@@ -2049,7 +2049,7 @@ text-shadow:
 /* ============ Sponsor Page ============ */
 
 .sponsorPageContainer {
-  padding: 120px 0 20px 100px;
+  padding: 120px 0 20px 90px;
   margin: 20px;
 }
 
@@ -2071,12 +2071,13 @@ text-shadow:
   gap: 25px;
   justify-content: center;
   align-items: stretch;
-  margin: 40px auto;
+  /* margin: 40px auto; */
 }
 
 .sponsor-box {
   flex: 1 1 280px;
   max-width: 550px;
+  height: 500px;
   /* Subtle, transparent dark background like the 2nd image */
   background-color: rgba(50, 50, 87, 0.5); /* 323257 with 50% opacity */
   border: 2px solid rgba(90, 121, 233, 0.6); /* Soft border */
@@ -2100,7 +2101,7 @@ text-shadow:
 
 
 .sponsor-logo img {
-  width: 170px;
+  width: 220px;
   height: auto;
   margin: 0 auto 10px;
   filter: drop-shadow(0 0 6px rgba(34, 181, 200, 0.4));
@@ -2121,7 +2122,7 @@ text-shadow:
   margin: 0 auto;
   border: none;
   padding: 10px 16px;
-  border-radius: 9px;
+  border-radius: 5px;
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.3s ease, transform 0.3s ease;
@@ -2134,12 +2135,12 @@ text-shadow:
 
 .swiper-container {
   max-width: 100%; /* or 100%, depending on layout */
-  margin: 0 auto;
+  margin: 0;
 }
 
 /* Make slides fit card width and center the card inside the slide */
 .swiper-slide {
-  width: 420px !important;       /* fixed consistent width */
+  width: 400px !important;       /* fixed consistent width */
   transition: transform 0.3s ease;
 }
 
@@ -2148,6 +2149,7 @@ text-shadow:
   transform: scale(1.7); /* Make the active slide 50% larger */
   z-index: 1; /* Ensure it's above other slides */
   background-color: rgba(50, 50, 87, 0.8);
+  max-height:540px;
 }
 
 
@@ -2160,7 +2162,7 @@ text-shadow:
 .sponsor-swiper {
   width: 95%;
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 40px 0;
   padding-bottom: 24px;
 }
 
@@ -2193,7 +2195,8 @@ text-shadow:
 /* Buttons & pagination */
 .swiper-button-next,
 .swiper-button-prev {
-  color: #5a79e9;
+  color: #ccc;
+  margin: auto 0px;
 }
 
 .swiper-pagination-bullet {
@@ -2246,7 +2249,6 @@ text-shadow:
 .Sponsor-category {
   flex: 1 1 280px;
   max-width: 390px;
-  /* Subtle, transparent dark background like the 2nd image */
   background-color: rgba(50, 50, 87, 0.5); /* 323257 with 50% opacity */
   border: 2px solid rgba(90, 121, 233, 0.6); /* Soft border */
   padding: 25px 20px;
