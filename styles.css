@@ -1326,6 +1326,7 @@ ul li {
 }
 
 /* ========= Achievements ========= */
+
 .timeline {
   position: relative;
   width: 90%;
@@ -2048,25 +2049,23 @@ text-shadow:
 /* ============ Sponsor Page ============ */
 
 .sponsorPageContainer {
-  padding: 100px 0 20px 100px;
+  padding: 120px 0 20px 100px;
   margin: 20px;
 }
 
 .sponsorPageContainer h2 {
   font-family: "Raleway", sans-serif;
+  font-weight: bold;
   font-size: 35px;
   color: #f5f5dc;
-  font-weight: normal;
   padding-left: 10px;
-  margin-top: 60px;
-  margin-bottom: 35px;
-  letter-spacing: 2px;
   text-align: left;
+  
 }
 
 .sponsorPageContainer p {
   max-width: auto;
-  margin: 40px;
+  margin: 40px 40px 40px 0;
   font-size: 20px;
   font-family: "Saira", sans-serif;
   color: #fff4e1;
@@ -2390,7 +2389,7 @@ text-shadow:
 }
 
 .AchievementPage {
-  padding: 100px 20px 20px 100px;
+  padding: 140px 20px 20px 100px;
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -2399,8 +2398,9 @@ text-shadow:
 }
 
 .AchievementPage p {
-  font-weight: lighter;
-  line-height: 29px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40px;
   color: #fff4e1;
   margin: 40px 0;
   text-align: left;
@@ -2413,22 +2413,66 @@ text-shadow:
 
 .AchievementPage h2 {
   font-family: "Raleway", sans-serif;
+  font-weight: bold;
   font-size: 35px;
   color: #f5f5dc;
-  font-weight: normal;
   padding-left: 10px;
-  margin-top: 60px;
-  margin-bottom: 35px;
-  letter-spacing: 2px;
   text-align: left;
 }
 
-.AchievementPage li {
-  font-weight: lighter;
-  line-height: 0px;
-  color: #fff4e1;
-  margin: 40px 0;
-  text-align: left;
-  max-width: 900px;
-  list-style: none;
+/* ---------- Responsive Breakpoints ---------- */
+
+/* For tablets (max width: 1024px) */
+@media (max-width: 1024px) {
+  .AchievementPage {
+    padding: 100px 40px 40px 60px;
+  }
+
+  .AchievementPage h2 {
+    font-size: 30px;
+  }
+
+  .AchievementPage p {
+    font-size: 18px;
+    line-height: 35px;
+    max-width: 100%;
+  }
+}
+
+/* For mobile landscape (max width: 768px) */
+@media (max-width: 768px) {
+  .AchievementPage {
+    padding: 80px 30px;
+    align-items: center;
+  }
+
+  .AchievementPage h2 {
+    font-size: 26px;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .AchievementPage p {
+    font-size: 17px;
+    text-align: center;
+    line-height: 32px;
+  }
+}
+
+/* For mobile portrait (max width: 480px) */
+@media (max-width: 480px) {
+  .AchievementPage {
+    padding: 80px 20px;
+    margin: 10px;
+  }
+
+  .AchievementPage h2 {
+    font-size: 22px;
+  }
+
+  .AchievementPage p {
+    font-size: 16px;
+    line-height: 28px;
+    margin: 20px 0;
+  }
 }
