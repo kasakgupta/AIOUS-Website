@@ -256,3 +256,72 @@ if (contactForm) {
     });
   });
 }
+
+ const cards = document.querySelectorAll('.department-card');
+        const cardScrollWrapper = document.getElementById('cardScrollWrapper');
+        let activeIndex = 1; // Default active card (Vehicle Dynamics)
+
+        /**
+         * Scrolls the card container left or right by one card unit.
+         * @param {number} direction - -1 for left, 1 for right.
+         */
+        function scrollCardsHorizontal(direction) {
+            // Calculate how far to scroll. We scroll by the width of the first card plus the gap.
+            const cardWidth = cards[0].offsetWidth;
+            const gap = 30; // Matches CSS gap value
+            const scrollDistance = cardWidth + gap;
+
+            cardScrollWrapper.scrollLeft += direction * scrollDistance;
+            
+            // Adjust the active index for visual consistency
+            let newIndex = activeIndex + direction;
+            if (newIndex >= 0 && newIndex < cards.length) {
+                // Set the active card slightly after the scroll starts
+                setTimeout(() => setActiveCard(newIndex), 400); 
+            }
+        }
+
+
+        /**
+         * Updates the active card state and ensures the active card is centered in the viewport.
+         * @param {number} newIndex - The index of the card to make active.
+         */
+        function setActiveCard(newIndex) {
+            if (newIndex < 0 || newIndex >= cards.length) return;
+            
+            // 1. Update visual active state
+            cards.forEach(card => card.classList.remove('is-active'));
+            cards[newIndex].classList.add('is-active');
+            activeIndex = newIndex;
+            
+            // 2. Scroll to center the active card
+            const activeCard = cards[newIndex];
+            const scrollWrapperWidth = cardScrollWrapper.offsetWidth;
+            
+            // Calculate the position required to center the card
+            const scrollTarget = activeCard.offsetLeft - (scrollWrapperWidth / 2) + (activeCard.offsetWidth / 2);
+            
+            cardScrollWrapper.scrollLeft = scrollTarget;
+        }
+
+        // --- Event Handlers ---
+
+        // Desktop/Tablet Click Handler (handles card activation and centers it)
+        function handleCardClick(index) {
+            setActiveCard(index);
+        }
+        
+        // Touch/Tap Handler (handles card activation on touch devices and centers it)
+        function handleCardTap(index) {
+            // Use setTimeout to ensure the active state change is visible immediately on touch
+            setTimeout(() => {
+                setActiveCard(index);
+            }, 50);
+        }
+
+        // --- Initialization ---
+        
+        window.onload = () => {
+            // Initialize to the active card's position (index 1) and center it
+            setActiveCard(activeIndex);
+        }

@@ -553,59 +553,405 @@ h2 {
   margin-top: 5px;
   font-weight: lighter;
 }
+/* ================= DEPARTMENTS SECTION STYLES ================= */
+    /*
+         * SECTION STYLING
+         */
+        .departments-section {
+            padding: 20px 10px 40px;
+            
+            position: relative;
+        }
+
+        /*
+         * HEADER STYLING
+         */
+        .section-title {
+            font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  font-size: 35px;
+  color: #f5f5dc;
+  padding-left: 10px;
+  text-align: left;
+  margin: 30px;
+
+        }
+
+        /*
+         * EXTERNAL CAR IMAGE PLACEHOLDERS (Absolute positioning - Desktop Only)
+         * These are the "standing bars" above the sliding cards.
+         */
+        .card-image-placeholder {
+            position: absolute;
+            top: 50px;
+            z-index: 1;
+            transition: opacity 0.3s, transform 0.3s;
+            border-radius: 5px;
+            opacity: 0.7;
+            /* Placeholder to represent a visual object */
+            background-color: rgba(255, 255, 255, 0.05); 
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .image-chassis {
+            left: 10%;
+            width: 250px; 
+            height: 150px;
+        }
+
+        .image-dynamics {
+            left: 50%;
+            /* Prominent central image, slightly elevated */
+            transform: translateX(-50%) translateY(-30px);
+            width: 400px;
+            height: 200px;
+            opacity: 1;
+            z-index: 5; 
+            /* Match prominent red/dark visual of the main car */
+            background: linear-gradient(90deg, #D00000 5%, #151515 50%, #D00000 95%);
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            border: none;
+        }
+
+        .image-powertrain {
+            right: 10%;
+            width: 300px;
+            height: 160px;
+        }
+
+        /*
+         * SLIDER STRUCTURE (HORIZONTAL)
+         */
+        .card-grid-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 10; 
+            padding: 0 40px; 
+        }
+
+        .card-scroll-wrapper {
+            overflow-x: scroll;
+            padding-top: 10px; 
+            scroll-behavior: smooth;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .card-scroll-wrapper::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card-container {
+            display: flex; /* Makes cards horizontal */
+            gap: 30px;
+            align-items: flex-start; 
+            padding-bottom: 20px; 
+        }
+        
+        /* Navigation Buttons */
+        .slider-nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(50px); 
+            z-index: 20;
+           background: #000000ff;
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s;
+        }
+
+        .slider-nav-button:hover {
+            background: #5a70a8;
+        }
+
+        .slider-nav-button.left {
+            left: 0;
+        }
+
+        .slider-nav-button.right {
+            right: 0;
+        }
+
+        /*
+         * INDIVIDUAL CARD STYLING 
+         */
+        .department-card {
+            /* Desktop: Fits 4 cards with minimal gap adjustment */
+            min-width: calc(25% - 22.5px); 
+            flex-shrink: 0; 
+            
+            /* INACTIVE STATE: TRANSPARENT BACKGROUND WITH BORDER */
+            background-color: transparent; 
+            border: 1px solid rgba(66, 88, 129, 0.4); 
+            
+            padding: 15px 20px 15px; /* TIGHT PADDING */
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s, box-shadow 0.4s;
+            
+            /* CARD CONTENT STACKING: VERTICAL (column) */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 80px; 
+        }
+
+        /* Active Card State */
+        .department-card.is-active {
+            background-color: #425881; /* Brighter, SOLID indigo active color */
+            transform: scale(1.08) translateY(-10px); 
+            box-shadow: 
+                0 25px 60px rgba(0, 0, 0, 0.7), 
+                0 0 15px 5px rgba(66, 88, 129, 0.9); 
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        /*
+         * INTERNAL IMAGE PLACEHOLDER STYLING
+         */
+        .card-internal-image-placeholder {
+            width: 100%;
+            height: 100px; 
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-bottom: 20px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 12px;
+            font-family: 'Inter', sans-serif;
+            border: 1px dashed rgba(255, 255, 255, 0.1);
+        }
+        
+        /*
+         * CARD CONTENT
+         */
+        .card-heading {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 26px;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-align: center;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .card-text {
+            font-size: 10px;
+            color: #aca9a9ff;
+            /* TIGHTEST MARGIN AFTER PARAGRAPH */
+            margin-bottom: 10px; 
+            text-align: left;
+        }
+
+        .view-more-button {
+            display: block;
+            width: 100%;
+            padding: 12px 20px;
+            background-color: #FFFAF0; 
+            color: #1A1A1A; 
+            border: none;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
+            text-align: center;
+            text-decoration: none;
+            margin-top: auto; /* Ensures button sticks to the bottom */
+        }
+
+        .view-more-button:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .view-more-button:active {
+            transform: translateY(0);
+        }
+
+
+        /*
+         * RESPONSIVENESS (Media Queries)
+         */
+
+        /* Tablet View (max-width: 1024px) */
+        @media (max-width: 1024px) {
+            .department-card {
+                /* Show 2 cards at a time on tablet */
+                min-width: calc(50% - 15px);
+                margin-top: 50px; 
+            }
+            .department-card.is-active {
+                transform: scale(1.05) translateY(-8px); 
+            }
+            
+            /* Hide external image placeholders on smaller screens */
+            .image-chassis, .image-dynamics, .image-powertrain {
+                display: none; 
+            }
+            
+            /* Center navigation arrows vertically relative to the card bodies */
+            .slider-nav-button {
+                transform: translateY(20px); 
+            }
+        }
+
+        /* Mobile View (max-width: 768px) */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 32px;
+                margin-bottom: 30px;
+                padding-left: 0;
+                text-align: center;
+            }
+            
+            .card-grid-wrapper {
+                padding: 0 10px; 
+            }
+            
+            /* Show 1 card at a time on mobile */
+            .department-card {
+                min-width: calc(100% - 20px);
+            }
+            
+            /* Hide arrows on mobile, rely on touch scroll */
+            .slider-nav-button {
+                display: none;
+            }
+        }
 
 /* ===== About IGDTUW Section ===== */
-#about-igdtu {
-  padding: 20px 0 20px 100px;
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+/* SECTION STYLING */
+.about-igdtuw-section {
+    padding: 60px 80px; /* Generous padding for desktop, smaller for mobile via media query if needed, but 20px horizontal padding is good */
+    display: flex;
+    justify-content: center; /* Center the main content block */
+    width: 100%;
 }
 
-.about-heading {
-  font-size: 2rem;
-  text-align: left;
-  margin-bottom: 30px;
+.about-igdtuw-content-container {
+    width: 100%;
+    /* Max width to keep the content readable on very large screens, matching the image's content block width */
+    max-width: 1900px;
+    text-align: center; /* Center all block-level children (like paragraphs) by default for the image-based layout */
+}
+
+/* HEADING STYLING */
+.about-igdtuw-heading {
+  // ================= DEPARTMENTS CAROUSEL JS =================
+   font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
   font-weight: bold;
-  color: #fff;
-}
-
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 40px;
-}
-
-.about-image-wrapper {
-  flex: 1 1 400px;
-  max-width: 500px;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7), 0 0 40px rgba(0, 255, 255, 0.5); /* glowing border */
-}
-
-.about-image {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 15px;
-}
-
-.about-text {
-  font-size: 20px;
-  line-height: 2;
-  font-weight: lighter;
-  margin: 40px 0;
+  font-style: normal;
+  font-size: 35px;
+  color: #f5f5dc;
+  padding-left: 10px;
   text-align: left;
-  max-width: 900px;
+  margin: 30px;
+
 }
 
-.about-text strong {
-  color: #fff;
+/* IMAGE STYLING */
+.about-igdtuw-image-wrapper {
+    margin-bottom: 30px; /* Space below the image */
+    /* Ensure the image container aligns with the content text width */
+    display: inline-block; /* Allows auto-sizing based on content while maintaining block context */
+    max-width: 100%;
 }
+
+.igdtuw-main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Border: Blue border sampled from the image */
+    border: 5px solid #007bff; /* A bright, distinct blue color */
+    /* Box Shadow (Optional, for depth, though subtle in the original): */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* PARAGRAPH STYLING */
+.about-igdtuw-paragraph {
+    /* Color: Lighter than the heading, slightly off-white/gray */
+
+
+  margin: 30px;
+  font-size: 20px;
+  font-family: "Saira", sans-serif;
+  color: #fff4e1;
+  line-height: 35px;
+  font-weight: 200;
+ text-align: center;
+}
+
+/* Specific styling for the bolded text within paragraphs */
+.highlight-bold {
+    font-weight: 700;
+    /* Slightly lighter color for emphasis, but keeping it white for contrast */
+    color: #ffffff;
+}
+
+/* RESPONSIVENESS (Mobile and Tablet Adjustments) */
+
+/* Tablet and Smaller Desktop (e.g., up to 768px) */
+@media (max-width: 768px) {
+    .about-igdtuw-section {
+        padding: 40px 15px; /* Reduce vertical padding */
+    }
+
+    .about-igdtuw-content-container {
+        /* Allow content to take a bit more width on tablets */
+        max-width: 700px;
+    }
+    
+    .about-igdtuw-heading {
+        font-size: 1.8rem; /* Smaller heading */
+        margin-bottom: 25px;
+        letter-spacing: 0.12em;
+    }
+
+    .about-igdtuw-paragraph {
+        font-size: 1rem; /* Slightly smaller text */
+        margin-bottom: 20px;
+    }
+}
+
+/* Mobile (e.g., up to 480px) */
+@media (max-width: 480px) {
+    .about-igdtuw-heading {
+        font-size: 1.5rem; /* Even smaller heading for small screens */
+        margin-bottom: 20px;
+        letter-spacing: 0.1em;
+    }
+
+    .about-igdtuw-paragraph {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+}
+
+
+
 
 /* ========== About Formula Student Section ========== */
 .about-formula-student {
