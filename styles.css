@@ -880,7 +880,6 @@ h2 {
   height: auto;
   display: block;
   /* Border: Blue border sampled from the image */
-  border: 5px solid #007bff; /* A bright, distinct blue color */
   /* Box Shadow (Optional, for depth, though subtle in the original): */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
