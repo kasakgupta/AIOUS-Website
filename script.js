@@ -265,21 +265,21 @@ if (contactForm) {
          * Scrolls the card container left or right by one card unit.
          * @param {number} direction - -1 for left, 1 for right.
          */
-        function scrollCardsHorizontal(direction) {
-            // Calculate how far to scroll. We scroll by the width of the first card plus the gap.
-            const cardWidth = cards[0].offsetWidth;
-            const gap = 30; // Matches CSS gap value
-            const scrollDistance = cardWidth + gap;
+function scrollCardsHorizontal(direction) {
+  const cardWidth = cards[0].offsetWidth;
+  const gap = 25; // must match CSS 'gap'
+  const scrollDistance = (cardWidth + gap) * 3; // scroll by 3 cards per click
 
-            cardScrollWrapper.scrollLeft += direction * scrollDistance;
-            
-            // Adjust the active index for visual consistency
-            let newIndex = activeIndex + direction;
-            if (newIndex >= 0 && newIndex < cards.length) {
-                // Set the active card slightly after the scroll starts
-                setTimeout(() => setActiveCard(newIndex), 400); 
-            }
-        }
+  cardScrollWrapper.scrollLeft += direction * scrollDistance;
+
+  // Adjust the active card visually
+  let newIndex = activeIndex + direction * 3; // move active index by 3
+  if (newIndex < 0) newIndex = 0;
+  if (newIndex >= cards.length) newIndex = cards.length - 1;
+
+  setTimeout(() => setActiveCard(newIndex), 400);
+}
+
 
 
         /**

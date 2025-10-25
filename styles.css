@@ -550,18 +550,14 @@ h2 {
   font-weight: lighter;
 }
 /* ================= DEPARTMENTS SECTION STYLES ================= */
-/*
-         * SECTION STYLING
-         */
+/*SECTION STYLING*/
+
 .departments-section {
   padding: 20px 10px 40px;
-
   position: relative;
 }
 
-/*
-         * HEADER STYLING
-         */
+/*HEADER STYLING */
 .section-title {
   font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
@@ -574,52 +570,21 @@ h2 {
   margin: 30px;
 }
 
-/*
-         * EXTERNAL CAR IMAGE PLACEHOLDERS (Absolute positioning - Desktop Only)
-         * These are the "standing bars" above the sliding cards.
-         */
-.card-image-placeholder {
+.card-internal-image-placeholder {
   position: absolute;
-  top: 50px;
+  top: -89px;
   z-index: 1;
   transition: opacity 0.3s, transform 0.3s;
   border-radius: 5px;
-  opacity: 0.7;
-  /* Placeholder to represent a visual object */
-  background-color: rgba(50, 50, 87, 0.3); /* 323257 with 50% opacity */
-  border: 2px solid rgba(90, 121, 233, 0.6);
 }
 
-.image-chassis {
-  left: 10%;
-  width: 250px;
-  height: 150px;
+.department-card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
 }
 
-.image-dynamics {
-  left: 50%;
-  /* Prominent central image, slightly elevated */
-  transform: translateX(-50%) translateY(-30px);
-  width: 400px;
-  height: 200px;
-  opacity: 1;
-  z-index: 5;
-  /* Match prominent red/dark visual of the main car */
-  background: linear-gradient(90deg, #d00000 5%, #151515 50%, #d00000 95%);
-  border-radius: 10px;
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-  border: none;
-}
-
-.image-powertrain {
-  right: 10%;
-  width: 300px;
-  height: 160px;
-}
-
-/*
-         * SLIDER STRUCTURE (HORIZONTAL)
-         */
 .card-grid-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -628,23 +593,26 @@ h2 {
   padding: 0 40px;
 }
 
-.card-scroll-wrapper {
-  overflow-x: scroll;
-  padding-top: 10px;
+/* Scroll wrapper — hides scrollbar and allows smooth scroll */
+#cardScrollWrapper {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
   scroll-behavior: smooth;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+  padding: 90px;
 }
-
 .card-scroll-wrapper::-webkit-scrollbar {
   display: none;
 }
 
+/* Card container — single row (no wrap) */
 .card-container {
-  display: flex; /* Makes cards horizontal */
-  gap: 30px;
-  align-items: flex-start;
-  padding-bottom: 20px;
+  display: flex;
+  flex-wrap: nowrap; /* one line, horizontal scrolling */
+  gap: 25px;
+  justify-content: flex-start;
+  align-items: stretch;
 }
 
 /* Navigation Buttons */
@@ -680,31 +648,28 @@ h2 {
   right: 0;
 }
 
-/*
-         * INDIVIDUAL CARD STYLING 
-         */
+/* Department card sizing — 3 per screen on desktop */
+/* Department card sizing — 3 per screen on desktop */
 .department-card {
-  /* Desktop: Fits 4 cards with minimal gap adjustment */
-  min-width: calc(25% - 22.5px);
-  flex-shrink: 0;
-
-  /* INACTIVE STATE: TRANSPARENT BACKGROUND WITH BORDER */
-  background-color: transparent;
-  border: 1px solid rgba(66, 88, 129, 0.4);
-
-  padding: 15px 20px 15px; /* TIGHT PADDING */
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
-    background-color 0.4s, box-shadow 0.4s;
-
-  /* CARD CONTENT STACKING: VERTICAL (column) */
+  flex: 0 0 calc(33.333% - 20px); /* Show 3 cards on desktop */
+  max-width: 350px; /* Keeps card width consistent */
+  min-width: 250px; /* Prevents cards from shrinking too much */
+  height: 480px; /* Adjusted for better proportions */
+  background-color: rgba(50, 50, 87, 0.3); /* Transparent bluish background */
+  border: 2px solid rgba(90, 121, 233, 0.6);
+  border-radius: 15px;
+  padding: 50px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-family: "Raleway", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
-  margin-top: 80px;
+  align-items: center;
+  text-align: center;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 0px;
 }
 
 /* Active Card State */
@@ -716,30 +681,10 @@ h2 {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-/*
-         * INTERNAL IMAGE PLACEHOLDER STYLING
-         */
-.card-internal-image-placeholder {
-  width: 100%;
-  height: 100px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(255, 255, 255, 0.3);
-  font-size: 12px;
-  font-family: "Inter", sans-serif;
-  border: 1px dashed rgba(255, 255, 255, 0.1);
-}
-
-/*
-         * CARD CONTENT
-         */
-.card-heading {
-  font-family: "Montserrat", sans-serif;
-  font-size: 26px;
+/* CARD CONTENT */
+.department-card h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 22px;
   font-weight: 800;
   color: #ffffff;
   margin-top: 0;
@@ -749,13 +694,14 @@ h2 {
   line-height: 1.2;
 }
 
-.card-text {
-  font-size: 10px;
-  color: #aca9a9ff;
-  /* TIGHTEST MARGIN AFTER PARAGRAPH */
+.department-card p{
+  color: #ffffff;
   margin-bottom: 10px;
   text-align: left;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
 }
+
 
 .view-more-button {
   display: block;
@@ -1099,9 +1045,6 @@ ul li {
   text-align: center;
 }
 
-/* .departments-section h2 {
-  padding: 50px 100px 50px;
-} */
 .departments-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1109,44 +1052,8 @@ ul li {
   justify-items: center;
 }
 
-.department-card {
-  background: radial-gradient(
-    circle at center,
-    rgba(20, 109, 120, 0.2),
-    rgba(20, 109, 120, 0.1)
-  );
-  border: 2px solid #22b5c8;
-  border-radius: 10px;
-  padding: 20px;
-  width: 90%;
-  max-width: 280px;
-  box-shadow: 0 0 20px #00cfff50;
-  position: relative;
-  transition: transform 0.3s;
-}
-
 .department-card:hover {
   transform: scale(1.03);
-}
-
-.department-card img {
-  width: 100%;
-  max-height: 150px;
-  object-fit: contain;
-  margin-bottom: 15px;
-}
-
-.department-card h3 {
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: #22b5c8;
-  margin: 10px 0 5px;
-}
-
-.department-card p {
-  color: #ffffff;
-  margin-bottom: 15px;
-  font-size: 1.4rem;
 }
 
 .view-more {
