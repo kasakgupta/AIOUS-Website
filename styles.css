@@ -690,7 +690,7 @@ h2 {
          */
         .department-card {
             /* Desktop: Fits 4 cards with minimal gap adjustment */
-            min-width: calc(25% - 22.5px); 
+            min-width: calc(37% - 40px); 
             flex-shrink: 0; 
             
             /* INACTIVE STATE: TRANSPARENT BACKGROUND WITH BORDER */
