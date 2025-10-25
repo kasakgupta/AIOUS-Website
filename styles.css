@@ -2288,8 +2288,9 @@ ul li {
 }
 
 .sponsor-title h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
   font-size: 22px;
-  font-weight: normal;
   color: #fff;
   margin-bottom: 0;
   letter-spacing: 1px;
