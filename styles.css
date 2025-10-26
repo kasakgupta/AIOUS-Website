@@ -291,12 +291,8 @@ h2 {
 .aboutUs-box {
   flex: 1 1 280px;
   max-width: 300px;
-  background: radial-gradient(
-    circle at center,
-    rgba(54, 73, 140, 0.6),
-    rgba(5, 6, 12, 0.2)
-  );
-  border: 2px solid #5548ba;
+  background-color: rgba(50, 50, 87, 0.3); /* 323257 with 30% opacity */
+  border: 2px solid rgba(90, 121, 233, 0.6);
   padding: 25px 20px;
   border-radius: 10px;
   color: #fff;
@@ -553,314 +549,84 @@ h2 {
   margin-top: 5px;
   font-weight: lighter;
 }
-/* ================= DEPARTMENTS SECTION STYLES ================= */
-    /*
-         * SECTION STYLING
-         */
-        .departments-section {
-            padding: 20px 10px 40px;
-            
-            position: relative;
-        }
 
-        /*
-         * HEADER STYLING
-         */
-        .section-title {
-            font-family: "Raleway", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 35px;
-  color: #f5f5dc;
-  padding-left: 10px;
-  text-align: left;
-  margin: 30px;
-
-        }
-
-        /*
-         * EXTERNAL CAR IMAGE PLACEHOLDERS (Absolute positioning - Desktop Only)
-         * These are the "standing bars" above the sliding cards.
-         */
-        .card-image-placeholder {
-            position: absolute;
-            top: 50px;
-            z-index: 1;
-            transition: opacity 0.3s, transform 0.3s;
-            border-radius: 5px;
-            opacity: 0.7;
-            /* Placeholder to represent a visual object */
-            background-color: rgba(255, 255, 255, 0.05); 
-            border: 2px solid rgba(255, 255, 255, 0.5);
-        }
-
-        .image-chassis {
-            left: 10%;
-            width: 250px; 
-            height: 150px;
-        }
-
-        .image-dynamics {
-            left: 50%;
-            /* Prominent central image, slightly elevated */
-            transform: translateX(-50%) translateY(-30px);
-            width: 400px;
-            height: 200px;
-            opacity: 1;
-            z-index: 5; 
-            /* Match prominent red/dark visual of the main car */
-            background: linear-gradient(90deg, #D00000 5%, #151515 50%, #D00000 95%);
-            border-radius: 10px;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
-            border: none;
-        }
-
-        .image-powertrain {
-            right: 10%;
-            width: 300px;
-            height: 160px;
-        }
-
-        /*
-         * SLIDER STRUCTURE (HORIZONTAL)
-         */
-        .card-grid-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 10; 
-            padding: 0 40px; 
-        }
-
-        .card-scroll-wrapper {
-            overflow-x: scroll;
-            padding-top: 10px; 
-            scroll-behavior: smooth;
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-
-        .card-scroll-wrapper::-webkit-scrollbar {
-            display: none;
-        }
-
-        .card-container {
-            display: flex; /* Makes cards horizontal */
-            gap: 30px;
-            align-items: flex-start; 
-            padding-bottom: 20px; 
-        }
-        
-        /* Navigation Buttons */
-        .slider-nav-button {
-            position: absolute;
-            top: 50%;
-            transform: translateY(50px); 
-            z-index: 20;
-           background: #000000ff;
-            color: white;
-            border: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            font-size: 24px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            transition: background-color 0.3s;
-        }
-
-        .slider-nav-button:hover {
-            background: #5a70a8;
-        }
-
-        .slider-nav-button.left {
-            left: 0;
-        }
-
-        .slider-nav-button.right {
-            right: 0;
-        }
-
-        /*
-         * INDIVIDUAL CARD STYLING 
-         */
-        .department-card {
-            /* Desktop: Fits 4 cards with minimal gap adjustment */
-            min-width: calc(37% - 40px); 
-            flex-shrink: 0; 
-            
-            /* INACTIVE STATE: TRANSPARENT BACKGROUND WITH BORDER */
-            background-color: transparent; 
-            border: 1px solid rgba(66, 88, 129, 0.4); 
-            
-            padding: 15px 20px 15px; /* TIGHT PADDING */
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s, box-shadow 0.4s;
-            
-            /* CARD CONTENT STACKING: VERTICAL (column) */
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            margin-top: 80px; 
-        }
-
-        /* Active Card State */
-        .department-card.is-active {
-            background-color: #425881; /* Brighter, SOLID indigo active color */
-            transform: scale(1.08) translateY(-10px); 
-            box-shadow: 
-                0 25px 60px rgba(0, 0, 0, 0.7), 
-                0 0 15px 5px rgba(66, 88, 129, 0.9); 
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-
-        /*
-         * INTERNAL IMAGE PLACEHOLDER STYLING
-         */
-        .card-internal-image-placeholder {
-            width: 100%;
-            height: 100px; 
-            background-color: rgba(255, 255, 255, 0.05);
-            border-radius: 8px;
-            margin-bottom: 20px; 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255, 255, 255, 0.3);
-            font-size: 12px;
-            font-family: 'Inter', sans-serif;
-            border: 1px dashed rgba(255, 255, 255, 0.1);
-        }
-        
-        /*
-         * CARD CONTENT
-         */
-        .card-heading {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 26px;
-            font-weight: 800;
-            color: #FFFFFF;
-            margin-top: 0;
-            margin-bottom: 15px;
-            text-align: center;
-            letter-spacing: 0.5px;
-            line-height: 1.2;
-        }
-
-        .card-text {
-            font-size: 10px;
-            color: #aca9a9ff;
-            /* TIGHTEST MARGIN AFTER PARAGRAPH */
-            margin-bottom: 10px; 
-            text-align: left;
-        }
-
-        .view-more-button {
-            display: block;
-            width: 100%;
-            padding: 12px 20px;
-            background-color: #FFFAF0; 
-            color: #1A1A1A; 
-            border: none;
-            border-radius: 8px;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            font-size: 15px;
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s, box-shadow 0.3s;
-            text-align: center;
-            text-decoration: none;
-            margin-top: auto; /* Ensures button sticks to the bottom */
-        }
-
-        .view-more-button:hover {
-            background-color: #e0e0e0;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-        }
-        
-        .view-more-button:active {
-            transform: translateY(0);
-        }
+.image-powertrain {
+  right: 10%;
+  width: 300px;
+  height: 160px;
+}
 
 
-        /*
-         * RESPONSIVENESS (Media Queries)
-         */
 
-        /* Tablet View (max-width: 1024px) */
-        @media (max-width: 1024px) {
-            .department-card {
-                /* Show 2 cards at a time on tablet */
-                min-width: calc(50% - 15px);
-                margin-top: 50px; 
-            }
-            .department-card.is-active {
-                transform: scale(1.05) translateY(-8px); 
-            }
-            
-            /* Hide external image placeholders on smaller screens */
-            .image-chassis, .image-dynamics, .image-powertrain {
-                display: none; 
-            }
-            
-            /* Center navigation arrows vertically relative to the card bodies */
-            .slider-nav-button {
-                transform: translateY(20px); 
-            }
-        }
 
-        /* Mobile View (max-width: 768px) */
-        @media (max-width: 768px) {
-            .section-title {
-                font-size: 32px;
-                margin-bottom: 30px;
-                padding-left: 0;
-                text-align: center;
-            }
-            
-            .card-grid-wrapper {
-                padding: 0 10px; 
-            }
-            
-            /* Show 1 card at a time on mobile */
-            .department-card {
-                min-width: calc(100% - 20px);
-            }
-            
-            /* Hide arrows on mobile, rely on touch scroll */
-            .slider-nav-button {
-                display: none;
-            }
-        }
+
+
+/* image css */
+.unique-slider-section {
+    width: 100%;
+    overflow: hidden; /* Hide overflowing content */
+    position: relative;
+    /* Dark background similar to your image */
+    padding: 20px 0; /* Add some vertical padding */
+}
+
+.unique-slider-container {
+    display: flex;
+    transition: transform 0.8s ease-in-out; /* Smooth slide transition */
+}
+
+.unique-slider-item {
+    flex: 0 0 auto; 
+    width: 100vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.unique-slider-item img {
+    max-width: 90%; /* Adjust as needed to control the image width within the slider */
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensure the entire image is visible without cropping or zooming */
+    border: 5px solid #fff; /* White border similar to your image */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .unique-slider-item img {
+        max-width: 90%; /* Slightly larger on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .unique-slider-item img {
+        max-width: 95%; /* Even larger on very small screens */
+    }
+}
 
 /* ===== About IGDTUW Section ===== */
 /* SECTION STYLING */
 .about-igdtuw-section {
-    padding: 60px 80px; /* Generous padding for desktop, smaller for mobile via media query if needed, but 20px horizontal padding is good */
-    display: flex;
-    justify-content: center; /* Center the main content block */
-    width: 100%;
+  padding: 60px 80px; /* Generous padding for desktop, smaller for mobile via media query if needed, but 20px horizontal padding is good */
+  display: flex;
+  justify-content: center; /* Center the main content block */
+  width: 100%;
 }
 
 .about-igdtuw-content-container {
-    width: 100%;
-    /* Max width to keep the content readable on very large screens, matching the image's content block width */
-    max-width: 1900px;
-    text-align: center; /* Center all block-level children (like paragraphs) by default for the image-based layout */
+  width: 100%;
+  /* Max width to keep the content readable on very large screens, matching the image's content block width */
+  max-width: 1900px;
+  text-align: center; /* Center all block-level children (like paragraphs) by default for the image-based layout */
 }
 
 /* HEADING STYLING */
 .about-igdtuw-heading {
   /* ================= DEPARTMENTS CAROUSEL JS =================*/
-   font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
@@ -869,31 +635,28 @@ h2 {
   padding-left: 10px;
   text-align: left;
   margin: 30px;
-
 }
 
 /* IMAGE STYLING */
 .about-igdtuw-image-wrapper {
-    margin-bottom: 30px; /* Space below the image */
-    /* Ensure the image container aligns with the content text width */
-    display: inline-block; /* Allows auto-sizing based on content while maintaining block context */
-    max-width: 100%;
+  margin-bottom: 30px; /* Space below the image */
+  /* Ensure the image container aligns with the content text width */
+  display: inline-block; /* Allows auto-sizing based on content while maintaining block context */
+  max-width: 100%;
 }
 
 .igdtuw-main-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    /* Border: Blue border sampled from the image */
-    border: 5px solid #007bff; /* A bright, distinct blue color */
-    /* Box Shadow (Optional, for depth, though subtle in the original): */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Border: Blue border sampled from the image */
+  /* Box Shadow (Optional, for depth, though subtle in the original): */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* PARAGRAPH STYLING */
 .about-igdtuw-paragraph {
-    /* Color: Lighter than the heading, slightly off-white/gray */
-
+  /* Color: Lighter than the heading, slightly off-white/gray */
 
   margin: 30px;
   font-size: 20px;
@@ -901,57 +664,54 @@ h2 {
   color: #fff4e1;
   line-height: 35px;
   font-weight: 200;
- text-align: center;
+  text-align: center;
 }
 
 /* Specific styling for the bolded text within paragraphs */
 .highlight-bold {
-    font-weight: 700;
-    /* Slightly lighter color for emphasis, but keeping it white for contrast */
-    color: #ffffff;
+  font-weight: 700;
+  /* Slightly lighter color for emphasis, but keeping it white for contrast */
+  color: #ffffff;
 }
 
 /* RESPONSIVENESS (Mobile and Tablet Adjustments) */
 
 /* Tablet and Smaller Desktop (e.g., up to 768px) */
 @media (max-width: 768px) {
-    .about-igdtuw-section {
-        padding: 40px 15px; /* Reduce vertical padding */
-    }
+  .about-igdtuw-section {
+    padding: 40px 15px; /* Reduce vertical padding */
+  }
 
-    .about-igdtuw-content-container {
-        /* Allow content to take a bit more width on tablets */
-        max-width: 700px;
-    }
-    
-    .about-igdtuw-heading {
-        font-size: 1.8rem; /* Smaller heading */
-        margin-bottom: 25px;
-        letter-spacing: 0.12em;
-    }
+  .about-igdtuw-content-container {
+    /* Allow content to take a bit more width on tablets */
+    max-width: 700px;
+  }
 
-    .about-igdtuw-paragraph {
-        font-size: 1rem; /* Slightly smaller text */
-        margin-bottom: 20px;
-    }
+  .about-igdtuw-heading {
+    font-size: 1.8rem; /* Smaller heading */
+    margin-bottom: 25px;
+    letter-spacing: 0.12em;
+  }
+
+  .about-igdtuw-paragraph {
+    font-size: 1rem; /* Slightly smaller text */
+    margin-bottom: 20px;
+  }
 }
 
 /* Mobile (e.g., up to 480px) */
 @media (max-width: 480px) {
-    .about-igdtuw-heading {
-        font-size: 1.5rem; /* Even smaller heading for small screens */
-        margin-bottom: 20px;
-        letter-spacing: 0.1em;
-    }
+  .about-igdtuw-heading {
+    font-size: 1.5rem; /* Even smaller heading for small screens */
+    margin-bottom: 20px;
+    letter-spacing: 0.1em;
+  }
 
-    .about-igdtuw-paragraph {
-        font-size: 0.95rem;
-        margin-bottom: 15px;
-    }
+  .about-igdtuw-paragraph {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+  }
 }
-
-
-
 
 /* ========== About Formula Student Section ========== */
 .about-formula-student {
@@ -1336,7 +1096,7 @@ ul li {
 /* Two vertical lines - one left, one right */
 .timeline::before,
 .timeline::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1376,7 +1136,7 @@ ul li {
 .circle {
   width: 24px;
   height: 24px;
-  background: #0c0c0c; 
+  background: #0c0c0c;
   border-radius: 50%;
   border: 4px solid #00e0ff;
   position: absolute;
@@ -1397,7 +1157,7 @@ ul li {
 
 /* Connector lines from circle to box */
 .timeline-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   width: calc(15% - 22px);
@@ -1433,7 +1193,6 @@ ul li {
 .right-year {
   right: 4%;
 }
-
 
 /* Responsive Achievement */
 @media (max-width: 768px) {
@@ -1512,7 +1271,7 @@ ul li {
   /* Add flexbox to center content horizontally */
   display: flex;
   justify-content: center;
-  margin-top:40px;
+  margin-top: 40px;
 }
 
 .Gallery-container .heading h3 {
@@ -1520,19 +1279,14 @@ ul li {
   font-size: 6.5em;
   font-family: "Pro Racing", sans-serif;
   color: #fff4e1;
-text-shadow:
- -10px 0 4px #1B2446,
-  10px 0 4px #1B2446,
-  0 0 40px #1B2446;
+  text-shadow: -10px 0 4px #1b2446, 10px 0 4px #1b2446, 0 0 40px #1b2446;
 }
-
-
 
 .Gallery-container .gallery-box {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin:70px;
+  margin: 70px;
 }
 
 .Gallery-container .gallery-box .Gallery-column {
@@ -1691,7 +1445,6 @@ text-shadow:
   margin-top: 4px;
 }
 
-
 .iconss img {
   width: 24px;
   margin-right: 15px;
@@ -1833,7 +1586,7 @@ text-shadow:
   font-style: normal;
   color: #f5f5dc;
   padding-left: 10px;
-  margin-left:42px;
+  margin-left: 42px;
   margin-top: 50px;
   margin-bottom: 35px;
   text-align: left;
@@ -1862,16 +1615,16 @@ text-shadow:
 }
 
 .team-card {
-  padding-top: 20px;
-  background: radial-gradient(circle at center, #351c6a 30%, #0c0c0c 100%);
-  border: 1px solid #b98cff;
-  border-radius: 10px;
-  padding: 20px;
+  position: relative;
+  background-color: rgba(31, 41, 70, 0.8);
+  border: 2px solid rgba(90, 121, 233, 0.6);
+  border-radius: 15px;
+  padding: 120px 30px 30px; /* Extra top padding for the overlapping image */
   width: 335px;
-  height: 442px;
   text-align: center;
   color: #fff;
   transition: transform 0.3s ease;
+  margin-top: 100px; /* Space for the image to overflow at top */
 }
 
 .team-card:hover {
@@ -1879,21 +1632,23 @@ text-shadow:
 }
 
 .image-placeholder {
-  width: 189px;
-  height: 189px;
-  background-color: #aaa;
+  position: absolute;
+  top: -80px; /* Position image to overlap the card */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 180px;
+  background-color: #999;
   border-radius: 50%;
-  margin: 0 auto 15px;
   overflow: hidden;
+  z-index: 2;
 }
 
 .image-placeholder img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 50%;
 }
-
 .team-card h3 {
   color: #b98cff;
   margin: 10px 0 5px;
@@ -2062,7 +1817,6 @@ text-shadow:
   text-align: left;
   margin-bottom: 60px;
   margin-top: 50px;
-  
 }
 
 .sponsor-container {
@@ -2079,7 +1833,7 @@ text-shadow:
   max-width: 550px;
   height: 500px;
   /* Subtle, transparent dark background like the 2nd image */
-  background-color: rgba(50, 50, 87, 0.5); /* 323257 with 50% opacity */
+  background-color: rgba(50, 50, 87, 0.3); /* 323257 with 30% opacity */
   border: 2px solid rgba(90, 121, 233, 0.6); /* Soft border */
   padding: 25px 20px;
   border-radius: 10px;
@@ -2099,7 +1853,6 @@ text-shadow:
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-
 .sponsor-logo img {
   width: 220px;
   height: auto;
@@ -2115,8 +1868,8 @@ text-shadow:
 }
 
 .view-more {
-  background-color: #FFF4E1;
-  color: #5A79E9;
+  background-color: #fff4e1;
+  color: #5a79e9;
   display: block; /* Make the button a block-level element */
   width: 150px; /* Set a specific width for the button */
   margin: 0 auto;
@@ -2140,7 +1893,7 @@ text-shadow:
 
 /* Make slides fit card width and center the card inside the slide */
 .swiper-slide {
-  width: 400px !important;       /* fixed consistent width */
+  width: 400px !important; /* fixed consistent width */
   transition: transform 0.3s ease;
 }
 
@@ -2149,13 +1902,12 @@ text-shadow:
   transform: scale(1.7); /* Make the active slide 50% larger */
   z-index: 1; /* Ensure it's above other slides */
   background-color: rgba(50, 50, 87, 0.8);
-  max-height:540px;
+  max-height: 540px;
 }
-
 
 /* Ensure the swiper-wrapper doesn't create vertical misalignment */
 .swiper-wrapper {
-  align-items: stretch;            /* keeps slides same height */
+  align-items: stretch; /* keeps slides same height */
 }
 
 /* Container sizing */
@@ -2249,7 +2001,7 @@ text-shadow:
 .Sponsor-category {
   flex: 1 1 280px;
   max-width: 390px;
-  background-color: rgba(50, 50, 87, 0.5); /* 323257 with 50% opacity */
+  background-color: rgba(50, 50, 87, 0.3); /* 323257 with 50% opacity */
   border: 2px solid rgba(90, 121, 233, 0.6); /* Soft border */
   padding: 25px 20px;
   border-radius: 10px;
@@ -2294,12 +2046,8 @@ text-shadow:
 .sponsor-title {
   flex: 1 1 280px;
   max-width: 1200px;
-  background: radial-gradient(
-    circle at center,
-    rgba(20, 109, 120, 0.2),
-    rgba(20, 109, 120, 0.1)
-  );
-  border: 2px solid #22b5c8;
+  background-color: rgba(50, 50, 87, 0.3);
+  border: 2px solid rgba(90, 121, 233, 0.6);
   padding: 25px 20px;
   border-radius: 10px;
   color: #fff;
@@ -2312,8 +2060,9 @@ text-shadow:
 }
 
 .sponsor-title h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
   font-size: 22px;
-  font-weight: normal;
   color: #fff;
   margin-bottom: 0;
   letter-spacing: 1px;
