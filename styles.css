@@ -1281,10 +1281,12 @@ ul li {
 
 .timeline::before {
   left: 8%;
+  bottom:200px;
 }
 
 .timeline::after {
   right: 8%;
+  top:200px;
 }
 
 /* Timeline item */
@@ -1301,11 +1303,11 @@ ul li {
   background-color: rgba(50, 50, 87, 0.3);
   border: 2px solid rgba(90, 121, 233, 0.6);
   border-radius: 10px;
-  color: white;
-  padding: 25px;
+  color: #fff4e1;
+  padding: 15px;
   width: 50%;
   margin-left:254px;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #contentright{
