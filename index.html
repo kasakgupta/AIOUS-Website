@@ -161,6 +161,7 @@
         </p>
       </div>
 
+
 <!-- Departments Section -->
 
     
@@ -178,6 +179,112 @@
             </div>
             </div>
     </section>
+
+      <!-- Departments Section -->
+      <section class="departments-section">
+        <h2 class="section-title">DEPARTMENTS</h2>
+
+        <div class="card-grid-wrapper">
+
+          <button class="slider-nav-button left" onclick="scrollCardsHorizontal(-1)">&lt;</button>
+
+          <div class="card-scroll-wrapper" id="cardScrollWrapper">
+            <div class="card-container" id="cardContainer">
+
+              <!-- Card 1: Chassis -->
+              <div class="department-card" data-index="0" ontouchstart="handleCardTap(0)" onclick="handleCardClick(0)">
+                <div class="card-content">
+                  <!-- INTERNAL IMAGE PLACEHOLDER -->
+                  <div class="card-internal-image-placeholder"><img src="Images/chasis 2.png" alt=""></div>
+                  <h3>Chassis</h3>
+                  <p>
+                    The Chassis Team designs the core structural components, focusing on stiffness and weight reduction
+                    for performance and safety.
+                  </p>
+                </div>
+                <a href="#" class="view-more-button">View More</a>
+              </div>
+
+              <!-- Card 2: Vehicle Dynamics & Suspension (Active by Default) -->
+              <div class="department-card is-active" data-index="1" ontouchstart="handleCardTap(1)"
+                onclick="handleCardClick(1)">
+                <div class="card-content">
+                  <!-- INTERNAL IMAGE PLACEHOLDER -->
+                  <div class="card-internal-image-placeholder"><img src="Images/vehicle dynamics 1.png" alt=""></div>
+                  <h3>Vehicle Dynamics & Suspension</h3>
+                  <p>
+                    The Suspension Team is responsible for designing and developing the suspension system that ensures
+                    stability, handling, and comfort for the vehicle.
+                  </p>
+                </div>
+                <a href="#" class="view-more-button">View More</a>
+              </div>
+
+              <!-- Card 3: Powertrain -->
+              <div class="department-card" data-index="2" ontouchstart="handleCardTap(2)" onclick="handleCardClick(2)">
+                <div class="card-content">
+                  <!-- INTERNAL IMAGE PLACEHOLDER -->
+                  <div class="card-internal-image-placeholder"><img src="Images/powertrain 1.png" alt=""></div>
+                  <h3>Powertrain</h3>
+                  <p>
+                    This department manages the engine and its integration, focusing on optimizing performance, fuel
+                    efficiency, and maintaining mechanical reliability.
+                  </p>
+                </div>
+                <a href="#" class="view-more-button">View More</a>
+              </div>
+
+              <!-- Card 4: Suspension -->
+              <div class="department-card" data-index="3" ontouchstart="handleCardTap(3)" onclick="handleCardClick(3)">
+                <div class="card-content">
+                  <!-- INTERNAL IMAGE PLACEHOLDER -->
+                  <div class="card-internal-image-placeholder"><img src="Images/suspension 1.png" alt=""></div>
+                  <h3>Suspension</h3>
+                  <p>
+                    The Aero team focuses on minimizing drag and maximizing downforce, utilizing CFD simulations and
+                    wind tunnel testing for optimal bodywork design.
+                  </p>
+                </div>
+                <a href="#" class="view-more-button">View More</a>
+              </div>
+
+              <!-- Card 5: Engine -->
+              <div class="department-card" data-index="4" ontouchstart="handleCardTap(4)" onclick="handleCardClick(4)">
+                <div class="card-content">
+                  <!-- INTERNAL IMAGE PLACEHOLDER -->
+                  <div class="card-internal-image-placeholder"><img src="Images/engine 1.png" alt=""></div>
+                  <h3>Engine</h3>
+                  <p>
+                    This department manages all onboard systems, including telemetry, sensors, control units, and
+                    software for data logging and real-time communication.
+                  </p>
+                </div>
+                <a href="#" class="view-more-button">View More</a>
+              </div>
+
+              <!-- Card 6: Brakes -->
+              <div class="department-card" data-index="5" ontouchstart="handleCardTap(5)" onclick="handleCardClick(5)">
+                <div class="card-content">
+                  <!-- INTERNAL IMAGE PLACEHOLDER -->
+                  <div class="card-internal-image-placeholder"><img src="Images/brake 1.png" alt=""></div>
+                  <h3>Brakes</h3>
+                  <p>
+                    Responsible for the design and manufacturing of lightweight, high-strength carbon fiber parts
+                    essential for chassis, body panels, and structural integrity.
+                  </p>
+                </div>
+                <a href="#" class="view-more-button">View More</a>
+              </div>
+            </div>
+          </div>
+
+          <button class="slider-nav-button right" onclick="scrollCardsHorizontal(1)">&gt;</button>
+
+        </div>
+      </section>
+
+
+
 
       <!-- ================= ABOUT IGDTUW SECTION ================= -->
       <section class="about-igdtuw-section">
