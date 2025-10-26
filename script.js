@@ -256,7 +256,7 @@ if (contactForm) {
     });
   });
 }
-
+//depart js //
  const cards = document.querySelectorAll('.department-card');
         const cardScrollWrapper = document.getElementById('cardScrollWrapper');
         let activeIndex = 1; // Default active card (Vehicle Dynamics)
@@ -325,3 +325,47 @@ function scrollCardsHorizontal(direction) {
             // Initialize to the active card's position (index 1) and center it
             setActiveCard(activeIndex);
         }
+// img js //
+
+document.addEventListener('DOMContentLoaded', () => {
+    const uniqueSliderContainer = document.querySelector('.unique-slider-container');
+    const uniqueSliderItems = document.querySelectorAll('.unique-slider-item');
+    const totalItems = uniqueSliderItems.length;
+    let currentIndex = 0;
+
+    if (totalItems === 0) return;
+
+    function updateSlider() {
+        const containerWidth = uniqueSliderContainer.parentElement.offsetWidth; // Width of the visible viewport area
+        
+        // Get the full computed width of one item, including its left/right margins
+        const itemComputedStyle = getComputedStyle(uniqueSliderItems[0]);
+        const itemWidth = uniqueSliderItems[0].offsetWidth + 
+                          parseFloat(itemComputedStyle.marginLeft) + 
+                          parseFloat(itemComputedStyle.marginRight);
+
+        // Calculate the target offset to center the current item in the viewport.
+        // Formula: (Viewport Center) - (Item Center) - (Total previous items' width)
+        const offsetToCenter = (containerWidth / 2) - (itemWidth / 2);
+        
+        // Apply the transform to move the container
+        // offsetToCenter centers the current item. We then subtract the total width of the slides
+        // that have already passed (currentIndex * itemWidth).
+        uniqueSliderContainer.style.transform = `translateX(${offsetToCenter - (currentIndex * itemWidth)}px)`;
+    }
+
+    // Function to advance the slide
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalItems; // Loop back to 0 after the last slide
+        updateSlider();
+    }
+
+    // Set an interval to change slides every 4 seconds (4000ms)
+    setInterval(nextSlide, 4000);
+
+    // Initial position update and responsiveness listeners
+    updateSlider(); 
+    window.addEventListener('resize', updateSlider);
+});
+
+

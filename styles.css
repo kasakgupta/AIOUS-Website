@@ -549,6 +549,54 @@ h2 {
   margin-top: 5px;
   font-weight: lighter;
 }
+<<<<<<< HEAD
+
+.image-powertrain {
+  right: 10%;
+  width: 300px;
+  height: 160px;
+}
+
+
+
+
+
+
+/* image css */
+.unique-slider-section {
+    width: 100%;
+    overflow: hidden; /* Hide overflowing content */
+    position: relative;
+    /* Dark background similar to your image */
+    padding: 20px 0; /* Add some vertical padding */
+}
+
+.unique-slider-container {
+    display: flex;
+    transition: transform 0.8s ease-in-out; /* Smooth slide transition */
+}
+
+.unique-slider-item {
+    flex: 0 0 auto; 
+    width: 100vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.unique-slider-item img {
+    max-width: 90%; /* Adjust as needed to control the image width within the slider */
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensure the entire image is visible without cropping or zooming */
+    border: 5px solid #fff; /* White border similar to your image */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+}
+
+/* Responsive adjustments */
+=======
 /* ================= DEPARTMENTS SECTION STYLES ================= */
 /*SECTION STYLING*/
 
@@ -760,27 +808,17 @@ h2 {
 }
 
 /* Mobile View (max-width: 768px) */
+>>>>>>> b61860a4ed7e80e7bf91c1b852fa5ed1f6959ae0
 @media (max-width: 768px) {
-  .section-title {
-    font-size: 32px;
-    margin-bottom: 30px;
-    padding-left: 0;
-    text-align: center;
-  }
+    .unique-slider-item img {
+        max-width: 90%; /* Slightly larger on smaller screens */
+    }
+}
 
-  .card-grid-wrapper {
-    padding: 0 10px;
-  }
-
-  /* Show 1 card at a time on mobile */
-  .department-card {
-    min-width: calc(100% - 20px);
-  }
-
-  /* Hide arrows on mobile, rely on touch scroll */
-  .slider-nav-button {
-    display: none;
-  }
+@media (max-width: 480px) {
+    .unique-slider-item img {
+        max-width: 95%; /* Even larger on very small screens */
+    }
 }
 
 /* ===== About IGDTUW Section ===== */
