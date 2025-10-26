@@ -549,7 +549,6 @@ h2 {
   margin-top: 5px;
   font-weight: lighter;
 }
-<<<<<<< HEAD
 
 .image-powertrain {
   right: 10%;
@@ -557,46 +556,39 @@ h2 {
   height: 160px;
 }
 
-
-
-
-
-
 /* image css */
 .unique-slider-section {
-    width: 100%;
-    overflow: hidden; /* Hide overflowing content */
-    position: relative;
-    /* Dark background similar to your image */
-    padding: 20px 0; /* Add some vertical padding */
+  width: 100%;
+  overflow: hidden; /* Hide overflowing content */
+  position: relative;
+  /* Dark background similar to your image */
+  padding: 20px 0; /* Add some vertical padding */
 }
 
 .unique-slider-container {
-    display: flex;
-    transition: transform 0.8s ease-in-out; /* Smooth slide transition */
+  display: flex;
+  transition: transform 0.8s ease-in-out; /* Smooth slide transition */
 }
 
 .unique-slider-item {
-    flex: 0 0 auto; 
-    width: 100vw; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 0 0 auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
-
 .unique-slider-item img {
-    max-width: 90%; /* Adjust as needed to control the image width within the slider */
-    height: auto;
-    display: block;
-    object-fit: contain; /* Ensure the entire image is visible without cropping or zooming */
-    border: 5px solid #fff; /* White border similar to your image */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  max-width: 90%; /* Adjust as needed to control the image width within the slider */
+  height: auto;
+  display: block;
+  object-fit: contain; /* Ensure the entire image is visible without cropping or zooming */
+  border: 5px solid #fff; /* White border similar to your image */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
 }
 
 /* Responsive adjustments */
-=======
+
 /* ================= DEPARTMENTS SECTION STYLES ================= */
 /*SECTION STYLING*/
 
@@ -742,14 +734,13 @@ h2 {
   line-height: 1.2;
 }
 
-.department-card p{
+.department-card p {
   color: #ffffff;
   margin-bottom: 10px;
   text-align: left;
   margin-bottom: 15px;
   font-size: 1.3rem;
 }
-
 
 .view-more-button {
   display: block;
@@ -808,17 +799,17 @@ h2 {
 }
 
 /* Mobile View (max-width: 768px) */
->>>>>>> b61860a4ed7e80e7bf91c1b852fa5ed1f6959ae0
+
 @media (max-width: 768px) {
-    .unique-slider-item img {
-        max-width: 90%; /* Slightly larger on smaller screens */
-    }
+  .unique-slider-item img {
+    max-width: 90%; /* Slightly larger on smaller screens */
+  }
 }
 
 @media (max-width: 480px) {
-    .unique-slider-item img {
-        max-width: 95%; /* Even larger on very small screens */
-    }
+  .unique-slider-item img {
+    max-width: 95%; /* Even larger on very small screens */
+  }
 }
 
 /* ===== About IGDTUW Section ===== */
@@ -1281,12 +1272,12 @@ ul li {
 
 .timeline::before {
   left: 8%;
-  bottom:200px;
+  bottom: 200px;
 }
 
 .timeline::after {
   right: 8%;
-  top:200px;
+  top: 200px;
 }
 
 /* Timeline item */
@@ -1306,12 +1297,12 @@ ul li {
   color: #fff4e1;
   padding: 15px;
   width: 50%;
-  margin-left:254px;
-  font-family: 'Montserrat', sans-serif;
+  margin-left: 254px;
+  font-family: "Montserrat", sans-serif;
 }
 
-#contentright{
-   margin-left:325px;
+#contentright {
+  margin-left: 325px;
 }
 /* Circles */
 .circle {
