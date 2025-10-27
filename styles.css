@@ -1869,10 +1869,12 @@ ul li {
   }
 
   .team-card {
+    padding-top: 45px;
+    margin-top: 90px;
     width: 100%;
     max-width: 280px;
     height: auto;
-    padding: 20px;
+    padding-top: 70px;
   }
 
   .image-placeholder {
@@ -1911,8 +1913,9 @@ ul li {
   }
 
   .team-card {
+    padding-top: 45px;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 69px auto;
   }
 
   .image-placeholder {
