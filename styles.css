@@ -1577,14 +1577,14 @@ ul li {
 
 .btn-outline {
   padding: 10px 20px;
-  border: 1px solid #22b5c8;
+  border: 1px solid rgba(90, 121, 233, 0.6);
   border-radius: 4px;
   color: #fff;
   transition: 0.3s;
 }
 
 .btn-outline:hover {
-  background-color: #22b5c8;
+  background-color: rgba(90, 121, 233, 0.6);
 }
 
 .contact-detailss {
