@@ -2053,6 +2053,11 @@ ul li {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.view-more a{
+  text-decoration: none;
+   color: #5a79e9;
+}
+
 .view-more:hover {
   background-color: #1a8fa0;
   transform: translateY(-3px);
