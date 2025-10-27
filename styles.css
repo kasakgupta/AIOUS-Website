@@ -74,22 +74,26 @@ body {
   cursor: pointer;
 }
 
-/* ========== RESPONSIVE NAVBAR ========== */
+/* ========== MOBILE/TABLET ========== */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: flex;
+    z-index: 1001;
   }
 
   .navbar-items {
     display: none;
     flex-direction: column;
+    align-items: center;
     position: absolute;
-    top: 75px;
+    top: 70px;
     right: 0;
-    background-color: #fff4e1;
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    background-color: #fff4e1;
+    border-top: 2px solid #5a79e9;
+    padding: 10px 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
   }
 
   .navbar-items.show {
@@ -97,8 +101,42 @@ body {
   }
 
   .navbar-items a {
-    padding: 15px 0;
-    font-size: 15px;
+    color: #323257;
+    padding: 16px 0;
+    font-size: 20px;
+    width: 100%;
+    border-bottom: 1px solid rgba(90, 121, 233, 0.2);
+  }
+
+  .navbar-items a:hover {
+    background-color: rgba(90, 121, 233, 0.1);
+    color: #5a79e9;
+  }
+
+  /* Prevent background scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* ========== SMALL MOBILE SCREENS========== */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2.5px;
+  }
+
+  .navbar-items a {
+    font-size: 18px;
+    padding: 14px 0;
+  }
+
+  .navbar-items {
+    top: 60px;
   }
 }
 
