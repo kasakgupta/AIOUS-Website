@@ -1545,7 +1545,7 @@ ul li {
 
 .contact-form textarea {
   height: 120px;
-  border: 1px solid #22b5c8;
+  border: 2px solid rgba(90, 121, 233, 0.6);
   resize: none;
 }
 
@@ -1554,13 +1554,13 @@ ul li {
   border: none;
   color: #fff;
   font-size: 1rem;
-  border-bottom: 1px solid #22b5c8;
+  border-bottom: 2px solid rgba(90, 121, 233, 0.6);
   cursor: pointer;
   transition: 0.3s;
 }
 
 .submit-btn:hover {
-  color: #22b5c8;
+  color: rgba(90, 121, 233, 0.6);
   border-bottom-color: #fff;
 }
 
