@@ -74,22 +74,26 @@ body {
   cursor: pointer;
 }
 
-/* ========== RESPONSIVE NAVBAR ========== */
+/* ========== MOBILE/TABLET ========== */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: flex;
+    z-index: 1001;
   }
 
   .navbar-items {
     display: none;
     flex-direction: column;
+    align-items: center;
     position: absolute;
-    top: 75px;
+    top: 70px;
     right: 0;
-    background-color: #fff4e1;
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
+    background-color: #fff4e1;
+    border-top: 2px solid #5a79e9;
+    padding: 10px 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
   }
 
   .navbar-items.show {
@@ -97,8 +101,42 @@ body {
   }
 
   .navbar-items a {
-    padding: 15px 0;
-    font-size: 15px;
+    color: #323257;
+    padding: 16px 0;
+    font-size: 20px;
+    width: 100%;
+    border-bottom: 1px solid rgba(90, 121, 233, 0.2);
+  }
+
+  .navbar-items a:hover {
+    background-color: rgba(90, 121, 233, 0.1);
+    color: #5a79e9;
+  }
+
+  /* Prevent background scroll when menu is open */
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* ========== SMALL MOBILE SCREENS========== */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .hamburger span {
+    width: 24px;
+    height: 2.5px;
+  }
+
+  .navbar-items a {
+    font-size: 18px;
+    padding: 14px 0;
+  }
+
+  .navbar-items {
+    top: 60px;
   }
 }
 
@@ -1545,7 +1583,7 @@ ul li {
 
 .contact-form textarea {
   height: 120px;
-  border: 1px solid #22b5c8;
+  border: 2px solid rgba(90, 121, 233, 0.6);
   resize: none;
 }
 
@@ -1554,13 +1592,13 @@ ul li {
   border: none;
   color: #fff;
   font-size: 1rem;
-  border-bottom: 1px solid #22b5c8;
+  border-bottom: 2px solid rgba(90, 121, 233, 0.6);
   cursor: pointer;
   transition: 0.3s;
 }
 
 .submit-btn:hover {
-  color: #22b5c8;
+  color: rgba(90, 121, 233, 0.6);
   border-bottom-color: #fff;
 }
 
@@ -1577,14 +1615,14 @@ ul li {
 
 .btn-outline {
   padding: 10px 20px;
-  border: 1px solid #22b5c8;
+  border: 1px solid rgba(90, 121, 233, 0.6);
   border-radius: 4px;
   color: #fff;
   transition: 0.3s;
 }
 
 .btn-outline:hover {
-  background-color: #22b5c8;
+  background-color: rgba(90, 121, 233, 0.6);
 }
 
 .contact-detailss {
@@ -1869,10 +1907,12 @@ ul li {
   }
 
   .team-card {
+    padding-top: 45px;
+    margin-top: 90px;
     width: 100%;
     max-width: 280px;
     height: auto;
-    padding: 20px;
+    padding-top: 70px;
   }
 
   .image-placeholder {
@@ -1911,8 +1951,9 @@ ul li {
   }
 
   .team-card {
+    padding-top: 45px;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 69px auto;
   }
 
   .image-placeholder {
@@ -2051,6 +2092,11 @@ ul li {
   cursor: pointer;
   font-weight: 500;
   transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.view-more a{
+  text-decoration: none;
+   color: #5a79e9;
 }
 
 .view-more:hover {
