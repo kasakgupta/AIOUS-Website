@@ -1386,85 +1386,85 @@ ul li {
 }
 
 /* Year text on side */
-.year {
+.achievement-content h3 {
   position: absolute;
   top: 50%;
   font-weight: bold;
-  font-size: 1.1rem;
-  color: rgba(90, 121, 233, 0.6);
-  transform: translateY(-50%) rotate(-90deg);
+  font-size: 1.4rem;
+  color: #eaeaea;
+  
   letter-spacing: 2px;
 }
 
 .left-year {
-  left: 4%;
+  left: 69%;
+  transform: translateY(-50%) rotate(90deg);
+  font-family: "Pro Racing";
 }
 
 .right-year {
-  right: 4%;
+  right: 69%;
+  transform: translateY(-50%) rotate(-90deg);
+  font-family: "Pro Racing";
 }
 
 /* Responsive Achievement */
+/* Responsive Timeline */
 @media (max-width: 768px) {
-  .achievements {
-    padding: 40px 20px;
+  .timeline {
+    width: 95%;
+    margin: 50px auto;
   }
 
-  .line-wrapper {
-    display: flex;
+  /* Hide vertical lines */
+  .timeline::before,
+  .timeline::after {
+    display: none;
+  }
+
+  .timeline-item {
     flex-direction: column;
-    align-items: center;
-    height: auto !important;
-    position: relative;
-    gap: 30px;
+    align-items: flex-start;
+    margin: 60px 0;
   }
 
-  /* Hide all decorative lines and circles */
-  .vertical-line,
-  .vertical-line-right,
-  .horizontal-line,
-  .horizontal-line-right,
+  /* Hide circles */
   .circle,
-  .circle-right {
-    display: none !important;
+  .left-circle,
+  .right-circle {
+    display: none;
   }
 
-  .achievement-box,
-  .achievement-box-right {
-    position: relative !important;
-    left: auto !important;
-    right: auto !important;
-    top: auto !important;
+  /* Boxes full width */
+  .achievement-content {
     width: 100%;
-    max-width: 100%;
-    padding: 20px;
-    margin: 0 auto;
-    box-sizing: border-box;
+    margin-left: 0;
+    padding: 15px 20px;
+    font-size: 14px;
   }
 
-  .achievement-box {
-    margin-right: 25px;
+  #contentright {
+    margin-left: 0;
   }
 
-  .achievement-box-right {
-    margin-right: 25px;
+  /* Connector lines removed */
+  .timeline-item::before {
+    display: none;
   }
 
-  .achievement-box h3,
-  .achievement-box-right h3 {
-    position: static !important;
-    transform: none !important;
-    font-size: 22px;
-    margin: 10px 0;
-    text-align: left;
-  }
-
-  .achievement-box p,
-  .achievement-box-right p {
-    font-size: 16px;
-    text-align: justify;
-  }
+/* Year text below boxes, centered */
+/* Responsive Year text below boxes, perfectly centered */
+.left-year,
+.right-year {
+    display: block;         /* treat as block element */
+    width: 100%;
+    text-align: center;
+    font-size: 1.1rem;
+    margin: 10px 0 0 0;     /* small gap from box bottom */
 }
+}
+
+
 
 /* ========== Gallery ============ */
 .Gallery-container {
