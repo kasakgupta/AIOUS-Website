@@ -1113,7 +1113,6 @@ h2 {
 
 /* ========== About Formula Student Section ========== */
 .about-formula-student {
-  background: #242323ff;
   color: #e0e0e0;
   padding: 80px 20px;
   display: flex;
@@ -1129,7 +1128,7 @@ h2 {
 .afs-title {
   font-size: 2rem;
   font-weight: 700;
-  color: #00cfff; /* Cyan heading */
+  color: #5548ba;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -1150,7 +1149,7 @@ h2 {
 }
 
 .afs-heading.highlight {
-  color: #00cfff; /* Cyan like screenshot */
+  color: #5548ba;
 }
 
 .afs-subheading {
