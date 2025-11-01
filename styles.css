@@ -1563,9 +1563,8 @@ ul li {
   font-family: "Pro Racing";
 }
 
-/* Responsive Achievement */
-/* Responsive Timeline */
-@media (max-width: 768px) {
+/* Responsive Achievement / Timeline */
+@media (max-width: 1024px) {
   .timeline {
     width: 95%;
     margin: 50px auto;
@@ -1607,17 +1606,13 @@ ul li {
     display: none;
   }
 
-/* Year text below boxes, centered */
-/* Responsive Year text below boxes, perfectly centered */
-.left-year,
-.right-year {
-    display: block;         /* treat as block element */
-    width: 100%;
-    text-align: center;
-    font-size: 1.1rem;
-    margin: 10px 0 0 0;     /* small gap from box bottom */
+  /* Year text below boxes, centered */
+  .left-year,
+  .right-year {
+    display: none; /* hide years on small screens */
+  }
 }
-}
+
 
 
 
