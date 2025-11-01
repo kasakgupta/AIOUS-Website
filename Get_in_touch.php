@@ -81,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <li><a href="studentformula.html">Formula Student</a></li>
         <li><a href="SponsorPage.html">Sponsors</a></li>
         <li><a href="Gallery.html">Gallery</a></li>
-        <li><a href="#">Support Us</a></li>
+        <li><a href="SupportUs.html">Support Us</a></li>
         <li><a href="Get_in_touch.php">Contact Us</a></li>
       </ul>
     </div>
