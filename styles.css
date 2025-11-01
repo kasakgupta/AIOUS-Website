@@ -808,47 +808,202 @@ h2 {
   transform: translateY(0);
 }
 
-/*
-         * RESPONSIVENESS (Media Queries)
-         */
+/* ================= RESPONSIVE FIX (keeps horizontal scroll) ================= */
 
 /* Tablet View (max-width: 1024px) */
 @media (max-width: 1024px) {
-  .department-card {
-    /* Show 2 cards at a time on tablet */
-    min-width: calc(50% - 15px);
-    margin-top: 50px;
-  }
-  .department-card.is-active {
-    transform: scale(1.05) translateY(-8px);
+  .card-grid-wrapper {
+    padding: 0 20px;
   }
 
-  /* Hide external image placeholders on smaller screens */
+  #cardScrollWrapper {
+    padding: 60px 20px;
+    gap: 20px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  .department-card {
+    flex: 0 0 calc(50% - 15px); /* Show 2 cards */
+    min-width: 300px;
+    height: auto;
+    padding: 35px;
+    margin-top: 30px;
+  }
+
+  .department-card.is-active {
+    transform: scale(1.05) translateY(-5px);
+  }
+
+  /* Hide floating images */
   .image-chassis,
   .image-dynamics,
   .image-powertrain {
     display: none;
   }
 
-  /* Center navigation arrows vertically relative to the card bodies */
   .slider-nav-button {
     transform: translateY(20px);
   }
 }
 
 /* Mobile View (max-width: 768px) */
-
 @media (max-width: 768px) {
-  .unique-slider-item img {
-    max-width: 90%; /* Slightly larger on smaller screens */
+  .departments-section {
+    padding: 20px 10px;
+  }
+
+  .section-title {
+    text-align: center;
+    font-size: 26px;
+    margin: 20px 0;
+  }
+
+  #cardScrollWrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 18px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    padding: 40px 15px;
+  }
+
+  .department-card {
+    flex: 0 0 85%; /* One big card at a time, swipe horizontally */
+    min-width: 260px;
+    max-width: 300px;
+    height: auto;
+    padding: 25px 20px;
+    scroll-snap-align: center;
+    border-radius: 12px;
+  }
+
+  .department-card h3 {
+    font-size: 20px;
+  }
+
+  .department-card p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .view-more-button {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  /* Hide slider arrows on mobile */
+  .slider-nav-button {
+    display: none;
   }
 }
 
+/* Very Small Phones (max-width: 480px) */
 @media (max-width: 480px) {
-  .unique-slider-item img {
-    max-width: 95%; /* Even larger on very small screens */
+  #cardScrollWrapper {
+    gap: 15px;
+    padding: 30px 10px;
+  }
+
+  .department-card {
+    flex: 0 0 90%;
+    min-width: 250px;
+    padding: 20px 15px;
+  }
+
+  .department-card h3 {
+    font-size: 18px;
+  }
+
+  .department-card p {
+    font-size: 1rem;
+  }
+
+  .view-more-button {
+    font-size: 13px;
+    padding: 8px;
   }
 }
+/* ================= CLEAN + CONSISTENT SPACING FOR SMALL SCREENS ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .department-card {
+    height: auto;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .department-card img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: contain;
+    margin: 29px auto 10px; /* top + bottom like your style */
+    display: block;
+  }
+
+  .department-card h3 {
+    margin-top: 45px; /* same spacing consistency */
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .department-card {
+    height: auto;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .department-card img {
+    width: 100%;
+    max-height: 160px;
+    object-fit: contain;
+    margin: 29px auto 10px;
+    display: block;
+  }
+
+  .department-card h3 {
+    margin-top: 45px;
+    text-align: center;
+  }
+}
+
+/* Very Small Phones */
+@media (max-width: 480px) {
+  .department-card {
+    height: auto;
+    padding: 25px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .department-card img {
+    width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+    margin: 29px auto 10px;
+    display: block;
+  }
+
+  .department-card h3 {
+    margin-top: 45px;
+    text-align: center;
+  }
+}
+
 
 /* ===== About IGDTUW Section ===== */
 /* SECTION STYLING */
