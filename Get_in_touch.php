@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       <div class="brochure-links">
         <a href="#">VIEW OUR BROCHURE HERE</a>
-        <a href="#" class="btn-outline">AIOUS Brochure 2025</a>
+        <a href="assets/AiousBrochure'25.pdf" class="btn-outline">AIOUS Brochure 2025</a>
       </div>
     </div>
 
