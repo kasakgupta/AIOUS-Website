@@ -131,26 +131,26 @@ body {
   cursor: pointer;
 }
 
-/* ========== MOBILE/TABLET ========== */
+/* ========== MOBILE/TABLET IMPROVEMENTS ========== */
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
+    font-size: 42px;       /* bigger for touch */
+    padding: 10px;
     z-index: 1001;
   }
 
   .navbar-items {
     display: none;
     flex-direction: column;
-    align-items: center;
     position: absolute;
     top: 70px;
     right: 0;
     width: 100%;
     background-color: #fff4e1;
     border-top: 2px solid #5a79e9;
-    padding: 10px 0;
+    padding: 20px 0;
     z-index: 1000;
-    transition: all 0.3s ease;
   }
 
   .navbar-items.show {
@@ -158,11 +158,15 @@ body {
   }
 
   .navbar-items a {
-    color: #323257;
-    padding: 16px 0;
-    font-size: 20px;
-    width: 100%;
+    display: block;          /* ensures full width */
+    width: 100%;             /* stretch to full menu width */
+    text-align: center;      /* center text horizontally */
+    font-size: 36px;         /* bigger text for readability */
+    font-weight: 600;        /* pop more */
+    padding: 25px 0;         /* taller touch area */
     border-bottom: 1px solid rgba(90, 121, 233, 0.2);
+    color: #323257;
+    text-decoration: none;
   }
 
   .navbar-items a:hover {
@@ -170,32 +174,46 @@ body {
     color: #5a79e9;
   }
 
-  /* Prevent background scroll when menu is open */
+  /* Prevent scrolling when menu open */
   body.menu-open {
     overflow: hidden;
   }
 }
 
-/* ========== SMALL MOBILE SCREENS========== */
+/* Small mobile tweak */
 @media (max-width: 480px) {
-  .navbar {
-    padding: 12px 20px;
+  .navbar-items a {
+    font-size: 30px;
+    padding: 20px 0;
   }
 
-  .hamburger span {
-    width: 24px;
-    height: 2.5px;
+  .hamburger {
+    font-size: 38px;
+    padding: 8px;
+  }
+}
+
+
+
+/* ========== SMALL MOBILE SCREENS (UNDER 480px) ========== */
+@media (max-width: 480px) {
+  .hamburger {
+    font-size: 40px;        /* larger hamburger */
+    padding: 10px;          /* more tappable area */
   }
 
   .navbar-items a {
-    font-size: 18px;
-    padding: 14px 0;
+    font-size: 20px;        /* readable on small screens */
+    padding: 18px 0;        /* enough vertical spacing */
   }
 
   .navbar-items {
     top: 60px;
+    padding: 12px 0;
   }
 }
+
+
 
 /* ========== HERO SECTION ========== */
 .hero {
