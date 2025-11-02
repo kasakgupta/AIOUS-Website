@@ -191,28 +191,11 @@ body {
     font-size: 38px;
     padding: 8px;
   }
-}
-
-
-
-/* ========== SMALL MOBILE SCREENS (UNDER 480px) ========== */
-@media (max-width: 480px) {
-  .hamburger {
-    font-size: 40px;        /* larger hamburger */
-    padding: 10px;          /* more tappable area */
-  }
-
-  .navbar-items a {
-    font-size: 20px;        /* readable on small screens */
-    padding: 18px 0;        /* enough vertical spacing */
-  }
-
-  .navbar-items {
+    .navbar-items {
     top: 60px;
     padding: 12px 0;
   }
 }
-
 
 
 /* ========== HERO SECTION ========== */
