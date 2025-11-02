@@ -368,4 +368,37 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', updateSlider);
 });
 
+particlesJS("sparkle-canvas", {
+  particles: {
+    number: { value: 220, density: { enable: true, value_area: 900 } }, // more particles
+    color: { value: ["#9b59b6", "#5a79e9", "#ffffff", "#d4a0ff", "#6f4ff5"] }, // multiple colors
+    shape: { type: "circle" },
+    opacity: { value: 1.0, random: true },
+    size: { value: 3.5, random: true },
+    move: {
+      enable: true,
+      speed: 2,
+      direction: "right",  // moving rightwards
+      out_mode: "out"
+    },
+    line_linked: { enable: false }
+  },
+  interactivity: {
+    detect_on: "canvas",
+    events: { 
+      onhover: { enable: true, mode: "repulse" }, 
+      onclick: { enable: true, mode: "push" } 
+    },
+    modes: { 
+      repulse: { distance: 100, duration: 0.4 },
+      push: { particles_nb: 4 }
+    }
+  },
+  retina_detect: true
+});
+
+
+
+
+
 

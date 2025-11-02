@@ -48,7 +48,64 @@ body {
 .logo {
   width: 220px;
   object-fit: contain;
+  position: relative;
+  transition: transform 0.8s ease, filter 0.8s ease;
+  animation: logoPulse 3.2s ease-in-out infinite;
 }
+
+/* Hover: deeper color glow + lift */
+.logo:hover {
+  transform: scale(1.12) rotate(3deg);
+  filter: drop-shadow(0 0 20px rgba(170, 140, 255, 0.9))
+          drop-shadow(0 0 35px rgba(90, 120, 255, 0.6));
+}
+
+/* Pulse with purple-blue breathing effect */
+@keyframes logoPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px rgba(150, 100, 255, 0.3))
+            drop-shadow(0 0 16px rgba(80, 110, 255, 0.25));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(180, 120, 255, 0.8))
+            drop-shadow(0 0 30px rgba(100, 140, 255, 0.6));
+    transform: scale(1.05);
+  }
+}
+
+/* Shimmer reflection tuned to violet-blue gradient */
+.logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(180, 140, 255, 0.4) 40%,
+    rgba(120, 160, 255, 0.4) 60%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  opacity: 0;
+}
+
+.logo:hover::after {
+  opacity: 1;
+  animation: shimmer 1.3s ease forwards;
+}
+
+@keyframes shimmer {
+  0% { left: -75%; opacity: 0; }
+  40% { opacity: 1; }
+  100% { left: 125%; opacity: 0; }
+}
+
+
+
 
 .navbar-items {
   display: flex;
@@ -289,12 +346,13 @@ h2 {
 
 /* ========== ABOUT US SECTION ========== */
 .aboutUs {
-  padding: 20px 0 20px 100px;
+  padding: 20px 100px 20px 100px; /* keep your left padding */
   margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  position: relative; /* important for absolute child */
 }
 
 .aboutUs h4 {
@@ -315,6 +373,18 @@ h2 {
   max-width: 900px;
 }
 
+/* Right-side particle canvas */
+#sparkle-canvas {
+  position: absolute;  /* float on top/right of section */
+  top: 0;
+  right: 0;
+  width: 40%;          /* adjust width to taste */
+  height: 100%;        /* match the height of About section */
+  pointer-events: none; /* allows text selection / clicks */
+  z-index: 0;          /* behind text if needed */
+}
+
+
 /* About Us Card Container */
 .aboutUs-container {
   display: flex;
@@ -325,26 +395,87 @@ h2 {
   gap: 30px;
 }
 
-/* About Us Individual Card */
 .aboutUs-box {
+  position: relative;
   flex: 1 1 280px;
   max-width: 300px;
-  background-color: rgba(50, 50, 87, 0.3); /* 323257 with 30% opacity */
+  background-color: rgba(50, 50, 87, 0.6); /* slightly stronger for contrast */
   border: 2px solid rgba(90, 121, 233, 0.6);
   padding: 25px 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   color: #fff;
   font-family: "Raleway", sans-serif;
   box-shadow: 0 0 10px rgba(54, 73, 140, 0.6);
-  transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  transition:
+    transform 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+    box-shadow 0.5s cubic-bezier(0.19, 1, 0.22, 1),
+    background 0.5s ease,
+    border-color 0.5s ease;
+  overflow: hidden;
+  perspective: 1000px;
 }
 
 .aboutUs-box:hover {
-  transform: translateY(-5px);
+  transform: translateY(-12px) scale(1.08) rotateX(5deg) rotateY(-5deg);
+  box-shadow: 0 0 35px rgba(90, 121, 233, 0.8), 0 0 100px rgba(90, 121, 233, 0.4);
+  border-color: rgba(150, 180, 255, 0.9);
+  background: linear-gradient(145deg, rgba(60, 60, 120, 0.6), rgba(80, 100, 200, 0.35));
 }
+
+/* Glow animation stays */
+.aboutUs-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, #5a79e9, #9aaeff, #5a79e9);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.aboutUs-box:hover::before {
+  opacity: 1;
+  animation: border-glow 3s linear infinite;
+}
+
+
+/* Subtle particles floating on hover */
+.aboutUs-box::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.08) 0%, transparent 50%),
+              radial-gradient(circle at 70% 60%, rgba(255,255,255,0.05) 0%, transparent 50%),
+              radial-gradient(circle at 50% 90%, rgba(255,255,255,0.04) 0%, transparent 50%);
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 8s linear;
+  pointer-events: none;
+}
+
+.aboutUs-box:hover::after {
+  opacity: 1;
+  animation: particles-move 12s linear infinite;
+}
+
+@keyframes particles-move {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(5px, -5px) rotate(180deg); }
+  100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+
 
 .aboutUs-box h3 {
   font-size: 24px;
@@ -1035,22 +1166,31 @@ h2 {
   margin: 30px;
 }
 
-/* IMAGE STYLING */
 .about-igdtuw-image-wrapper {
-  margin-bottom: 30px; /* Space below the image */
-  /* Ensure the image container aligns with the content text width */
-  display: inline-block; /* Allows auto-sizing based on content while maintaining block context */
+  margin-bottom: 30px; 
+  display: inline-block; 
   max-width: 100%;
+  overflow: hidden; /* ensures the image doesn’t spill during hover */
+  border-radius: 12px; /* soft rounded corners */
+  transition: transform 0.8s ease, box-shadow 0.8s ease, filter 0.8s ease;
 }
 
 .igdtuw-main-image {
   width: 100%;
   height: auto;
   display: block;
-  /* Border: Blue border sampled from the image */
-  /* Box Shadow (Optional, for depth, though subtle in the original): */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  transition: transform 0.8s ease, box-shadow 0.8s ease, filter 0.8s ease;
 }
+
+/* Hover effect */
+.about-igdtuw-image-wrapper:hover .igdtuw-main-image {
+  transform: scale(1.05) translateY(-5px); /* lift & slight zoom */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.7); /* stronger depth */
+  filter: brightness(1.1); /* subtle lightening */
+}
+
 
 /* PARAGRAPH STYLING */
 .about-igdtuw-paragraph {
