@@ -1600,7 +1600,7 @@ ul li {
 }
 
 .contact-text {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.5;
 }
 
@@ -1660,7 +1660,6 @@ ul li {
   margin: 100px 0;
 }
 
-/* Box styling */
 .achievement-content {
   background-color: rgba(50, 50, 87, 0.3);
   border: 2px solid rgba(90, 121, 233, 0.6);
@@ -1670,7 +1669,34 @@ ul li {
   width: 50%;
   margin-left: 254px;
   font-family: "Montserrat", sans-serif;
+
+  /* Add smooth transitions */
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease, border-color 0.5s ease;
 }
+
+/* Optional hover effect for interactivity */
+.achievement-content {
+  background-color: rgba(50, 50, 87, 0.3);
+  border: 2px solid rgba(90, 121, 233, 0.6);
+  border-radius: 10px;
+  color: #fff4e1;
+  padding: 15px;
+  width: 50%;
+  margin-left: 254px;
+  font-family: "Montserrat", sans-serif;
+
+  /* Add smooth transitions */
+  transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease, border-color 0.5s ease;
+}
+
+/* Optional hover effect for interactivity */
+.achievement-content:hover {
+  box-shadow: 0 0 20px rgba(90, 121, 233, 0.8); /* soft glow */
+  border-color: rgba(150, 180, 255, 0.8); /* slightly brighter border */
+  background: rgba(60, 60, 110, 0.35); /* subtle gradient effect */
+}
+
+
 
 #contentright {
   margin-left: 325px;
@@ -1730,16 +1756,20 @@ ul li {
 }
 
 .left-year {
-  left: 69%;
+  left: calc(72% + 13px);  /* align with left circle */
   transform: translateY(-50%) rotate(90deg);
+  transform-origin: left center;  /* pivot from left so spacing is consistent */
   font-family: "Pro Racing";
 }
 
 .right-year {
-  right: 69%;
+  right: calc(71% + 13px); /* align with right circle */
   transform: translateY(-50%) rotate(-90deg);
+  transform-origin: right center; /* pivot from right so spacing is consistent */
   font-family: "Pro Racing";
 }
+
+
 
 /* Responsive Achievement / Timeline */
 @media (max-width: 1024px) {
@@ -2167,8 +2197,14 @@ ul li {
 }
 
 .team-card:hover {
-  transform: scale(1.03);
+  transform: translateY(-7px) scale(1.05); /* slightly higher lift */
+  box-shadow: 
+    0 0 25px rgba(90, 121, 255, 0.9),  /* strong outer glow */
+    0 0 50px rgba(120, 180, 255, 0.6), /* soft extended glow */
+    0 0 80px rgba(150, 200, 255, 0.4); /* subtle halo effect */
+  border-color: rgba(180, 220, 255, 1); /* maximum brightness */
 }
+
 
 .image-placeholder {
   position: absolute;
