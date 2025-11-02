@@ -1284,146 +1284,260 @@ h2 {
 }
 
 /* ========== About Formula Student Section ========== */
-.about-formula-student {
-  color: #e6e9f0;
-  padding: 90px 26px;
-  display: flex;
-  justify-content: center;
-  margin: 60px auto;
-  background: linear-gradient(
-      145deg,
-      rgba(10, 12, 25, 0.85),
-      rgba(6, 9, 18, 0.6)
-  );
-  backdrop-filter: blur(10px);
-  border-radius: 14px;
-  border: 1px solid rgba(0, 153, 255, 0.2);
-  box-shadow:
-    0 0 20px rgba(0, 153, 255, 0.15),
-    inset 0 0 25px rgba(0, 153, 255, 0.05);
-  animation: fadeUp 0.8s ease;
-  position: relative;
-  overflow: hidden;
+/* ====== NEW HERO ABOUT FS DESIGN ====== */
+.fsx-hero-wrapper{
+  width:100%;
+  min-height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:80px 8%;
+  background: linear-gradient(135deg, #000000ff 0%, #080c0cff 100%);
+  position:relative;
+  overflow:hidden;
 }
 
-/* Soft ambient glow layer */
-.about-formula-student::before {
-  content: "";
-  position: absolute;
-  top: -35%;
-  left: -15%;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(0,153,255,0.25), transparent 70%);
-  filter: blur(50px);
-  pointer-events: none;
+.fsx-hero-content{
+  width:55%;
+  color:#fff;
+  z-index:2;
 }
 
-/* Bottom glow */
-.about-formula-student::after {
-  content: "";
-  position: absolute;
-  bottom: -40%;
-  right: -10%;
-  width: 280px;
-  height: 280px;
-  background: radial-gradient(circle, rgba(74,168,255,0.2), transparent 70%);
-  filter: blur(55px);
-  pointer-events: none;
+.fsx-hero-tag{
+  color:#003b8e;
+  font-size:18px;
+  font-weight:500;
+  margin-bottom:20px;
+  letter-spacing:1px;
+  text-transform:uppercase;
 }
 
-.afs-container {
-  max-width: 900px;
-  width: 100%;
-  position: relative;
-  z-index: 2;
+.fsx-hero-title{
+  font-size:42px;
+  font-weight:700;
+  line-height:1.2;
+  margin-bottom:20px;
 }
 
+.fsx-hero-title span{
+  font-weight:800;
+  font-size:48px;
+  color:#fff;
+}
+
+.fsx-hero-text{
+  font-size:16px;
+  opacity:0.85;
+  margin-bottom:30px;
+  line-height:1.6;
+  max-width:90%;
+}
+
+.fsx-hero-btn {
+  display: inline-block;
+  padding: 14px 32px;
+  background: #003b8e; /* dark royal blue */
+  color: #ffffff;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: 0.3s ease-in-out;
+  border: 2px solid #00c9ff; /* neon edge */
+  text-shadow: 0 0 8px rgba(0, 201, 255, 0.6);
+  box-shadow: 
+    0 0 8px #003b8e,
+    0 0 18px rgba(0, 201, 255, 0.7),
+    inset 0 0 8px rgba(0, 201, 255, 0.3);
+}
+
+.fsx-hero-btn:hover {
+  background: #007bff; /* brighter neon blue */
+  border-color: #00c9ff;
+  box-shadow: 
+    0 0 12px #007bff,
+    0 0 25px #00c9ff,
+    inset 0 0 10px rgba(0, 201, 255, 0.6);
+  transform: translateY(-2px); /* subtle lift */
+}
+
+
+/* Car Image */
+.fsx-hero-car{
+  width:45%;
+  display:flex;
+  justify-content:center;
+}
+
+.fsx-hero-car img{
+  width:100%;
+  object-fit:contain;
+  filter:drop-shadow(0 12px 45px rgba(35, 94, 170, 0.5));
+}
+
+/* Mobile View */
+@media(max-width:900px){
+  .fsx-hero-wrapper{
+    flex-direction:column;
+    text-align:center;
+    padding:60px 6%;
+  }
+  .fsx-hero-content, .fsx-hero-car{
+    width:100%;
+  }
+  .fsx-hero-car img{
+    width:85%;
+    margin-top:20px;
+  }
+}
+/* ==========================================
+   FORMULA STUDENT DETAILS SECTION (AFTER HERO)
+========================================== */
+.fsx-details-section {
+  padding: 10px 8%;
+  background: #0b0b0b;
+  color: #e8e8e8;
+  font-family: "Poppins", sans-serif;
+}
+
+.fsx-details-section .afs-container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Headings */
 .afs-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #40aaff;
-  margin-bottom: 10px;
+  font-size: 34px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  text-shadow:
-    0 0 8px rgba(64,170,255,0.65),
-    0 0 20px rgba(64,170,255,0.45);
+  color: #ffffff;
+  margin-bottom: 10px;
+  text-align: left;
 }
 
 .afs-subtitle {
-  font-size: 1.22rem;
-  margin-bottom: 22px;
-  color: #cdd6ff;
-  opacity: 0.9;
-}
-
-/* Divider */
-.afs-divider {
-  height: 2px;
-  width: 100%;
-  background: linear-gradient(90deg, transparent, #4aa8ff, transparent);
-  margin: 20px 0 34px;
-  box-shadow: 0 0 10px rgba(74,168,255,0.6);
-}
-
-.afs-heading {
-  font-size: 1.6rem;
+  font-size: 20px;
+  font-weight: 500;
+ 
+  margin-bottom: 10px;
+   color: #4aa8ff;
   font-weight: 700;
-  margin-top: 48px;
-  margin-bottom: 14px;
-  color: #ebf3ff;
-  text-shadow: 0 0 6px rgba(0,153,255,0.4);
+  text-shadow:
+    0 0 3px rgba(74,168,255,0.8),
+    0 0 10px rgba(74,168,255,0.7),
+    0 0 20px rgba(74,168,255,0.5),
+    0 0 40px rgba(0,153,255,0.4);
+}
+
+.afs-divider {
+  width: 420px;
+  height: 4px;
+  background:  #338abcff;
+  border-radius: 5px;
+  margin: 15px 0 25px;
+}
+
+/* Paragraphs */
+.fsx-details-section p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+/* Section Headings */
+.afs-heading {
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-top: 40px;
+  margin-bottom: 12px;
 }
 
 .afs-heading.highlight {
-  color: #4aa8ff;
+   color: #4aa8ff;
+  font-weight: 700;
   text-shadow:
-    0 0 10px rgba(74,168,255,0.7),
-    0 0 22px rgba(74,168,255,0.4);
+    0 0 6px rgba(74,168,255,0.8),
+    0 0 12px rgba(74,168,255,0.7),
+    0 0 24px rgba(74,168,255,0.5),
+    0 0 45px rgba(0,153,255,0.4);
 }
 
+/* Subheadings */
 .afs-subheading {
-  font-size: 1.22rem;
+  font-size: 18px;
   font-weight: 600;
-  margin-top: 18px;
-  margin-bottom: 8px;
-  color: #dce8ff;
+  margin-top: 25px;
+  margin-bottom: 12px;
+   color: #4aa8ff;
+  font-weight: 700;
+  text-shadow:
+    0 0 6px rgba(74,168,255,0.8),
+    0 0 12px rgba(74,168,255,0.7),
+    0 0 24px rgba(74,168,255,0.5),
+    0 0 45px rgba(0,153,255,0.4);
 }
 
-p {
-  margin-bottom: 15px;
-  line-height: 1.75;
-  font-size: 1.05rem;
-  opacity: 0.95;
+/* Lists */
+.fsx-details-section ul {
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 
-ul {
-  margin-left: 22px;
-  margin-bottom: 18px;
-  line-height: 1.7;
+.fsx-details-section ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 15.5px;
 }
 
-ul li {
-  margin-bottom: 6px;
-  font-size: 1.05rem;
-  opacity: 0.95;
+.fsx-details-section ul li strong {
+  color: #ffffff;
+  font-weight: 600;
 }
 
-/* Animation */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(25px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ========================== RESPONSIVE ========================== */
+
+@media (max-width: 900px) {
+  .fsx-details-section {
+    padding: 60px 6%;
+  }
+
+  .afs-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .afs-subtitle {
+    text-align: center;
+  }
+
+  .afs-divider {
+    margin: 10px auto 25px;
+  }
+
+  .afs-heading {
+    font-size: 22px;
+  }
+
+  .afs-subheading {
+    font-size: 17px;
+  }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .afs-title { font-size: 2rem; }
-  .afs-heading { font-size: 1.35rem; }
-  .afs-subheading { font-size: 1.05rem; }
-  .about-formula-student {
-    margin: 25px;
-    padding: 60px 18px;
+@media (max-width: 600px) {
+  .fsx-details-section {
+    padding: 50px 5%;
+  }
+
+  .afs-title {
+    font-size: 24px;
+  }
+
+  .afs-heading {
+    font-size: 20px;
+  }
+
+  .fsx-details-section p,
+  .fsx-details-section ul li {
+    font-size: 15px;
   }
 }
 
