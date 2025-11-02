@@ -771,12 +771,18 @@ h2 {
 }
 
 .unique-slider-item img {
-  max-width: 90%; /* Adjust as needed to control the image width within the slider */
+  max-width: 90%;
   height: auto;
   display: block;
-  object-fit: contain; /* Ensure the entire image is visible without cropping or zooming */
-  border: 5px solid #fff; /* White border similar to your image */
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  object-fit: contain;
+  border: 4px solid #fff;
+  border-radius: 8px; /* optional */
+  box-shadow:
+    0 0 6px #fff,
+    0 0 7px #0f3d87ff,
+    0 0 15px #134d88ff,
+    0 0 25px #0e4a90ff; /* glow effect */
+  transition: box-shadow 0.3s ease;
 }
 
 /* Responsive adjustments */
@@ -1201,9 +1207,14 @@ h2 {
   width: 100%;
   height: auto;
   display: block;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+ 
   border-radius: 12px;
-  transition: transform 0.8s ease, box-shadow 0.8s ease, filter 0.8s ease;
+  box-shadow:
+    0 0 8px #ffffff,
+    0 0 15px #6ecbff,
+    0 0 30px #219eff,
+    0 0 45px #007bff;
+  transition: box-shadow 0.3s ease; filter 0.8s ease;
 }
 
 /* Hover effect */
@@ -1274,80 +1285,148 @@ h2 {
 
 /* ========== About Formula Student Section ========== */
 .about-formula-student {
-  color: #e0e0e0;
-  padding: 80px 20px;
+  color: #e6e9f0;
+  padding: 90px 26px;
   display: flex;
   justify-content: center;
-  margin: 50px;
+  margin: 60px auto;
+  background: linear-gradient(
+      145deg,
+      rgba(10, 12, 25, 0.85),
+      rgba(6, 9, 18, 0.6)
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  border: 1px solid rgba(0, 153, 255, 0.2);
+  box-shadow:
+    0 0 20px rgba(0, 153, 255, 0.15),
+    inset 0 0 25px rgba(0, 153, 255, 0.05);
+  animation: fadeUp 0.8s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft ambient glow layer */
+.about-formula-student::before {
+  content: "";
+  position: absolute;
+  top: -35%;
+  left: -15%;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0,153,255,0.25), transparent 70%);
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+/* Bottom glow */
+.about-formula-student::after {
+  content: "";
+  position: absolute;
+  bottom: -40%;
+  right: -10%;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(74,168,255,0.2), transparent 70%);
+  filter: blur(55px);
+  pointer-events: none;
 }
 
 .afs-container {
   max-width: 900px;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .afs-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #5548ba;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #40aaff;
   margin-bottom: 10px;
   text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow:
+    0 0 8px rgba(64,170,255,0.65),
+    0 0 20px rgba(64,170,255,0.45);
 }
 
 .afs-subtitle {
-  font-size: 1.3rem;
-  font-weight: 500;
-  margin-bottom: 20px;
-  color: #bbb;
+  font-size: 1.22rem;
+  margin-bottom: 22px;
+  color: #cdd6ff;
+  opacity: 0.9;
+}
+
+/* Divider */
+.afs-divider {
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, transparent, #4aa8ff, transparent);
+  margin: 20px 0 34px;
+  box-shadow: 0 0 10px rgba(74,168,255,0.6);
 }
 
 .afs-heading {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
-  margin-top: 40px;
-  margin-bottom: 15px;
-  color: #ddd;
+  margin-top: 48px;
+  margin-bottom: 14px;
+  color: #ebf3ff;
+  text-shadow: 0 0 6px rgba(0,153,255,0.4);
 }
 
 .afs-heading.highlight {
-  color: #5548ba;
+  color: #4aa8ff;
+  text-shadow:
+    0 0 10px rgba(74,168,255,0.7),
+    0 0 22px rgba(74,168,255,0.4);
 }
 
 .afs-subheading {
-  font-size: 1.2rem;
+  font-size: 1.22rem;
   font-weight: 600;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  color: #fff;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  color: #dce8ff;
 }
 
 p {
   margin-bottom: 15px;
-  line-height: 1.6;
+  line-height: 1.75;
+  font-size: 1.05rem;
+  opacity: 0.95;
 }
 
 ul {
-  margin-left: 20px;
-  margin-bottom: 20px;
-  line-height: 1.6;
+  margin-left: 22px;
+  margin-bottom: 18px;
+  line-height: 1.7;
 }
 
 ul li {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  font-size: 1.05rem;
+  opacity: 0.95;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-  .afs-title {
-    font-size: 1.7rem;
-  }
-  .afs-heading {
-    font-size: 1.3rem;
-  }
-  .afs-subheading {
-    font-size: 1.1rem;
+  .afs-title { font-size: 2rem; }
+  .afs-heading { font-size: 1.35rem; }
+  .afs-subheading { font-size: 1.05rem; }
+  .about-formula-student {
+    margin: 25px;
+    padding: 60px 18px;
   }
 }
+
 
 /* ========== SPONSORS SLIDER ========== */
 .sponsors h2 {
