@@ -2397,27 +2397,27 @@ ul li {
   margin-top: 50px;
 }
 
+/* ========= SPONSORS SECTION ========= */
+
 .sponsor-container {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   justify-content: center;
   align-items: stretch;
-  /* margin: 40px auto; */
 }
 
 .sponsor-box {
   flex: 1 1 280px;
   max-width: 550px;
   height: 500px;
-  /* Subtle, transparent dark background like the 2nd image */
-  background-color: rgba(50, 50, 87, 0.3); /* 323257 with 30% opacity */
-  border: 2px solid rgba(90, 121, 233, 0.6); /* Soft border */
+  background-color: rgba(50, 50, 87, 0.3);
+  border: 2px solid rgba(90, 121, 233, 0.6);
   padding: 25px 20px;
   border-radius: 10px;
   color: #fff;
   font-family: "Raleway", sans-serif;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* subtle shadow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -2425,19 +2425,37 @@ ul li {
   text-align: center;
 }
 
-/* Hover effect stays soft */
-.Sponsor-category:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+/* Hover effect for sponsor cards */
+.sponsor-box:hover {
+  transform: scale(1.04);
+  box-shadow: 0 8px 25px rgba(90, 121, 233, 0.5);
+  border-color: rgba(150, 180, 255, 0.9);
 }
 
+/* Logo styling */
 .sponsor-logo img {
   width: 220px;
   height: auto;
   margin: 0 auto 10px;
-  filter: drop-shadow(0 0 6px rgba(34, 181, 200, 0.4));
+  filter:
+    brightness(1.25)
+    contrast(1.15)
+    drop-shadow(0 0 8px rgba(255, 255, 255, 0.6))
+    drop-shadow(0 0 16px rgba(90, 121, 233, 0.9));
+  transition: all 0.4s ease;
 }
 
+.sponsor-logo img:hover {
+  transform: scale(1.1);
+  filter:
+    brightness(1.45)
+    contrast(1.25)
+    drop-shadow(0 0 15px rgba(255, 255, 255, 0.95))
+    drop-shadow(0 0 25px rgba(90, 121, 233, 1))
+    drop-shadow(0 0 45px rgba(90, 121, 233, 0.9));
+}
+
+/* Description text */
 .sponsor-desc {
   flex-grow: 1;
   font-size: 0.95rem;
@@ -2445,11 +2463,12 @@ ul li {
   line-height: 1.4;
 }
 
+/* View More Button */
 .view-more {
   background-color: #fff4e1;
   color: #5a79e9;
-  display: block; /* Make the button a block-level element */
-  width: 150px; /* Set a specific width for the button */
+  display: block;
+  width: 150px;
   margin: 0 auto;
   border: none;
   padding: 10px 16px;
@@ -2469,69 +2488,32 @@ ul li {
   transform: translateY(-3px);
 }
 
-.swiper-container {
-  max-width: 100%; /* or 100%, depending on layout */
-  margin: 0;
-}
-
-/* Make slides fit card width and center the card inside the slide */
-.swiper-slide {
-  width: 400px !important; /* fixed consistent width */
-  transition: transform 0.3s ease;
-}
-
-/* subtle zoom effect on center slide */
-.swiper-slide-active {
-  transform: scale(1.7); /* Make the active slide 50% larger */
-  z-index: 1; /* Ensure it's above other slides */
-  background-color: rgba(50, 50, 87, 0.8);
-  max-height: 540px;
-}
-
-/* Ensure the swiper-wrapper doesn't create vertical misalignment */
-.swiper-wrapper {
-  align-items: stretch; /* keeps slides same height */
-}
-
-/* Container sizing */
+/* Swiper Container */
 .sponsor-swiper {
   width: 95%;
   max-width: 1200px;
-  margin: 40px 0;
+  margin: 40px auto;
   padding-bottom: 24px;
 }
 
-/* Make each card responsive inside Swiper */
-.sponsor-box {
-  flex: 1;
-  width: 100%; /* Let Swiper control actual width */
-  max-width: 530px;
-  box-sizing: border-box;
-}
-
-/* Let Swiper calculate spacing instead of hardcoding */
-.swiper-wrapper {
-  align-items: stretch;
-}
-
+/* Swiper Slide Settings */
 .swiper-slide {
+  width: 400px !important;
   display: flex;
-  justify-content: center; /* centers cards */
+  justify-content: center;
   align-items: stretch;
   transition: transform 0.3s ease;
 }
 
-/* Zoom effect for active slide */
 .swiper-slide-active {
   transform: scale(1.05);
   z-index: 2;
 }
 
-/* Buttons & pagination */
+/* Buttons & Pagination */
 .swiper-button-next,
 .swiper-button-prev {
   color: #ccc;
-  margin: auto 0px;
 }
 
 .swiper-pagination-bullet {
@@ -2544,18 +2526,76 @@ ul li {
   opacity: 1;
 }
 
-/* Responsive */
+/* ===== RESPONSIVE: SHOW 1 BOX PER VIEW ONLY ON SMALLER SCREENS ===== */
+
+/* Tablets */
 @media (max-width: 1024px) {
+  .swiper-wrapper {
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
   .swiper-slide {
-    width: 45% !important; /* Show 2 slides per view on medium screens */
+    width: 80% !important; /* one full box per slide */
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sponsor-box {
+    width: 80%;
+    max-width: 480px;
+    padding: 24px;
+  }
+
+  .sponsor-logo img {
+    width: 200px;
+    max-width: 80%;
+  }
+
+  .swiper-slide-active .sponsor-box {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
   }
 }
 
+/* Phones */
 @media (max-width: 768px) {
   .swiper-slide {
-    width: 80% !important; /* Show 1 slide per view on small screens */
+    width: 90% !important;
+  }
+
+  .sponsor-box {
+    width: 90%;
+    max-width: 420px;
+    padding: 18px;
+  }
+
+  .sponsor-logo img {
+    width: 160px;
   }
 }
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .swiper-slide {
+    width: 100% !important;
+  }
+
+  .sponsor-box {
+    width: 95%;
+    max-width: 360px;
+    padding: 16px;
+  }
+
+  .sponsor-logo img {
+    width: 140px;
+  }
+}
+
+
+
+
 
 .sponsorPageContainer p {
   max-width: auto;
