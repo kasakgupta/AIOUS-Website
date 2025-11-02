@@ -2594,9 +2594,6 @@ ul li {
 }
 
 
-
-
-
 .sponsorPageContainer p {
   max-width: auto;
   margin: 40px 40px 40px 0;
@@ -2677,24 +2674,65 @@ ul li {
   font-family: "Raleway", sans-serif;
   box-shadow: 0 0 10px rgba(34, 181, 200, 0.3);
   transition: transform 0.3s ease;
+  
+  /* FIXED PART */
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: column; /* stack title & para vertically */
+  align-items: flex-start; /* align all text to start (left edge) */
+  text-align: left;
 }
-
 .sponsor-title h3 {
-  font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 22px;
   color: #fff;
-  margin-bottom: 0;
+  margin-bottom: 10px; /* tighter gap between h3 and p */
   letter-spacing: 1px;
-  margin: 20px 40px;
 }
 
 .sponsor-title p {
-  margin: 20px;
+  margin: 0; /* remove extra spacing */
 }
+
+.gold-text {
+  background: linear-gradient(90deg, #FFD700, #FFB700, #FFF1A6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+  font-weight: 700;
+}
+
+.silver-text {
+  background: linear-gradient(90deg, #E0E0E0, #C0C0C0, #FFFFFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(224, 224, 224, 0.7);
+  font-weight: 700;
+}
+
+.platinum-text {
+  background: linear-gradient(90deg, #E5E4E2, #C9C8C6, #F8F8F8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 18px rgba(229, 228, 226, 0.8);
+  font-weight: 700;
+}
+
+.gold-bg {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.3), rgba(255, 183, 0, 0.3));
+  border: 1px solid rgba(255, 234, 112, 0.5);
+}
+
+.silver-bg {
+  background: linear-gradient(135deg, rgba(217, 217, 217, 0.3), rgba(168, 168, 168, 0.3));
+  border: 1px solid rgba(234, 234, 234, 0.5);
+}
+
+.platinum-bg {
+  background: linear-gradient(135deg, rgba(229, 228, 226, 0.3), rgba(201, 200, 198, 0.3));
+  border: 1px solid rgba(240, 240, 240, 0.5);
+}
+
+
 
 /* ========== Responsive Sponsor ========= */
 @media (max-width: 992px) {
@@ -2773,7 +2811,7 @@ ul li {
   .sponsor-title h3 {
     font-size: 20px;
     margin: 10px 0;
-    text-align: center;
+    text-align: left;
   }
 
   .sponsor-title p {
