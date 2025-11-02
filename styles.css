@@ -1586,6 +1586,24 @@ ul li {
   margin-left: 30px;
 }
 
+.contact-item {
+  display: flex;
+  align-items: flex-start; /* top-align text with icon */
+  gap: 15px;               /* space between image and text */
+  margin-bottom: 20px;
+}
+
+.contact-item img {
+  width: 40px;             /* adjust icon size */
+  height: 40px;
+  object-fit: contain;
+}
+
+.contact-text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .footer-container {
