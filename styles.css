@@ -3131,7 +3131,7 @@ h2 {
 /* For tablets (max width: 1024px) */
 @media (max-width: 1024px) {
   .AchievementPage {
-    padding: 100px 40px 40px 60px;
+    padding: 190px 40px 40px 60px;
   }
 
   .AchievementPage h2 {
@@ -3148,7 +3148,7 @@ h2 {
 /* For mobile landscape (max width: 768px) */
 @media (max-width: 768px) {
   .AchievementPage {
-    padding: 80px 30px;
+    padding: 120px 30px;
     align-items: center;
   }
 
@@ -3168,7 +3168,7 @@ h2 {
 /* For mobile portrait (max width: 480px) */
 @media (max-width: 480px) {
   .AchievementPage {
-    padding: 80px 20px;
+    padding: 120px 20px;
     margin: 10px;
   }
 
