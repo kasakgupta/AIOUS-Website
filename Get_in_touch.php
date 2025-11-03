@@ -75,10 +75,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
       <!-- Navigation links -->
       <ul class="navbar-items" id="navbar-items">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Team_Page.html">Team</a></li>
-        <li><a href="#">Achievements</a></li>
-        <li><a href="studentformula.html">Formula Student</a></li>
+        <li><a href="https://aiousformulastudent.com/Home">Home</a></li>
+        <li><a href="https://aiousformulastudent.com/team">Team</a></li>
+        <li><a href="https://aiousformulastudent.com/achievements">Achievements</a></li>
+        <li><a href="https://aiousformulastudent.com/formula-student">Formula Student</a></li>
         <li><a href="SponsorPage.html">Sponsors</a></li>
         <li><a href="Gallery.html">Gallery</a></li>
         <li><a href="SupportUs.html">Support Us</a></li>
@@ -164,7 +164,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <ul>
               <li><a href="#hero-section">Home</a></li>
               <li><a href="#aboutUs">About Us</a></li>
-              <li><a href="Team_Page.html">Team</a></li>
+              <li><a href="https://aiousformulastudent.com/team">Team</a></li>
               <li><a href="SponsorPage.html">Sponsorship</a></li>
               <li><a href="Gallery.html">Gallery</a></li>
               <li><a href="Get_in_touch.html">Contact</a></li>
