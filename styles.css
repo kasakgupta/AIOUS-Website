@@ -3094,6 +3094,86 @@ h2 {
   text-align: left;
 }
 
+
+/* ========= RESPONSIVE STYLES ========= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .SupportPage {
+    padding: 80px 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .SupportPage p {
+    font-size: 18px;
+    max-width: 700px;
+    text-align: center;
+  }
+
+  .SupportPage h2 {
+    font-size: 30px;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .supportButton {
+    justify-content: center;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .SupportPage {
+    padding: 60px 30px;
+    margin: 10px;
+    align-items: center;
+  }
+
+  .SupportPage h2 {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+
+  .SupportPage p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin: 20px 0;
+  }
+
+  .supportButton {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .supportButton button {
+    width: 200px;
+    font-size: 15px;
+    padding: 8px 20px;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 480px) {
+  .SupportPage {
+    padding: 40px 20px;
+  }
+
+  .SupportPage h2 {
+    font-size: 22px;
+  }
+
+  .SupportPage p {
+    font-size: 15px;
+  }
+
+  .supportButton button {
+    width: 180px;
+    font-size: 14px;
+    padding: 6px 18px;
+  }
+}
 .AchievementPage {
   padding: 140px 20px 20px 100px;
   margin: 20px;
