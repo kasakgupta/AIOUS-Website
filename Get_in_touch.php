@@ -153,7 +153,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <p>Enter your email here</p>
                 <form id="signupForm" class="signup-form">
                   <input type="email" id="email" name="email" placeholder=" " required>
-                  <button type="submit">Sign Up</button>
+                  <button type="submit">Stay Updated</button>
                 </form>
               </div>
             </section>
