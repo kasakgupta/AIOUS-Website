@@ -527,6 +527,7 @@ h2 {
 
   .aboutUs-box p {
     font-size: 18px;
+   text-align: center;
   }
 }
 
@@ -2548,6 +2549,14 @@ h2 {
   text-align: left;
   line-height: 1.6;
 }
+
+@media (max-width: 768px){
+  .cont p{
+    text-align: center;
+  }
+}
+
+
 
 /* ============ Sponsor Page ============ */
 
