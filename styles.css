@@ -1132,7 +1132,7 @@ h2 {
     max-height: 160px;
     object-fit: contain;
     margin: 29px auto 10px;
-    display: block;
+    display: none;
   }
 
   .department-card h3 {
@@ -1157,7 +1157,7 @@ h2 {
     max-height: 140px;
     object-fit: contain;
     margin: 29px auto 10px;
-    display: block;
+    display: none;
   }
 
   .department-card h3 {
