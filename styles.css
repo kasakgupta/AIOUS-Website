@@ -519,7 +519,7 @@ h2 {
   font-weight: 200;
 }
 
-/* Responsive About us */
+/* Responsive About Us */
 @media (max-width: 768px) {
   .aboutUs {
     padding: 30px 20px;
@@ -527,9 +527,11 @@ h2 {
 
   .aboutUs-box p {
     font-size: 18px;
-   text-align: center;
+    text-align: center; /* centers only the paragraph */
+    margin: 0 auto;     /* optional: keeps paragraph balanced */
   }
 }
+
 
 /* ========== OUR TEAM SECTION ========== */
 .team-section {
@@ -2550,12 +2552,12 @@ h2 {
   line-height: 1.6;
 }
 
-@media (max-width: 768px){
-  .cont p{
+@media (max-width: 768px) {
+  .cont p {
     text-align: center;
+    margin: 0 auto; /* optional – makes it look more balanced */
   }
 }
-
 
 
 /* ============ Sponsor Page ============ */
