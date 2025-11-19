@@ -1934,17 +1934,23 @@ h2 {
 }
 
 .left-year {
-  left: calc(70% + 13px); /* align with left circle */
+  position: absolute;
+  top: 50%;
+  left: calc(70% + 13px);
   transform: translateY(-50%) rotate(90deg);
-  transform-origin: left center; /* pivot from left so spacing is consistent */
+  transform-origin: left center;
   font-family: "Pro Racing";
 }
+
 .right-year {
-  right: calc(70% + 13px); /* align with right circle */
+  position: absolute;
+  top: 50%;
+  right: calc(70% + 13px);
   transform: translateY(-50%) rotate(-90deg);
-  transform-origin: right center; /* pivot from right so spacing is consistent */
+  transform-origin: right center;
   font-family: "Pro Racing";
 }
+
 
 /* Responsive Achievement / Timeline */
 @media (max-width: 1024px) {
@@ -3253,4 +3259,37 @@ h2 {
     line-height: 28px;
     margin: 20px 0;
   }
+}
+
+/* Force box-edge anchoring + visible overflow so years can't be clipped */
+.achievement-content {
+  position: relative !important;
+  overflow: visible !important;
+}
+
+/* Shared year styles */
+.left-year, .right-year {
+  position: absolute !important;
+  top: 50% !important;
+  transform-origin: center center !important;
+  z-index: 20 !important;
+  white-space: nowrap !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: "Pro Racing", sans-serif !important;
+  font-size: 1.5rem !important;
+}
+
+/* LEFT years: anchored to the RIGHT edge of the box, then pushed outward */
+.timeline-item:nth-child(odd) .left-year {
+  left: 95% !important;                        /* start exactly at box right edge */
+  margin-left: 12px !important;                 /* move outward from edge — tweak this */
+  transform: translateY(-50%) rotate(90deg) !important;
+}
+
+/* RIGHT years: anchored to the LEFT edge of the box, then pushed outward */
+.timeline-item:nth-child(even) .right-year {
+  right: 95% !important;                       /* start exactly at box left edge */
+  margin-right: 12px !important;                /* move outward from edge — tweak this */
+  transform: translateY(-50%) rotate(-90deg) !important;
 }
