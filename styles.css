@@ -2699,6 +2699,13 @@ h2 {
   color: #ccc;
 }
 
+.swiper-button-next::after, .swiper-button-prev::after{
+  display: flex;
+  justify-content: space-between;
+  color: #ccc;
+  display: none;
+}
+
 .swiper-pagination-bullet {
   background: #5a79e9;
   opacity: 0.85;
